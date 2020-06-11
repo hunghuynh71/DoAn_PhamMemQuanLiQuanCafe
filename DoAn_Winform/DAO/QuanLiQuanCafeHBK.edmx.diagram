@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="39f9b5f00f6d4d919c93141314036467" Name="Diagram1">
+        <EntityTypeShape EntityType="QUAN_LI_QUAN_CAFE_HBKModel.BAN" Width="1.5" PointX="0.75" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QUAN_LI_QUAN_CAFE_HBKModel.CHI_TIET_DON_DAT_HANG" Width="1.5" PointX="5.25" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="QUAN_LI_QUAN_CAFE_HBKModel.CHI_TIET_HOA_DON" Width="1.5" PointX="5.25" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QUAN_LI_QUAN_CAFE_HBKModel.CHI_TIET_PHIEU_NHAP_HANG" Width="1.5" PointX="7.5" PointY="11.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="QUAN_LI_QUAN_CAFE_HBKModel.DAT_HANG" Width="1.5" PointX="5.25" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="QUAN_LI_QUAN_CAFE_HBKModel.DON_DAT_HANG" Width="1.5" PointX="3" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QUAN_LI_QUAN_CAFE_HBKModel.HANG_HOA" Width="1.5" PointX="3" PointY="22" IsExpanded="true" />
+        <EntityTypeShape EntityType="QUAN_LI_QUAN_CAFE_HBKModel.HOA_DON" Width="1.5" PointX="3" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QUAN_LI_QUAN_CAFE_HBKModel.LOAI_THUC_UONG" Width="1.5" PointX="0.75" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QUAN_LI_QUAN_CAFE_HBKModel.NHA_CUNG_CAP" Width="1.5" PointX="3" PointY="18" IsExpanded="true" />
+        <EntityTypeShape EntityType="QUAN_LI_QUAN_CAFE_HBKModel.NHAN_VIEN" Width="1.5" PointX="0.75" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="QUAN_LI_QUAN_CAFE_HBKModel.PHIEU_NHAP_HANG" Width="1.5" PointX="5.25" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QUAN_LI_QUAN_CAFE_HBKModel.sysdiagram" Width="1.5" PointX="7.75" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="QUAN_LI_QUAN_CAFE_HBKModel.TAI_KHOAN" Width="1.5" PointX="3" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QUAN_LI_QUAN_CAFE_HBKModel.THUC_UONG" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="QUAN_LI_QUAN_CAFE_HBKModel.FK__HOA_DON__SOBAN__5BE2A6F2" ManuallyRouted="false" />
+        <AssociationConnector Association="QUAN_LI_QUAN_CAFE_HBKModel.FK__CHI_TIET___MADDH__4316F928" ManuallyRouted="false" />
+        <AssociationConnector Association="QUAN_LI_QUAN_CAFE_HBKModel.FK__CHI_TIET_D__MAHH__440B1D61" ManuallyRouted="false" />
+        <AssociationConnector Association="QUAN_LI_QUAN_CAFE_HBKModel.FK__CHI_TIET_H__MAHD__5EBF139D" ManuallyRouted="false" />
+        <AssociationConnector Association="QUAN_LI_QUAN_CAFE_HBKModel.FK__CHI_TIET_H__MATU__5FB337D6" ManuallyRouted="false" />
+        <AssociationConnector Association="QUAN_LI_QUAN_CAFE_HBKModel.FK__CHI_TIET___MAPNH__4D94879B" ManuallyRouted="false" />
+        <AssociationConnector Association="QUAN_LI_QUAN_CAFE_HBKModel.FK__CHI_TIET_P__MAHH__4E88ABD4" ManuallyRouted="false" />
+        <AssociationConnector Association="QUAN_LI_QUAN_CAFE_HBKModel.FK__DAT_HANG__MADDH__68487DD7" ManuallyRouted="false" />
+        <AssociationConnector Association="QUAN_LI_QUAN_CAFE_HBKModel.FK__DAT_HANG__MANCC__693CA210" ManuallyRouted="false" />
+        <AssociationConnector Association="QUAN_LI_QUAN_CAFE_HBKModel.FK__DON_DAT_H__MANVL__3E52440B" ManuallyRouted="false" />
+        <AssociationConnector Association="QUAN_LI_QUAN_CAFE_HBKModel.FK_DDH" ManuallyRouted="false" />
+        <AssociationConnector Association="QUAN_LI_QUAN_CAFE_HBKModel.FK__HOA_DON__MANVLAP__5AEE82B9" ManuallyRouted="false" />
+        <AssociationConnector Association="QUAN_LI_QUAN_CAFE_HBKModel.FK__THUC_UONG__MALOA__534D60F1" ManuallyRouted="false" />
+        <AssociationConnector Association="QUAN_LI_QUAN_CAFE_HBKModel.FK__PHIEU_NHA__MANCC__49C3F6B7" ManuallyRouted="false" />
+        <AssociationConnector Association="QUAN_LI_QUAN_CAFE_HBKModel.FK__PHIEU_NHA__MANVL__4AB81AF0" ManuallyRouted="false" />
+        <AssociationConnector Association="QUAN_LI_QUAN_CAFE_HBKModel.FK_TAI_KHOAN_NHAN_VIEN" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

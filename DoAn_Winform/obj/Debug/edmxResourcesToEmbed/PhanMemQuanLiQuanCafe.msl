@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="QUAN_LI_QUAN_CAFE_HBKModelStoreContainer" CdmEntityContainer="QUAN_LI_QUAN_CAFE_HBKEntities">
+    <EntitySetMapping Name="BANs">
+      <EntityTypeMapping TypeName="QUAN_LI_QUAN_CAFE_HBKModel.BAN">
+        <MappingFragment StoreEntitySet="BAN">
+          <ScalarProperty Name="SOBAN" ColumnName="SOBAN" />
+          <ScalarProperty Name="SOCHO" ColumnName="SOCHO" />
+          <ScalarProperty Name="TRANGTHAI" ColumnName="TRANGTHAI" />
+          <ScalarProperty Name="TRANGTHAIXOA" ColumnName="TRANGTHAIXOA" />
+          <ScalarProperty Name="TENBAN" ColumnName="TENBAN" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CHI_TIET_DON_DAT_HANG">
+      <EntityTypeMapping TypeName="QUAN_LI_QUAN_CAFE_HBKModel.CHI_TIET_DON_DAT_HANG">
+        <MappingFragment StoreEntitySet="CHI_TIET_DON_DAT_HANG">
+          <ScalarProperty Name="MADDH" ColumnName="MADDH" />
+          <ScalarProperty Name="MAHH" ColumnName="MAHH" />
+          <ScalarProperty Name="SL" ColumnName="SL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CHI_TIET_HOA_DON">
+      <EntityTypeMapping TypeName="QUAN_LI_QUAN_CAFE_HBKModel.CHI_TIET_HOA_DON">
+        <MappingFragment StoreEntitySet="CHI_TIET_HOA_DON">
+          <ScalarProperty Name="MAHD" ColumnName="MAHD" />
+          <ScalarProperty Name="MATU" ColumnName="MATU" />
+          <ScalarProperty Name="SL" ColumnName="SL" />
+          <ScalarProperty Name="GIABAN" ColumnName="GIABAN" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CHI_TIET_PHIEU_NHAP_HANG">
+      <EntityTypeMapping TypeName="QUAN_LI_QUAN_CAFE_HBKModel.CHI_TIET_PHIEU_NHAP_HANG">
+        <MappingFragment StoreEntitySet="CHI_TIET_PHIEU_NHAP_HANG">
+          <ScalarProperty Name="MAPNH" ColumnName="MAPNH" />
+          <ScalarProperty Name="MAHH" ColumnName="MAHH" />
+          <ScalarProperty Name="SL" ColumnName="SL" />
+          <ScalarProperty Name="GIA" ColumnName="GIA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DAT_HANG">
+      <EntityTypeMapping TypeName="QUAN_LI_QUAN_CAFE_HBKModel.DAT_HANG">
+        <MappingFragment StoreEntitySet="DAT_HANG">
+          <ScalarProperty Name="MADDH" ColumnName="MADDH" />
+          <ScalarProperty Name="MANCC" ColumnName="MANCC" />
+          <ScalarProperty Name="NGAYGIAO" ColumnName="NGAYGIAO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DON_DAT_HANG">
+      <EntityTypeMapping TypeName="QUAN_LI_QUAN_CAFE_HBKModel.DON_DAT_HANG">
+        <MappingFragment StoreEntitySet="DON_DAT_HANG">
+          <ScalarProperty Name="MADDH" ColumnName="MADDH" />
+          <ScalarProperty Name="NGAYLAP" ColumnName="NGAYLAP" />
+          <ScalarProperty Name="MANVLAP" ColumnName="MANVLAP" />
+          <ScalarProperty Name="TRANGTHAIXOA" ColumnName="TRANGTHAIXOA" />
+          <ScalarProperty Name="TRANGTHAIDUYET" ColumnName="TRANGTHAIDUYET" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HANG_HOA">
+      <EntityTypeMapping TypeName="QUAN_LI_QUAN_CAFE_HBKModel.HANG_HOA">
+        <MappingFragment StoreEntitySet="HANG_HOA">
+          <ScalarProperty Name="MAHH" ColumnName="MAHH" />
+          <ScalarProperty Name="TENHH" ColumnName="TENHH" />
+          <ScalarProperty Name="DVT" ColumnName="DVT" />
+          <ScalarProperty Name="TRANGTHAIXOA" ColumnName="TRANGTHAIXOA" />
+          <ScalarProperty Name="SLTON" ColumnName="SLTON" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HOA_DON">
+      <EntityTypeMapping TypeName="QUAN_LI_QUAN_CAFE_HBKModel.HOA_DON">
+        <MappingFragment StoreEntitySet="HOA_DON">
+          <ScalarProperty Name="MAHD" ColumnName="MAHD" />
+          <ScalarProperty Name="NGAYLAP" ColumnName="NGAYLAP" />
+          <ScalarProperty Name="MANVLAP" ColumnName="MANVLAP" />
+          <ScalarProperty Name="SOBAN" ColumnName="SOBAN" />
+          <ScalarProperty Name="TRANGTHAI" ColumnName="TRANGTHAI" />
+          <ScalarProperty Name="TRANGTHAIXOA" ColumnName="TRANGTHAIXOA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LOAI_THUC_UONG">
+      <EntityTypeMapping TypeName="QUAN_LI_QUAN_CAFE_HBKModel.LOAI_THUC_UONG">
+        <MappingFragment StoreEntitySet="LOAI_THUC_UONG">
+          <ScalarProperty Name="MALOAITU" ColumnName="MALOAITU" />
+          <ScalarProperty Name="TENLOAITU" ColumnName="TENLOAITU" />
+          <ScalarProperty Name="TRANGTHAIXOA" ColumnName="TRANGTHAIXOA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NHA_CUNG_CAP">
+      <EntityTypeMapping TypeName="QUAN_LI_QUAN_CAFE_HBKModel.NHA_CUNG_CAP">
+        <MappingFragment StoreEntitySet="NHA_CUNG_CAP">
+          <ScalarProperty Name="MANCC" ColumnName="MANCC" />
+          <ScalarProperty Name="TENNCC" ColumnName="TENNCC" />
+          <ScalarProperty Name="DIACHI" ColumnName="DIACHI" />
+          <ScalarProperty Name="SDT" ColumnName="SDT" />
+          <ScalarProperty Name="TRANGTHAIXOA" ColumnName="TRANGTHAIXOA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NHAN_VIEN">
+      <EntityTypeMapping TypeName="QUAN_LI_QUAN_CAFE_HBKModel.NHAN_VIEN">
+        <MappingFragment StoreEntitySet="NHAN_VIEN">
+          <ScalarProperty Name="MANV" ColumnName="MANV" />
+          <ScalarProperty Name="TENNV" ColumnName="TENNV" />
+          <ScalarProperty Name="DIACHI" ColumnName="DIACHI" />
+          <ScalarProperty Name="SDT" ColumnName="SDT" />
+          <ScalarProperty Name="TENTAIKHOAN" ColumnName="TENTAIKHOAN" />
+          <ScalarProperty Name="TRANGTHAIXOA" ColumnName="TRANGTHAIXOA" />
+          <ScalarProperty Name="CHUCVU" ColumnName="CHUCVU" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PHIEU_NHAP_HANG">
+      <EntityTypeMapping TypeName="QUAN_LI_QUAN_CAFE_HBKModel.PHIEU_NHAP_HANG">
+        <MappingFragment StoreEntitySet="PHIEU_NHAP_HANG">
+          <ScalarProperty Name="MAPNH" ColumnName="MAPNH" />
+          <ScalarProperty Name="MANCC" ColumnName="MANCC" />
+          <ScalarProperty Name="NGAYLAP" ColumnName="NGAYLAP" />
+          <ScalarProperty Name="MANVLAP" ColumnName="MANVLAP" />
+          <ScalarProperty Name="MADDH" ColumnName="MADDH" />
+          <ScalarProperty Name="TRANGTHAIXOA" ColumnName="TRANGTHAIXOA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="QUAN_LI_QUAN_CAFE_HBKModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TAI_KHOAN">
+      <EntityTypeMapping TypeName="QUAN_LI_QUAN_CAFE_HBKModel.TAI_KHOAN">
+        <MappingFragment StoreEntitySet="TAI_KHOAN">
+          <ScalarProperty Name="TENDANGNHAP" ColumnName="TENDANGNHAP" />
+          <ScalarProperty Name="MATKHAU" ColumnName="MATKHAU" />
+          <ScalarProperty Name="LOAITAIKHOAN" ColumnName="LOAITAIKHOAN" />
+          <ScalarProperty Name="TRANGTHAIXOA" ColumnName="TRANGTHAIXOA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="THUC_UONG">
+      <EntityTypeMapping TypeName="QUAN_LI_QUAN_CAFE_HBKModel.THUC_UONG">
+        <MappingFragment StoreEntitySet="THUC_UONG">
+          <ScalarProperty Name="MATU" ColumnName="MATU" />
+          <ScalarProperty Name="TENTU" ColumnName="TENTU" />
+          <ScalarProperty Name="MALOAITU" ColumnName="MALOAITU" />
+          <ScalarProperty Name="GIA" ColumnName="GIA" />
+          <ScalarProperty Name="TRANGTHAIXOA" ColumnName="TRANGTHAIXOA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,12 @@
+D:\DoAn_PhanMemQuanLiQuanCafe\Project\DoAn_Winform\BUS\bin\Debug\BUS.dll
+D:\DoAn_PhanMemQuanLiQuanCafe\Project\DoAn_Winform\BUS\bin\Debug\BUS.pdb
+D:\DoAn_PhanMemQuanLiQuanCafe\Project\DoAn_Winform\BUS\bin\Debug\DAO.dll
+D:\DoAn_PhanMemQuanLiQuanCafe\Project\DoAn_Winform\BUS\bin\Debug\EntityFramework.dll
+D:\DoAn_PhanMemQuanLiQuanCafe\Project\DoAn_Winform\BUS\bin\Debug\DAO.pdb
+D:\DoAn_PhanMemQuanLiQuanCafe\Project\DoAn_Winform\BUS\bin\Debug\EntityFramework.xml
+D:\DoAn_PhanMemQuanLiQuanCafe\Project\DoAn_Winform\BUS\obj\Debug\BUS.csprojResolveAssemblyReference.cache
+D:\DoAn_PhanMemQuanLiQuanCafe\Project\DoAn_Winform\BUS\obj\Debug\BUS.dll
+D:\DoAn_PhanMemQuanLiQuanCafe\Project\DoAn_Winform\BUS\obj\Debug\BUS.pdb
+D:\DoAn_PhanMemQuanLiQuanCafe\Project\DoAn_Winform\BUS\bin\Debug\DTO.dll
+D:\DoAn_PhanMemQuanLiQuanCafe\Project\DoAn_Winform\BUS\bin\Debug\DTO.pdb
+D:\DoAn_PhanMemQuanLiQuanCafe\Project\DoAn_Winform\BUS\bin\Debug\BUS.dll.config
