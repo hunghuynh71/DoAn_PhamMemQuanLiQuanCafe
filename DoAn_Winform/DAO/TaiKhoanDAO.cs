@@ -17,10 +17,17 @@ namespace DAO
             { Tendangnhap = p.TENDANGNHAP, Matkhau = p.MATKHAU, Loaitaikhoan = p.LOAITAIKHOAN, Tennv=p.NHAN_VIEN.TENNV}).ToList();
         }
 
+        public TaiKhoanDTO TimKiemTK(string tenDN)
+        {
+            return db.TAI_KHOAN.Where(p => p.TRANGTHAIXOA == false && p.TENDANGNHAP == tenDN).Select(p => new TaiKhoanDTO 
+            { Tendangnhap = p.TENDANGNHAP, Matkhau = p.MATKHAU, Loaitaikhoan = p.LOAITAIKHOAN, Manv = p.MANV }).SingleOrDefault();
+        }
+
         public bool ThemTK(TaiKhoanDTO tk)
         {
             try
             {
+                //Lưu ý do dùng TENDANGNHAP làm khóa nên khi thêm 1 tên ĐN trùng với 1 tên đã có thì sẽ thêm thất bại
                 TAI_KHOAN tkDB = new TAI_KHOAN
                 {
                     TENDANGNHAP=tk.Tendangnhap,

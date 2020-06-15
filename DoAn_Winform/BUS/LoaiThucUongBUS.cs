@@ -17,6 +17,11 @@ namespace BUS
             return loaituTam.LoadDsLoaiTU();
         }
 
+        public LoaiThucUongDTO TimKiemLoaiTU(string tenLTU)
+        {
+            return loaituTam.TimKiemLoaiTU(tenLTU);
+        }
+
         public bool ThemLoaiTU(LoaiThucUongDTO ltu)
         {
             return loaituTam.ThemLoaiTU(ltu);

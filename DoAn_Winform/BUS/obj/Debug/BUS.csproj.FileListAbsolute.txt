@@ -10,3 +10,15 @@ D:\DoAn_PhanMemQuanLiQuanCafe\Project\DoAn_Winform\BUS\obj\Debug\BUS.pdb
 D:\DoAn_PhanMemQuanLiQuanCafe\Project\DoAn_Winform\BUS\bin\Debug\DTO.dll
 D:\DoAn_PhanMemQuanLiQuanCafe\Project\DoAn_Winform\BUS\bin\Debug\DTO.pdb
 D:\DoAn_PhanMemQuanLiQuanCafe\Project\DoAn_Winform\BUS\bin\Debug\BUS.dll.config
+C:\Users\hungh\OneDrive\Desktop\Đồ án\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\BUS\bin\Debug\BUS.dll.config
+C:\Users\hungh\OneDrive\Desktop\Đồ án\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\BUS\bin\Debug\BUS.dll
+C:\Users\hungh\OneDrive\Desktop\Đồ án\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\BUS\bin\Debug\BUS.pdb
+C:\Users\hungh\OneDrive\Desktop\Đồ án\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\BUS\bin\Debug\DAO.dll
+C:\Users\hungh\OneDrive\Desktop\Đồ án\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\BUS\bin\Debug\DTO.dll
+C:\Users\hungh\OneDrive\Desktop\Đồ án\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\BUS\bin\Debug\EntityFramework.dll
+C:\Users\hungh\OneDrive\Desktop\Đồ án\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\BUS\bin\Debug\DTO.pdb
+C:\Users\hungh\OneDrive\Desktop\Đồ án\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\BUS\bin\Debug\DAO.pdb
+C:\Users\hungh\OneDrive\Desktop\Đồ án\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\BUS\bin\Debug\EntityFramework.xml
+C:\Users\hungh\OneDrive\Desktop\Đồ án\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\BUS\obj\Debug\BUS.csprojResolveAssemblyReference.cache
+C:\Users\hungh\OneDrive\Desktop\Đồ án\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\BUS\obj\Debug\BUS.dll
+C:\Users\hungh\OneDrive\Desktop\Đồ án\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\BUS\obj\Debug\BUS.pdb

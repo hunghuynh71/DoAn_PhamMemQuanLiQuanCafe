@@ -15,6 +15,12 @@ namespace DAO
             return db.NHA_CUNG_CAP.Where(p => p.TRANGTHAIXOA == false).Select(p => new NhaCungCapDTO 
             { Mancc = p.MANCC, Tenncc = p.TENNCC, Diachi = p.DIACHI, Sdt = p.SDT }).ToList();
         }
+        
+        public NhaCungCapDTO TimKiemNCC(string tenNCC)
+        {
+            return db.NHA_CUNG_CAP.Where(p => p.TRANGTHAIXOA == false && p.TENNCC == tenNCC).Select(p => new NhaCungCapDTO 
+            { Mancc=p.MANCC, Tenncc = p.TENNCC, Diachi = p.DIACHI, Sdt = p.SDT }).SingleOrDefault();
+        }
 
         public bool ThemNCC(NhaCungCapDTO ncc)
         {

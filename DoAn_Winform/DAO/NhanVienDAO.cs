@@ -17,6 +17,12 @@ namespace DAO
             { Manv = p.MANV, Tennv = p.TENNV, Diachi = p.DIACHI, Sdt = p.SDT, Chucvu = p.CHUCVU }).ToList();  
         }
 
+        public NhanVienDTO TimKiemNV(string tenNV)
+        {
+            return db.NHAN_VIEN.Where(p => p.TRANGTHAIXOA == false && p.TENNV == tenNV).Select(p => new NhanVienDTO 
+            { Manv = p.MANV, Tennv = p.TENNV, Diachi = p.DIACHI, Sdt = p.SDT, Chucvu = p.CHUCVU }).SingleOrDefault();
+        }
+
         public bool ThemNV(NhanVienDTO nv)
         {
             try

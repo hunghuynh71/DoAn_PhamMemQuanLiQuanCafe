@@ -17,6 +17,11 @@ namespace BUS
             return tuTam.LoadDsThucUong();
         }
 
+        public ThucUongDTO TimKiemTU(string tenTU)
+        {
+            return tuTam.TimKiemTU(tenTU);
+        }
+
         public bool ThemTU(ThucUongDTO tu)
         {
             return tuTam.ThemTU(tu);

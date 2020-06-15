@@ -17,6 +17,12 @@ namespace DAO
             { Maloaitu = p.MALOAITU, Tenloaitu = p.TENLOAITU }).ToList();
         }
 
+        public LoaiThucUongDTO TimKiemLoaiTU(string tenLTU)
+        {
+            return db.LOAI_THUC_UONG.Where(p => p.TRANGTHAIXOA == false && p.TENLOAITU == tenLTU).Select(p => new LoaiThucUongDTO 
+            { Maloaitu = p.MALOAITU, Tenloaitu = p.TENLOAITU }).SingleOrDefault();
+        }
+
         public bool ThemLoaiTU(LoaiThucUongDTO ltu)
         {
             try

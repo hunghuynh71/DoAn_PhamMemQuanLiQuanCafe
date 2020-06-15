@@ -3,3 +3,8 @@ D:\DoAn_PhanMemQuanLiQuanCafe\Project\DTO\bin\Debug\DTO.pdb
 D:\DoAn_PhanMemQuanLiQuanCafe\Project\DTO\obj\Debug\DTO.csprojResolveAssemblyReference.cache
 D:\DoAn_PhanMemQuanLiQuanCafe\Project\DTO\obj\Debug\DTO.dll
 D:\DoAn_PhanMemQuanLiQuanCafe\Project\DTO\obj\Debug\DTO.pdb
+C:\Users\hungh\OneDrive\Desktop\Đồ án\DoAn_PhamMemQuanLiQuanCafe\DTO\bin\Debug\DTO.dll
+C:\Users\hungh\OneDrive\Desktop\Đồ án\DoAn_PhamMemQuanLiQuanCafe\DTO\bin\Debug\DTO.pdb
+C:\Users\hungh\OneDrive\Desktop\Đồ án\DoAn_PhamMemQuanLiQuanCafe\DTO\obj\Debug\DTO.csprojResolveAssemblyReference.cache
+C:\Users\hungh\OneDrive\Desktop\Đồ án\DoAn_PhamMemQuanLiQuanCafe\DTO\obj\Debug\DTO.dll
+C:\Users\hungh\OneDrive\Desktop\Đồ án\DoAn_PhamMemQuanLiQuanCafe\DTO\obj\Debug\DTO.pdb

@@ -17,6 +17,12 @@ namespace DAO
             { Matu = p.MATU, Tentu = p.TENTU, Maloaitu = p.MALOAITU, Gia = p.GIA }).ToList();
         }
 
+        public ThucUongDTO TimKiemTU(string tenTU)
+        {
+            return db.THUC_UONG.Where(p => p.TRANGTHAIXOA == false && p.TENTU == tenTU).Select(p => new ThucUongDTO 
+            { Matu = p.MATU, Tentu = p.TENTU, Maloaitu = p.MALOAITU, Gia = p.GIA }).SingleOrDefault();
+        }
+
         public bool ThemTU(ThucUongDTO tu)
         {
             try

@@ -16,6 +16,12 @@ namespace DAO
             { Soban = p.SOBAN, Tenban = p.TENBAN, Socho = p.SOCHO, Trangthai = p.TRANGTHAI }).ToList();
         }
 
+        public BanDTO TimKiemBan(string tenBan)
+        {
+            return db.BANs.Where(p => p.TRANGTHAIXOA == false && p.TENBAN == tenBan).Select(p => new BanDTO 
+            { Soban = p.SOBAN, Tenban = p.TENBAN, Socho = p.SOCHO, Trangthai = p.TRANGTHAI }).SingleOrDefault();
+        }
+
         public bool ThemBan(BanDTO ban)
         {
             try

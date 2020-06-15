@@ -17,6 +17,11 @@ namespace BUS
             return nccTam.LoadDsNCC();
         }
 
+        public NhaCungCapDTO TimKiemNCC(string tenNCC)
+        {
+            return nccTam.TimKiemNCC(tenNCC);
+        }
+
         public bool ThemNCC(NhaCungCapDTO ncc)
         {
             return nccTam.ThemNCC(ncc);

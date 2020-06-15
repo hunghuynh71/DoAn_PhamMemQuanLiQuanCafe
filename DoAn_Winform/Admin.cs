@@ -30,6 +30,20 @@ namespace DoAn_Winform
             dtgvBan.DataSource = ban.LoadDsBan();
         }
 
+        void AutoCompleteBan()
+        {
+            var source = new AutoCompleteStringCollection();
+
+            foreach (BanDTO item in banBus.LoadDsBan())
+            {
+                source.Add(item.Tenban);
+            }
+
+            txtTimKiemBan.AutoCompleteCustomSource = source;
+            txtTimKiemBan.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            txtTimKiemBan.AutoCompleteSource = AutoCompleteSource.CustomSource;
+        }
+
         //Thức uống
         void LoadComboboxLoaiTU()
         {
@@ -39,9 +53,23 @@ namespace DoAn_Winform
             colLoaiThucUong.DisplayMember = "TENLOAITU";
             colLoaiThucUong.ValueMember = "MALOAITU";
 
-            cboLoaiThucUong.DataSource=ltu.LoadDsLoaiTU();
+            cboLoaiThucUong.DataSource = ltu.LoadDsLoaiTU();
             cboLoaiThucUong.DisplayMember = "TENLOAITU";
             cboLoaiThucUong.ValueMember = "MALOAITU";
+        }
+
+        void AutoCompleteTU()
+        {
+            var source = new AutoCompleteStringCollection();
+
+            foreach(ThucUongDTO item in tuBUS.LoadDsTU())
+            {
+                source.Add(item.Tentu);
+            }
+
+            txtTimKiemThucUong.AutoCompleteCustomSource = source;
+            txtTimKiemThucUong.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            txtTimKiemThucUong.AutoCompleteSource = AutoCompleteSource.CustomSource;
         }
 
         void LoadDsThucUong()
@@ -59,6 +87,20 @@ namespace DoAn_Winform
             dtgvLoaiThucUong.DataSource = loaituBUS.LoadDsLoaiTU();
         }
 
+        void AutoCompleteLoaiTU()
+        {
+            var source = new AutoCompleteStringCollection();
+
+            foreach(LoaiThucUongDTO item in loaituBUS.LoadDsLoaiTU())
+            {
+                source.Add(item.Tenloaitu);
+            }
+
+            txtTimKiemLoaiThucUong.AutoCompleteCustomSource = source;
+            txtTimKiemLoaiThucUong.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            txtTimKiemLoaiThucUong.AutoCompleteSource = AutoCompleteSource.CustomSource;
+        }
+
         //Hàng hóa
         void LoadDsHangHoa()
         {
@@ -67,12 +109,40 @@ namespace DoAn_Winform
             dtgvHangHoa.DataSource = hangBUS.LoadDsHH();
         }
 
+        void AutoCompleteHH()
+        {
+            var source = new AutoCompleteStringCollection();
+
+            foreach(HangHoaDTO item in hangBUS.LoadDsHH())
+            {
+                source.Add(item.Tenhh);
+            }
+
+            txtTimKiemHangHoa.AutoCompleteCustomSource = source;
+            txtTimKiemHangHoa.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            txtTimKiemHangHoa.AutoCompleteSource = AutoCompleteSource.CustomSource;
+        }
+
         //Nhà cung cấp
         void LoadDsNCC()
         {
             NhaCungCapBUS nccBUS = new NhaCungCapBUS();
             dtgvNhaCungCap.AutoGenerateColumns = false;
             dtgvNhaCungCap.DataSource = nccBUS.LoadDsNCC();
+        }
+
+        void AutoCompleteNCC()
+        {
+            var source = new AutoCompleteStringCollection();
+
+            foreach(NhaCungCapDTO item in nccBUS.LoadDsNCC())
+            {
+                source.Add(item.Tenncc);
+            }
+
+            txtTimKiemNhaCungCap.AutoCompleteCustomSource = source;
+            txtTimKiemNhaCungCap.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            txtTimKiemNhaCungCap.AutoCompleteSource = AutoCompleteSource.CustomSource;
         }
 
         //Tài khoản
@@ -91,12 +161,40 @@ namespace DoAn_Winform
             dtgvTaiKhoan.DataSource = tkBUS.LoadDsTK();
         }
 
+        void AutoCompleteTK()
+        {
+            var source = new AutoCompleteStringCollection();
+
+            foreach (TaiKhoanDTO item in tkBUS.LoadDsTK())
+            {
+                source.Add(item.Tendangnhap);
+            }
+
+            txtTimKiemTaiKhoan.AutoCompleteCustomSource = source;
+            txtTimKiemTaiKhoan.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            txtTimKiemTaiKhoan.AutoCompleteSource = AutoCompleteSource.CustomSource;
+        }
+
         //Nhân viên
         void LoadDsNhanVien()
         {
             NhanVienBUS nvBUS = new NhanVienBUS();
             dtgvNhanVien.AutoGenerateColumns = false;
             dtgvNhanVien.DataSource = nvBUS.LoadDsNV();
+        }
+
+        void AutoCompleteNV()
+        {
+            var source = new AutoCompleteStringCollection();
+
+            foreach(NhanVienDTO item in nvBUS.LoadDsNV())
+            {
+                source.Add(item.Tennv);
+            }
+
+            txtTimKiemNhanVien.AutoCompleteCustomSource = source;
+            txtTimKiemNhanVien.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            txtTimKiemNhanVien.AutoCompleteSource = AutoCompleteSource.CustomSource;
         }
 
         #endregion
@@ -106,33 +204,39 @@ namespace DoAn_Winform
         #region Event
         private void frmAdmin_Load(object sender, EventArgs e)
         {
-            //Load bàn
+            //Tab bàn
             LoadDsBan();
+            AutoCompleteBan();
 
-            //Load thức uống
+            //Tab thức uống
             LoadComboboxLoaiTU();
             LoadDsThucUong();
+            AutoCompleteTU();
 
-            //Load loại thức uống
+            //Tab loại thức uống
             LoadDsLoaiTU();
+            AutoCompleteLoaiTU();
 
-            //Load hàng hóa
+            //Tab hàng hóa
             LoadDsHangHoa();
+            AutoCompleteHH();
 
-            //Load nhà cung cấp
+            //Tab nhà cung cấp
             LoadDsNCC();
+            AutoCompleteNCC();
 
-            //Load tài khoản
+            //Tab tài khoản
             LoadComboBoxTenNVCuaTK();
             LoadDsTaiKhoan();
+            AutoCompleteTK();
 
-            //Load nhân viên
+            //Tab nhân viên
             LoadDsNhanVien();
+            AutoCompleteNV();
         }       
 
         //Bàn
         BanBUS banBus= new BanBUS();
-        BanDTO banTam=new BanDTO();
 
         private void dtgvBan_MouseClick(object sender, MouseEventArgs e)
         {
@@ -144,14 +248,49 @@ namespace DoAn_Winform
             }
         }
 
+        private void btnTimKiemBan_Click(object sender, EventArgs e)
+        {
+            BanDTO banTam = new BanDTO();
+            string tenBan = txtTimKiemBan.Text;
+
+            banTam = banBus.TimKiemBan(tenBan);
+            if (banTam != null)
+            {
+                foreach (DataGridViewRow row in dtgvBan.Rows)
+                {
+                    if (Convert.ToInt32(row.Cells["colMaBan"].Value.ToString()) == banTam.Soban)
+                    {
+                        row.Selected = true;
+                        dtgvBan.CurrentCell = dtgvBan.Rows[row.Index].Cells[0];
+                        txtTenBan.Text = banTam.Tenban;
+                        nmrSoCho.Value = banTam.Socho;
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Không tìm thấy!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
         private void btnThemBan_Click(object sender, EventArgs e)
         {
-            banTam.Tenban = txtTenBan.Text;
-            banTam.Socho = Convert.ToInt32(nmrSoCho.Value);
+            BanDTO banTam = new BanDTO();
+            if (txtTenBan.Text==string.Empty)
+            {
+                MessageBox.Show("Bạn chưa nhập đầy đủ thông tin!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                banTam.Tenban = txtTenBan.Text;
+                banTam.Socho = Convert.ToInt32(nmrSoCho.Value);
+            }
+            
             if (banBus.ThemBan(banTam))
             {
                 MessageBox.Show("Thêm thành công!", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 LoadDsBan();
+                AutoCompleteBan();
             }
             else
             {
@@ -166,6 +305,7 @@ namespace DoAn_Winform
             {
                 MessageBox.Show("Xóa thành công!", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 LoadDsBan();
+                AutoCompleteBan();
             }
             else
             {
@@ -175,13 +315,23 @@ namespace DoAn_Winform
 
         private void btnSuaBan_Click(object sender, EventArgs e)
         {
+            BanDTO banTam = new BanDTO();
             banTam.Soban = Convert.ToInt32(dtgvBan.SelectedCells[0].OwningRow.Cells["colMaBan"].Value.ToString());
-            banTam.Tenban = txtTenBan.Text;
-            banTam.Socho = Convert.ToInt32(nmrSoCho.Value);
+            if (txtTenBan.Text == string.Empty)
+            {
+                MessageBox.Show("Bạn chưa nhập đầy đủ thông tin!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                banTam.Tenban = txtTenBan.Text;
+                banTam.Socho = Convert.ToInt32(nmrSoCho.Value);
+            }
+
             if (banBus.SuaBan(banTam))
             {
                 MessageBox.Show("Sửa thành công!", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 LoadDsBan();
+                AutoCompleteBan();
             }
             else
             {
@@ -191,7 +341,6 @@ namespace DoAn_Winform
 
         //Thức uống
         ThucUongBUS tuBUS = new ThucUongBUS();
-        ThucUongDTO tuTam = new ThucUongDTO();
 
         private void dtgvThucUong_MouseClick(object sender, MouseEventArgs e)
         {
@@ -204,15 +353,50 @@ namespace DoAn_Winform
             }
         }
 
+        private void btnTimKiemThucUong_Click(object sender, EventArgs e)
+        {
+            ThucUongDTO tuTam = new ThucUongDTO();
+            string tenTU = txtTimKiemThucUong.Text;
+            tuTam = tuBUS.TimKiemTU(tenTU);
+            if (tuTam != null)
+            {
+                foreach (DataGridViewRow row in dtgvThucUong.Rows)
+                {
+                    if (Convert.ToInt32(row.Cells["colMaTU"].Value.ToString()) == tuTam.Matu)
+                    {
+                        row.Selected = true;
+                        dtgvThucUong.CurrentCell = dtgvThucUong.Rows[row.Index].Cells[0];
+                        txtTenThucUong.Text = tuTam.Tentu;
+                        cboLoaiThucUong.SelectedValue = tuTam.Maloaitu;
+                        txtGia.Text = tuTam.Gia.ToString();
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Không tìm thấy!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
         private void btnThemThucUong_Click(object sender, EventArgs e)
         {
-            tuTam.Tentu = txtTenThucUong.Text;
-            tuTam.Maloaitu = Convert.ToInt32(cboLoaiThucUong.SelectedValue);
-            tuTam.Gia = Convert.ToDouble(txtGia.Text);            
+            ThucUongDTO tuTam = new ThucUongDTO();
+            if (txtTenThucUong.Text==string.Empty||txtGia.Text==string.Empty)
+            {
+                MessageBox.Show("Bạn chưa nhập đầy đủ thông tin!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                tuTam.Tentu = txtTenThucUong.Text;
+                tuTam.Maloaitu = Convert.ToInt32(cboLoaiThucUong.SelectedValue);
+                tuTam.Gia = Convert.ToDouble(txtGia.Text);
+            }
+                        
             if (tuBUS.ThemTU(tuTam))
             {
                 MessageBox.Show("Thêm thành công!", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 LoadDsThucUong();
+                AutoCompleteTU();
             }
             else
             {
@@ -227,6 +411,7 @@ namespace DoAn_Winform
             {
                 MessageBox.Show("Xóa thành công!", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 LoadDsThucUong();
+                AutoCompleteTU();
             }
             else
             {
@@ -236,14 +421,24 @@ namespace DoAn_Winform
 
         private void btnSuaThucUong_Click(object sender, EventArgs e)
         {
+            ThucUongDTO tuTam = new ThucUongDTO();
             tuTam.Matu = Convert.ToInt32(dtgvThucUong.SelectedCells[0].OwningRow.Cells["colMaTU"].Value.ToString());
-            tuTam.Tentu = txtTenThucUong.Text;
-            tuTam.Maloaitu = Convert.ToInt32(cboLoaiThucUong.SelectedValue);
-            tuTam.Gia = Convert.ToDouble(txtGia.Text);
+            if (txtTenThucUong.Text == string.Empty || txtGia.Text == string.Empty)
+            {
+                MessageBox.Show("Bạn chưa nhập đầy đủ thông tin!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                tuTam.Tentu = txtTenThucUong.Text;
+                tuTam.Maloaitu = Convert.ToInt32(cboLoaiThucUong.SelectedValue);
+                tuTam.Gia = Convert.ToDouble(txtGia.Text);
+            }
+
             if (tuBUS.SuaTU(tuTam))
             {
                 MessageBox.Show("Sửa thành công!", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 LoadDsThucUong();
+                AutoCompleteTU();
             }
             else
             {
@@ -253,7 +448,6 @@ namespace DoAn_Winform
 
         //Loại thức uống
         LoaiThucUongBUS loaituBUS = new LoaiThucUongBUS();
-        LoaiThucUongDTO ltuTam = new LoaiThucUongDTO();
 
         private void dtgvLoaiThucUong_MouseClick(object sender, MouseEventArgs e)
         {
@@ -264,13 +458,47 @@ namespace DoAn_Winform
             }
         }
 
+        private void btnLoaiThucUong_Click(object sender, EventArgs e)
+        {
+            LoaiThucUongDTO ltuTam = new LoaiThucUongDTO();
+            string tenLTU = txtTimKiemLoaiThucUong.Text;
+            ltuTam = loaituBUS.TimKiemLoaiTU(tenLTU);
+            if (ltuTam != null)
+            {
+                foreach (DataGridViewRow row in dtgvLoaiThucUong.Rows)
+                {
+                    if (Convert.ToInt32(row.Cells["colMaLoaiTU"].Value.ToString()) == ltuTam.Maloaitu)
+                    {
+                        row.Selected = true;
+                        dtgvLoaiThucUong.CurrentCell = dtgvLoaiThucUong.Rows[row.Index].Cells[0];
+                        txtTenLoaiThucUong.Text = ltuTam.Tenloaitu;
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Không tìm thấy!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
         private void btnThemLoaiThucUong_Click(object sender, EventArgs e)
         {
-            ltuTam.Tenloaitu = txtTenLoaiThucUong.Text;
+            LoaiThucUongDTO ltuTam = new LoaiThucUongDTO();
+            if(txtTenLoaiThucUong.Text==string.Empty)
+            {
+                MessageBox.Show("Bạn chưa nhập đầy đủ thông tin!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                ltuTam.Tenloaitu = txtTenLoaiThucUong.Text;
+            }
+            
             if (loaituBUS.ThemLoaiTU(ltuTam))
             {
                 MessageBox.Show("Thêm thành công!", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 LoadDsLoaiTU();
+                LoadComboboxLoaiTU();
+                AutoCompleteLoaiTU();
             }
             else
             {
@@ -285,6 +513,8 @@ namespace DoAn_Winform
             {
                 MessageBox.Show("Xóa thành công!", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 LoadDsLoaiTU();
+                LoadComboboxLoaiTU();
+                AutoCompleteLoaiTU();
             }
             else
             {
@@ -294,12 +524,23 @@ namespace DoAn_Winform
 
         private void btnSuaLoaiThucUong_Click(object sender, EventArgs e)
         {
+            LoaiThucUongDTO ltuTam = new LoaiThucUongDTO();
             ltuTam.Maloaitu = Convert.ToInt32(dtgvLoaiThucUong.SelectedCells[0].OwningRow.Cells["colMaLoaiTU"].Value.ToString());
-            ltuTam.Tenloaitu = txtTenLoaiThucUong.Text;
+            if (txtTenLoaiThucUong.Text == string.Empty)
+            {
+                MessageBox.Show("Bạn chưa nhập đầy đủ thông tin!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                ltuTam.Tenloaitu = txtTenLoaiThucUong.Text;
+            }
+
             if (loaituBUS.SuaLoaiTU(ltuTam))
             {
                 MessageBox.Show("Sửa thành công!", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 LoadDsLoaiTU();
+                LoadComboboxLoaiTU();
+                AutoCompleteLoaiTU();
             }
             else
             {
@@ -309,7 +550,6 @@ namespace DoAn_Winform
 
         //Hàng hóa
         HangHoaBUS hangBUS = new HangHoaBUS();
-        HangHoaDTO hhTam = new HangHoaDTO();
 
         private void dtgvHangHoa_MouseClick(object sender, MouseEventArgs e)
         {
@@ -322,15 +562,51 @@ namespace DoAn_Winform
             }
         }
 
+        private void btnTimKiemHangHoa_Click(object sender, EventArgs e)
+        {
+            HangHoaDTO hhTam = new HangHoaDTO();
+            string tenHH = txtTimKiemHangHoa.Text;
+            hhTam = hangBUS.TimKiemHH(tenHH);
+
+            if (hhTam != null)
+            {
+                foreach (DataGridViewRow row in dtgvHangHoa.Rows)
+                {
+                    if (Convert.ToInt32(row.Cells["colMaHH"].Value.ToString()) == hhTam.Mahh)
+                    {
+                        row.Selected = true;
+                        dtgvHangHoa.CurrentCell = dtgvHangHoa.Rows[row.Index].Cells[0];
+                        txtTenHangHoa.Text = hhTam.Tenhh;
+                        txtDonViTinh.Text = hhTam.Dvt;
+                        txtSoLuongTon.Text = hhTam.Slton.ToString();
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Không tìm thấy!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
         private void btnThemHangHoa_Click(object sender, EventArgs e)
         {
-            hhTam.Tenhh = txtTenHangHoa.Text;
-            hhTam.Dvt = txtDonViTinh.Text;
-            hhTam.Slton = Convert.ToInt32(txtSoLuongTon.Text);
+            HangHoaDTO hhTam = new HangHoaDTO();
+            if (txtTenHangHoa.Text == string.Empty || txtDonViTinh.Text == string.Empty || txtSoLuongTon.Text == string.Empty) 
+            {
+                MessageBox.Show("Bạn chưa nhập đầy đủ thông tin!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                hhTam.Tenhh = txtTenHangHoa.Text;
+                hhTam.Dvt = txtDonViTinh.Text;
+                hhTam.Slton = Convert.ToInt32(txtSoLuongTon.Text);
+            }
+            
             if (hangBUS.ThemHH(hhTam))
             {
                 MessageBox.Show("Thêm thành công!", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 LoadDsHangHoa();
+                AutoCompleteHH();
             }
             else
             {
@@ -345,6 +621,7 @@ namespace DoAn_Winform
             {
                 MessageBox.Show("Xóa thành công!", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 LoadDsHangHoa();
+                AutoCompleteHH();
             }
             else
             {
@@ -354,14 +631,24 @@ namespace DoAn_Winform
 
         private void btnSuaHangHoa_Click(object sender, EventArgs e)
         {
+            HangHoaDTO hhTam = new HangHoaDTO();
             hhTam.Mahh = Convert.ToInt32(dtgvHangHoa.SelectedCells[0].OwningRow.Cells["colMaHH"].Value.ToString());
-            hhTam.Tenhh = txtTenHangHoa.Text;
-            hhTam.Dvt = txtDonViTinh.Text;
-            hhTam.Slton = Convert.ToInt32(txtSoLuongTon.Text);
-            if (hangBUS.ThemHH(hhTam))
+            if (txtTenHangHoa.Text == string.Empty || txtDonViTinh.Text == string.Empty || txtSoLuongTon.Text == string.Empty)
+            {
+                MessageBox.Show("Bạn chưa nhập đầy đủ thông tin!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                hhTam.Tenhh = txtTenHangHoa.Text;
+                hhTam.Dvt = txtDonViTinh.Text;
+                hhTam.Slton = Convert.ToInt32(txtSoLuongTon.Text);
+            }
+
+            if (hangBUS.SuaHH(hhTam))
             {
                 MessageBox.Show("Sửa thành công!", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 LoadDsHangHoa();
+                AutoCompleteHH();
             }
             else
             {
@@ -371,8 +658,6 @@ namespace DoAn_Winform
 
         //Nhà cung cấp
         NhaCungCapBUS nccBUS = new NhaCungCapBUS();
-        NhaCungCapDTO nccTam = new NhaCungCapDTO();
-
 
         private void dtgvNhaCungCap_MouseClick(object sender, MouseEventArgs e)
         {
@@ -385,15 +670,50 @@ namespace DoAn_Winform
             }
         }
 
+        private void btnTimKiemNhaCungCap_Click(object sender, EventArgs e)
+        {
+            NhaCungCapDTO nccTam = new NhaCungCapDTO();
+            string tenNCC = txtTimKiemNhaCungCap.Text;
+            nccTam = nccBUS.TimKiemNCC(tenNCC);
+            if (nccTam != null)
+            {
+                foreach(DataGridViewRow row in dtgvNhaCungCap.Rows)
+                {
+                    if(Convert.ToInt32(row.Cells["colMaNCC"].Value.ToString()) == nccTam.Mancc)
+                    {
+                        row.Selected = true;
+                        dtgvNhaCungCap.CurrentCell = dtgvNhaCungCap.Rows[row.Index].Cells[0];
+                        txtTenNhaCungCap.Text = nccTam.Tenncc;
+                        txtDiaChiNhaCungCap.Text = nccTam.Diachi;
+                        txtSDTNhaCungCap.Text = nccTam.Sdt;
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Không tìm thấy!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
         private void btnThemNhaCungCap_Click(object sender, EventArgs e)
         {
-            nccTam.Tenncc = txtTenNhaCungCap.Text;
-            nccTam.Diachi = txtDiaChiNhaCungCap.Text;
-            nccTam.Sdt = txtSDTNhaCungCap.Text;
+            NhaCungCapDTO nccTam = new NhaCungCapDTO();
+            if (txtTenNhaCungCap.Text == string.Empty || txtDiaChiNhaCungCap.Text == string.Empty || txtSDTNhaCungCap.Text == string.Empty)
+            {
+                MessageBox.Show("Bạn chưa nhập đầy đủ thông tin!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                nccTam.Tenncc = txtTenNhaCungCap.Text;
+                nccTam.Diachi = txtDiaChiNhaCungCap.Text;
+                nccTam.Sdt = txtSDTNhaCungCap.Text;
+            }
+            
             if(nccBUS.ThemNCC(nccTam))
             {
                 MessageBox.Show("Thêm thành công!", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 LoadDsNCC();
+                AutoCompleteNCC();
             }
             else
             {
@@ -408,6 +728,7 @@ namespace DoAn_Winform
             {
                 MessageBox.Show("Xóa thành công!", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 LoadDsNCC();
+                AutoCompleteNCC();
             }
             else
             {
@@ -417,14 +738,24 @@ namespace DoAn_Winform
 
         private void btnSuaNhaCungCap_Click(object sender, EventArgs e)
         {
+            NhaCungCapDTO nccTam = new NhaCungCapDTO();
             nccTam.Mancc = Convert.ToInt32(dtgvNhaCungCap.SelectedCells[0].OwningRow.Cells["colmancc"].Value.ToString());
-            nccTam.Tenncc = txtTenNhaCungCap.Text;
-            nccTam.Diachi = txtDiaChiNhaCungCap.Text;
-            nccTam.Sdt = txtSDTNhaCungCap.Text;
+            if (txtTenNhaCungCap.Text == string.Empty || txtDiaChiNhaCungCap.Text == string.Empty || txtSDTNhaCungCap.Text == string.Empty)
+            {
+                MessageBox.Show("Bạn chưa nhập đầy đủ thông tin!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                nccTam.Tenncc = txtTenNhaCungCap.Text;
+                nccTam.Diachi = txtDiaChiNhaCungCap.Text;
+                nccTam.Sdt = txtSDTNhaCungCap.Text;
+            }
+
             if (nccBUS.SuaNCC(nccTam))
             {
                 MessageBox.Show("Sửa thành công!", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 LoadDsNCC();
+                AutoCompleteNCC();
             }
             else
             {
@@ -434,7 +765,6 @@ namespace DoAn_Winform
 
         //Tài khoản
         TaiKhoanBUS tkBUS = new TaiKhoanBUS();
-        TaiKhoanDTO tkTam = new TaiKhoanDTO();
 
         private void dtgvTaiKhoan_MouseClick(object sender, MouseEventArgs e)
         {
@@ -448,16 +778,52 @@ namespace DoAn_Winform
             }
         }
 
+        private void btnTimKiemTaiKhoan_Click(object sender, EventArgs e)
+        {
+            TaiKhoanDTO tkTam = new TaiKhoanDTO();
+            string tenDN = txtTimKiemTaiKhoan.Text;
+            tkTam = tkBUS.TimKiemTK(tenDN);
+            if (tkTam != null)
+            {
+                foreach (DataGridViewRow row in dtgvTaiKhoan.Rows)
+                {
+                    if (row.Cells["colTenDangNhap"].Value.ToString() == tkTam.Tendangnhap)
+                    {
+                        row.Selected = true;
+                        dtgvTaiKhoan.CurrentCell = dtgvTaiKhoan.Rows[row.Index].Cells[0];
+                        txtTenDangNhap.Text = tkTam.Tendangnhap;
+                        txtMatKhau.Text = tkTam.Matkhau;
+                        txtLoaiTaiKhoan.Text = tkTam.Loaitaikhoan;
+                        cboTenNVCuaTK.SelectedValue = tkTam.Manv;
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Không tìm thấy!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
         private void btnThemTaiKhoan_Click(object sender, EventArgs e)
         {
-            tkTam.Tendangnhap = txtTenDangNhap.Text;
-            tkTam.Matkhau = txtMatKhau.Text;
-            tkTam.Loaitaikhoan = txtLoaiTaiKhoan.Text;
-            tkTam.Manv = Convert.ToInt32(cboTenNVCuaTK.SelectedValue);
+            TaiKhoanDTO tkTam = new TaiKhoanDTO();
+            if(txtTenDangNhap.Text==string.Empty||txtMatKhau.Text==string.Empty||txtLoaiTaiKhoan.Text==string.Empty)
+            {
+                MessageBox.Show("Bạn chưa nhập đầy đủ thông tin!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                tkTam.Tendangnhap = txtTenDangNhap.Text;
+                tkTam.Matkhau = txtMatKhau.Text;
+                tkTam.Loaitaikhoan = txtLoaiTaiKhoan.Text;
+                tkTam.Manv = Convert.ToInt32(cboTenNVCuaTK.SelectedValue);
+            }
+            
             if(tkBUS.ThemTK(tkTam))
             {
                 MessageBox.Show("Thêm thành công!", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 LoadDsTaiKhoan();
+                AutoCompleteTK();
             }
             else
             {
@@ -472,6 +838,7 @@ namespace DoAn_Winform
             {
                 MessageBox.Show("Xóa thành công!", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 LoadDsTaiKhoan();
+                AutoCompleteTK();
             }
             else
             {
@@ -481,7 +848,6 @@ namespace DoAn_Winform
 
         //Nhân viên
         NhanVienBUS nvBUS = new NhanVienBUS();
-        NhanVienDTO nvTam = new NhanVienDTO();
 
         private void dtgvNhanVien_MouseClick(object sender, MouseEventArgs e)
         {
@@ -496,17 +862,53 @@ namespace DoAn_Winform
             }
         }
 
+        private void btnTimKiemNhanVien_Click(object sender, EventArgs e)
+        {
+            NhanVienDTO nvTam = new NhanVienDTO();
+            string tenNV = txtTimKiemNhanVien.Text;
+            nvTam = nvBUS.TimKiemNV(tenNV);
+            if (nvTam != null)
+            {
+                foreach (DataGridViewRow row in dtgvNhanVien.Rows)
+                {
+                    if (Convert.ToInt32(row.Cells["colMaNV"].Value.ToString()) == nvTam.Manv)
+                    {
+                        row.Selected = true;
+                        dtgvNhanVien.CurrentCell = dtgvNhanVien.Rows[row.Index].Cells[0];
+                        txtTenNhanVien.Text = nvTam.Tennv;
+                        txtDiaChiNhanVien.Text = nvTam.Diachi;
+                        txtSDTNhanVien.Text = nvTam.Sdt;
+                        txtChucVu.Text = nvTam.Chucvu;
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Không tìm thấy!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
         private void btnThemNhanVien_Click(object sender, EventArgs e)
         {
-            nvTam.Tennv = txtTenNhanVien.Text;
-            nvTam.Diachi = txtDiaChiNhanVien.Text;
-            nvTam.Sdt = txtSDTNhanVien.Text;
-            nvTam.Chucvu = txtChucVu.Text;
+            NhanVienDTO nvTam = new NhanVienDTO();
+            if (txtTenNhanVien.Text == string.Empty || txtDiaChiNhanVien.Text == string.Empty || txtSDTNhanVien.Text == string.Empty || txtChucVu.Text == string.Empty)
+            {
+                MessageBox.Show("Bạn chưa nhập đầy đủ thông tin!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                nvTam.Tennv = txtTenNhanVien.Text;
+                nvTam.Diachi = txtDiaChiNhanVien.Text;
+                nvTam.Sdt = txtSDTNhanVien.Text;
+                nvTam.Chucvu = txtChucVu.Text;
+            }
+
             if(nvBUS.ThemNV(nvTam))
             {
                 MessageBox.Show("Thêm thành công!", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 LoadDsNhanVien();
                 LoadComboBoxTenNVCuaTK();
+                AutoCompleteNV();
             }
             else
             {
@@ -522,6 +924,7 @@ namespace DoAn_Winform
                 MessageBox.Show("Xóa thành công!", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 LoadDsNhanVien();
                 LoadComboBoxTenNVCuaTK();
+                AutoCompleteNV();
             }
             else
             {
@@ -531,16 +934,26 @@ namespace DoAn_Winform
 
         private void btnSuaNhanVien_Click(object sender, EventArgs e)
         {
+            NhanVienDTO nvTam = new NhanVienDTO();
             nvTam.Manv = Convert.ToInt32(dtgvNhanVien.SelectedCells[0].OwningRow.Cells["colmanv"].Value.ToString());
-            nvTam.Tennv = txtTenNhanVien.Text;
-            nvTam.Diachi = txtDiaChiNhanVien.Text;
-            nvTam.Sdt = txtSDTNhanVien.Text;
-            nvTam.Chucvu = txtChucVu.Text;
+            if (txtTenNhanVien.Text == string.Empty || txtDiaChiNhanVien.Text == string.Empty || txtSDTNhanVien.Text == string.Empty || txtChucVu.Text == string.Empty)
+            {
+                MessageBox.Show("Bạn chưa nhập đầy đủ thông tin!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                nvTam.Tennv = txtTenNhanVien.Text;
+                nvTam.Diachi = txtDiaChiNhanVien.Text;
+                nvTam.Sdt = txtSDTNhanVien.Text;
+                nvTam.Chucvu = txtChucVu.Text;
+            }
+
             if (nvBUS.SuaNV(nvTam))
             {
                 MessageBox.Show("Sửa thành công!", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 LoadDsNhanVien();
                 LoadComboBoxTenNVCuaTK();
+                AutoCompleteNV();
             }
             else
             {
@@ -549,41 +962,5 @@ namespace DoAn_Winform
         }
 
         #endregion 
-
-        private void btnTimKiemBan_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnTimKiemThucUong_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnLoaiThucUong_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnTimKiemHangHoa_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnTimKiemNhaCungCap_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnTimKiemTaiKhoan_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnTimKiemNhanVien_Click(object sender, EventArgs e)
-        {
-
-        }
-
     }
 }

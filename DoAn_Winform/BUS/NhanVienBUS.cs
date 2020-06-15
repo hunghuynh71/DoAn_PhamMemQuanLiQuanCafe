@@ -17,6 +17,11 @@ namespace BUS
             return nvTam.LoadDsNV();
         }
 
+        public NhanVienDTO TimKiemNV(string tenNV)
+        {
+            return nvTam.TimKiemNV(tenNV);
+        }
+
         public bool ThemNV(NhanVienDTO nv)
         {
             return nvTam.ThemNV(nv);

@@ -17,6 +17,11 @@ namespace BUS
             return hhTam.LoadDsHH();
         }
 
+        public HangHoaDTO TimKiemHH(string tenHH)
+        {
+            return hhTam.TimKiemHH(tenHH);
+        }
+
         public bool ThemHH(HangHoaDTO hh)
         {
             return hhTam.ThemHH(hh);
@@ -24,7 +29,7 @@ namespace BUS
 
         public bool SuaHH(HangHoaDTO hh)
         {
-            return hhTam.ThemHH(hh);
+            return hhTam.SuaHH(hh);
         }
 
         public bool XoaHH(int maHH)

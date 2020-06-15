@@ -17,6 +17,11 @@ namespace BUS
             return banTam.LoadDsBan();
         }
 
+        public BanDTO TimKiemBan(string tenBan)
+        {
+            return banTam.TimKiemBan(tenBan);
+        }
+
         public bool ThemBan(BanDTO ban)
         {
             return banTam.ThemBan(ban);

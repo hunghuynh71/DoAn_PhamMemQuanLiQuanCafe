@@ -17,6 +17,13 @@ namespace DAO
             { Mahh = p.MAHH, Tenhh = p.TENHH, Dvt = p.DVT, Slton = p.SLTON }).ToList();
         }
 
+        public HangHoaDTO TimKiemHH(string tenHH)
+        {
+            return db.HANG_HOA.Where(p => p.TRANGTHAIXOA == false && p.TENHH == tenHH).Select(p => new HangHoaDTO 
+            { Mahh = p.MAHH, Tenhh = p.TENHH, Dvt = p.DVT, Slton = p.SLTON }).SingleOrDefault();
+
+        }
+
         public bool ThemHH(HangHoaDTO hh)
         {
             try
