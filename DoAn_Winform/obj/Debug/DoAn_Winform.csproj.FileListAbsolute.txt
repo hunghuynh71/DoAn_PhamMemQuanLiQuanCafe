@@ -48,9 +48,8 @@ D:\DoAn_PhanMemQuanLiQuanCafe\Project\DoAn_Winform\bin\Debug\EntityFramework.xml
 D:\DoAn_PhanMemQuanLiQuanCafe\Project\DoAn_Winform\bin\Debug\EntityFramework.SqlServer.xml
 D:\DoAn_PhanMemQuanLiQuanCafe\Project\DoAn_Winform\bin\Debug\DTO.dll
 D:\DoAn_PhanMemQuanLiQuanCafe\Project\DoAn_Winform\bin\Debug\DTO.pdb
+C:\Users\hungh\OneDrive\Desktop\Đồ án\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\bin\Debug\EntityFramework.xml
 C:\Users\hungh\OneDrive\Desktop\Đồ án\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\bin\Debug\DoAn_Winform.exe.config
-C:\Users\hungh\OneDrive\Desktop\Đồ án\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\obj\Debug\DoAn_Winform.exe
-C:\Users\hungh\OneDrive\Desktop\Đồ án\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\obj\Debug\DoAn_Winform.pdb
 C:\Users\hungh\OneDrive\Desktop\Đồ án\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\bin\Debug\DoAn_Winform.exe
 C:\Users\hungh\OneDrive\Desktop\Đồ án\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\bin\Debug\DoAn_Winform.pdb
 C:\Users\hungh\OneDrive\Desktop\Đồ án\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\bin\Debug\BUS.dll
@@ -61,12 +60,13 @@ C:\Users\hungh\OneDrive\Desktop\Đồ án\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winfor
 C:\Users\hungh\OneDrive\Desktop\Đồ án\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\bin\Debug\DTO.pdb
 C:\Users\hungh\OneDrive\Desktop\Đồ án\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\bin\Debug\BUS.pdb
 C:\Users\hungh\OneDrive\Desktop\Đồ án\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\bin\Debug\DAO.pdb
-C:\Users\hungh\OneDrive\Desktop\Đồ án\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\bin\Debug\EntityFramework.xml
 C:\Users\hungh\OneDrive\Desktop\Đồ án\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\hungh\OneDrive\Desktop\Đồ án\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\obj\Debug\DoAn_Winform.csprojResolveAssemblyReference.cache
 C:\Users\hungh\OneDrive\Desktop\Đồ án\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\obj\Debug\DoAn_Winform.frmAccount.resources
 C:\Users\hungh\OneDrive\Desktop\Đồ án\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\obj\Debug\DoAn_Winform.frmAdmin.resources
 C:\Users\hungh\OneDrive\Desktop\Đồ án\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\obj\Debug\DoAn_Winform.frmBanHang.resources
+C:\Users\hungh\OneDrive\Desktop\Đồ án\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\obj\Debug\DoAn_Winform.frmChonBaoCao.resources
+C:\Users\hungh\OneDrive\Desktop\Đồ án\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\obj\Debug\DoAn_Winform.frmXemBaoCao.resources
 C:\Users\hungh\OneDrive\Desktop\Đồ án\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\obj\Debug\DoAn_Winform.frmHoaDon.resources
 C:\Users\hungh\OneDrive\Desktop\Đồ án\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\obj\Debug\DoAn_Winform.frmLogin.resources
 C:\Users\hungh\OneDrive\Desktop\Đồ án\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\obj\Debug\DoAn_Winform.frmPhieuNhaphag.resources
@@ -76,3 +76,5 @@ C:\Users\hungh\OneDrive\Desktop\Đồ án\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winfor
 C:\Users\hungh\OneDrive\Desktop\Đồ án\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\obj\Debug\DoAn_Winform.frmHome.resources
 C:\Users\hungh\OneDrive\Desktop\Đồ án\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\obj\Debug\DoAn_Winform.frmDatHang.resources
 C:\Users\hungh\OneDrive\Desktop\Đồ án\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\obj\Debug\DoAn_Winform.csproj.GenerateResource.Cache
+C:\Users\hungh\OneDrive\Desktop\Đồ án\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\obj\Debug\DoAn_Winform.exe
+C:\Users\hungh\OneDrive\Desktop\Đồ án\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\obj\Debug\DoAn_Winform.pdb
