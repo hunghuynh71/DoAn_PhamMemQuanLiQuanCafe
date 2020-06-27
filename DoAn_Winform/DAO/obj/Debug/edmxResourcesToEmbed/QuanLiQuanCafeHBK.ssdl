@@ -39,15 +39,6 @@
     <Property Name="SL" Type="int" Nullable="false" />
     <Property Name="GIA" Type="float" Nullable="false" />
   </EntityType>
-  <EntityType Name="DAT_HANG">
-    <Key>
-      <PropertyRef Name="MADDH" />
-      <PropertyRef Name="MANCC" />
-    </Key>
-    <Property Name="MADDH" Type="int" Nullable="false" />
-    <Property Name="MANCC" Type="int" Nullable="false" />
-    <Property Name="NGAYGIAO" Type="date" Nullable="false" />
-  </EntityType>
   <EntityType Name="DON_DAT_HANG">
     <Key>
       <PropertyRef Name="MADDH" />
@@ -57,6 +48,9 @@
     <Property Name="MANVLAP" Type="int" Nullable="false" />
     <Property Name="TRANGTHAIXOA" Type="bit" Nullable="false" />
     <Property Name="TRANGTHAIDUYET" Type="bit" Nullable="false" />
+    <Property Name="MANCC" Type="int" Nullable="false" />
+    <Property Name="NGAYGIAO" Type="date" Nullable="false" />
+    <Property Name="TRANGTHAITAODON" Type="bit" Nullable="false" />
   </EntityType>
   <EntityType Name="HANG_HOA">
     <Key>
@@ -221,30 +215,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__DAT_HANG__MADDH__68487DD7">
-    <End Role="DON_DAT_HANG" Type="Self.DON_DAT_HANG" Multiplicity="1" />
-    <End Role="DAT_HANG" Type="Self.DAT_HANG" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="DON_DAT_HANG">
-        <PropertyRef Name="MADDH" />
-      </Principal>
-      <Dependent Role="DAT_HANG">
-        <PropertyRef Name="MADDH" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__DAT_HANG__MANCC__693CA210">
-    <End Role="NHA_CUNG_CAP" Type="Self.NHA_CUNG_CAP" Multiplicity="1" />
-    <End Role="DAT_HANG" Type="Self.DAT_HANG" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="NHA_CUNG_CAP">
-        <PropertyRef Name="MANCC" />
-      </Principal>
-      <Dependent Role="DAT_HANG">
-        <PropertyRef Name="MANCC" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK__DON_DAT_H__MANVL__3E52440B">
     <End Role="NHAN_VIEN" Type="Self.NHAN_VIEN" Multiplicity="1" />
     <End Role="DON_DAT_HANG" Type="Self.DON_DAT_HANG" Multiplicity="*" />
@@ -329,6 +299,18 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_DON_DAT_HANG_NHA_CUNG_CAP">
+    <End Role="NHA_CUNG_CAP" Type="Self.NHA_CUNG_CAP" Multiplicity="1" />
+    <End Role="DON_DAT_HANG" Type="Self.DON_DAT_HANG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NHA_CUNG_CAP">
+        <PropertyRef Name="MANCC" />
+      </Principal>
+      <Dependent Role="DON_DAT_HANG">
+        <PropertyRef Name="MANCC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_TAI_KHOAN_NHAN_VIEN">
     <End Role="NHAN_VIEN" Type="Self.NHAN_VIEN" Multiplicity="1" />
     <End Role="TAI_KHOAN" Type="Self.TAI_KHOAN" Multiplicity="*" />
@@ -377,7 +359,6 @@
     <EntitySet Name="CHI_TIET_DON_DAT_HANG" EntityType="Self.CHI_TIET_DON_DAT_HANG" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="CHI_TIET_HOA_DON" EntityType="Self.CHI_TIET_HOA_DON" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="CHI_TIET_PHIEU_NHAP_HANG" EntityType="Self.CHI_TIET_PHIEU_NHAP_HANG" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="DAT_HANG" EntityType="Self.DAT_HANG" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="DON_DAT_HANG" EntityType="Self.DON_DAT_HANG" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="HANG_HOA" EntityType="Self.HANG_HOA" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="HOA_DON" EntityType="Self.HOA_DON" Schema="dbo" store:Type="Tables" />
@@ -412,14 +393,6 @@
       <End Role="HANG_HOA" EntitySet="HANG_HOA" />
       <End Role="CHI_TIET_PHIEU_NHAP_HANG" EntitySet="CHI_TIET_PHIEU_NHAP_HANG" />
     </AssociationSet>
-    <AssociationSet Name="FK__DAT_HANG__MADDH__68487DD7" Association="Self.FK__DAT_HANG__MADDH__68487DD7">
-      <End Role="DON_DAT_HANG" EntitySet="DON_DAT_HANG" />
-      <End Role="DAT_HANG" EntitySet="DAT_HANG" />
-    </AssociationSet>
-    <AssociationSet Name="FK__DAT_HANG__MANCC__693CA210" Association="Self.FK__DAT_HANG__MANCC__693CA210">
-      <End Role="NHA_CUNG_CAP" EntitySet="NHA_CUNG_CAP" />
-      <End Role="DAT_HANG" EntitySet="DAT_HANG" />
-    </AssociationSet>
     <AssociationSet Name="FK__DON_DAT_H__MANVL__3E52440B" Association="Self.FK__DON_DAT_H__MANVL__3E52440B">
       <End Role="NHAN_VIEN" EntitySet="NHAN_VIEN" />
       <End Role="DON_DAT_HANG" EntitySet="DON_DAT_HANG" />
@@ -447,6 +420,10 @@
     <AssociationSet Name="FK_DDH" Association="Self.FK_DDH">
       <End Role="DON_DAT_HANG" EntitySet="DON_DAT_HANG" />
       <End Role="PHIEU_NHAP_HANG" EntitySet="PHIEU_NHAP_HANG" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DON_DAT_HANG_NHA_CUNG_CAP" Association="Self.FK_DON_DAT_HANG_NHA_CUNG_CAP">
+      <End Role="NHA_CUNG_CAP" EntitySet="NHA_CUNG_CAP" />
+      <End Role="DON_DAT_HANG" EntitySet="DON_DAT_HANG" />
     </AssociationSet>
     <AssociationSet Name="FK_TAI_KHOAN_NHAN_VIEN" Association="Self.FK_TAI_KHOAN_NHAN_VIEN">
       <End Role="NHAN_VIEN" EntitySet="NHAN_VIEN" />

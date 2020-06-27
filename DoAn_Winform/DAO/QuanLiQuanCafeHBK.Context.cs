@@ -31,7 +31,6 @@ namespace DAO
         public virtual DbSet<CHI_TIET_DON_DAT_HANG> CHI_TIET_DON_DAT_HANG { get; set; }
         public virtual DbSet<CHI_TIET_HOA_DON> CHI_TIET_HOA_DON { get; set; }
         public virtual DbSet<CHI_TIET_PHIEU_NHAP_HANG> CHI_TIET_PHIEU_NHAP_HANG { get; set; }
-        public virtual DbSet<DAT_HANG> DAT_HANG { get; set; }
         public virtual DbSet<DON_DAT_HANG> DON_DAT_HANG { get; set; }
         public virtual DbSet<HANG_HOA> HANG_HOA { get; set; }
         public virtual DbSet<HOA_DON> HOA_DON { get; set; }

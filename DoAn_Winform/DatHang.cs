@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BUS;
+using DTO;
 
 namespace DoAn_Winform
 {
@@ -16,33 +18,107 @@ namespace DoAn_Winform
         {
             InitializeComponent();
         }
-        int i = 5;
-        private void addThemDongDH()
-        {
-            //Panel Pan = new Panel() { Width = 444, Height = 35, BackColor = Color.Silver };
-            //Label lblTenH = new Label() { Size = new Size(58, 13), Text = "Tên Hàng:", Location = new Point(13, 11) };
-            //ComboBox cboTenH = new ComboBox() { Width = 121, Height = 21, Size = new Size(121, 21), Location = new Point(76, 8) };
-            //Label lblSL = new Label() { Size = new Size(60, 13), Text = "Số Lượng:", Location = new Point(217, 11) };
-            //NumericUpDown numSL = new NumericUpDown() { Size = new Size(45, 20), Location = new Point(276, 9), Minimum = 1 };
-            //ComboBox cboDVT = new ComboBox() { Size = new Size(49, 21), Location = new Point(347, 8) };
 
-            //Pan.Controls.Add(lblTenH);
-            //Pan.Controls.Add(cboTenH);
-            //Pan.Controls.Add(lblSL);
-            //Pan.Controls.Add(numSL);
-            //Pan.Controls.Add(cboDVT);
+        #region Method
+
+        void LoadComboboxTenHH()
+        {
+            HangHoaBUS hhBUS=new HangHoaBUS();
+            cboTenHangHoa.DataSource = hhBUS.LoadDsHH();
+            cboTenHangHoa.DisplayMember = "Tenhh";
+            cboTenHangHoa.ValueMember = "Mahh";
+        }
+
+        void LoadComboboxTenNCC()
+        {
+            NhaCungCapBUS nccBUS = new NhaCungCapBUS();
+            cboNhaCungCap.DataSource = nccBUS.LoadDsNCC();
+            cboNhaCungCap.DisplayMember = "Tenncc";
+            cboNhaCungCap.ValueMember = "Mancc";
+        }
+
+        void LoadDsDDH()
+        {
+            DonDatHangBUS ddhBUS=new DonDatHangBUS();
+            dtgvDsDDH.AutoGenerateColumns = false;
+            dtgvDsDDH.DataSource=ddhBUS.LoadDsDDH();
+            dtgvDsDDH.Columns["colNgayLap"].DefaultCellStyle.Format = "dd/MM/yyyy";
+            //foreach(DataRow row in dtgvDsDDH.Rows)
+            //{
+            //    if(Convert.ToUInt32(row["colTrangThaiDuyet"])==1)
+            //        colTrangThaiDuyet
+
+            //}
+        }
+
+        #endregion
+
+        #region Event
+
+        private void frmDatHang_Load(object sender, EventArgs e)
+        {
+            LoadComboboxTenHH();
+            LoadComboboxTenNCC();
+            LoadDsDDH();
+        }
+
+
+        private void btnTaoDDH_Click(object sender, EventArgs e)
+        {
+            DonDatHangDTO ddh = new DonDatHangDTO();
+            ddh.Manvlap = 15;
+            ddh.Mancc = ((NhaCungCapDTO)cboNhaCungCap.SelectedItem).Mancc;
+            ddh.Ngaygiao = DateTime.Now;
+            DonDatHangBUS ddhBUS = new DonDatHangBUS();
+            if(ddhBUS.ThemDDH(ddh))
+            {
+                MessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                LoadDsDDH();
+                             
+            }
+            else
+            {
+                MessageBox.Show("Thêm thất bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        //load chi tiết ddh chi chọn vào ddh trong danh sách
+        private void dtgvDsDDH_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                DataGridViewRow dtr = dtgvDsDDH.SelectedRows[0];
+                int maDDH = Convert.ToInt32(dtr.Cells["colMaDonDatHang"].Value.ToString());
+                ChiTietDonDatHangBUS ctddhBUS = new ChiTietDonDatHangBUS();
+                dtgvChiTietDatHang.AutoGenerateColumns = false;
+                dtgvChiTietDatHang.DataSource = ctddhBUS.LoadDsChiTietDDHtheoMaDDH(maDDH);
+            }
+        }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            //th1: thêm chi tiết khi chưa tạo đơn đặt hàng (thêm ddh mới)
             
-           
+                
         }
 
-        private void BtnThemDongDatH_Click(object sender, EventArgs e)
+        private void btnSua_Click(object sender, EventArgs e)
         {
-            addThemDongDH();
+
         }
+
+        #endregion
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-          
+
         }
+
+
+        private void btnDatHang_Click(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }

@@ -88,6 +88,7 @@
             this.btnThemThucUong.TabIndex = 4;
             this.btnThemThucUong.Text = "Thêm";
             this.btnThemThucUong.UseVisualStyleBackColor = true;
+            this.btnThemThucUong.Click += new System.EventHandler(this.btnThemThucUong_Click);
             // 
             // label4
             // 

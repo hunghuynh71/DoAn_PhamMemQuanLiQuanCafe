@@ -54,6 +54,7 @@
       <DependentUpon>QuanLiQuanCafeHBK.tt</DependentUpon>
     </Compile>
     <Compile Include="BanDAO.cs" />
+    <Compile Include="ChiTietDonDatHangDAO.cs" />
     <Compile Include="ChiTietHoaDonDAO.cs" />
     <Compile Include="CHI_TIET_DON_DAT_HANG.cs">
       <DependentUpon>QuanLiQuanCafeHBK.tt</DependentUpon>
@@ -64,9 +65,7 @@
     <Compile Include="CHI_TIET_PHIEU_NHAP_HANG.cs">
       <DependentUpon>QuanLiQuanCafeHBK.tt</DependentUpon>
     </Compile>
-    <Compile Include="DAT_HANG.cs">
-      <DependentUpon>QuanLiQuanCafeHBK.tt</DependentUpon>
-    </Compile>
+    <Compile Include="DonDatHangDAO.cs" />
     <Compile Include="DON_DAT_HANG.cs">
       <DependentUpon>QuanLiQuanCafeHBK.tt</DependentUpon>
     </Compile>

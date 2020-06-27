@@ -16,7 +16,7 @@ namespace DAO
     {
         public NHA_CUNG_CAP()
         {
-            this.DAT_HANG = new HashSet<DAT_HANG>();
+            this.DON_DAT_HANG = new HashSet<DON_DAT_HANG>();
             this.PHIEU_NHAP_HANG = new HashSet<PHIEU_NHAP_HANG>();
         }
     
@@ -26,7 +26,7 @@ namespace DAO
         public string SDT { get; set; }
         public bool TRANGTHAIXOA { get; set; }
     
-        public virtual ICollection<DAT_HANG> DAT_HANG { get; set; }
+        public virtual ICollection<DON_DAT_HANG> DON_DAT_HANG { get; set; }
         public virtual ICollection<PHIEU_NHAP_HANG> PHIEU_NHAP_HANG { get; set; }
     }
 }

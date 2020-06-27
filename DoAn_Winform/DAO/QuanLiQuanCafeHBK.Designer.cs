@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'D:\DoAn_PhanMemQuanLiQuanCafe\Project\DoAn_Winform\DAO\QuanLiQuanCafeHBK.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Users\hungh\OneDrive\Desktop\Đồ án\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\DAO\QuanLiQuanCafeHBK.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

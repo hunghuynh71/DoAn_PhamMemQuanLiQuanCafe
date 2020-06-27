@@ -84,8 +84,8 @@
             // đặtHàngToolStripMenuItem
             // 
             this.đặtHàngToolStripMenuItem.Name = "đặtHàngToolStripMenuItem";
-            this.đặtHàngToolStripMenuItem.Size = new System.Drawing.Size(223, 26);
-            this.đặtHàngToolStripMenuItem.Text = "Yêu cầu đặt hàng";
+            this.đặtHàngToolStripMenuItem.Size = new System.Drawing.Size(225, 26);
+            this.đặtHàngToolStripMenuItem.Text = "Lập yêu cầu đặt hàng";
             this.đặtHàngToolStripMenuItem.Click += new System.EventHandler(this.đặtHàngToolStripMenuItem_Click);
             // 
             // phiếuNhậpToolStripMenuItem
@@ -144,7 +144,7 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmHome";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Home";

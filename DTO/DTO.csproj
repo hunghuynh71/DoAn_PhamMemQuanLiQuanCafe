@@ -40,7 +40,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BanDTO.cs" />
+    <Compile Include="ChiTietDonDatHangDTO.cs" />
     <Compile Include="ChiTietHoaDonDTO.cs" />
+    <Compile Include="DonDatHangDTO.cs" />
     <Compile Include="HangHoaDTO.cs" />
     <Compile Include="HoaDonDTO.cs" />
     <Compile Include="LoaiThucUongDTO.cs" />

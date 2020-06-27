@@ -122,5 +122,10 @@ namespace DoAn_Winform
 
         #endregion
 
+        private void btnThemThucUong_Click(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }
