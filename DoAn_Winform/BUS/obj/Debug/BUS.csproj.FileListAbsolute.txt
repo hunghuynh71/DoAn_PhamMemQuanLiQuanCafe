@@ -31,6 +31,9 @@ C:\Users\admin\Downloads\Desktop\DoAnWinform_23-06-2020\DoAn_PhamMemQuanLiQuanCa
 C:\Users\admin\Downloads\Desktop\DoAnWinform_23-06-2020\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\BUS\bin\Debug\DTO.pdb
 C:\Users\admin\Downloads\Desktop\DoAnWinform_23-06-2020\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\BUS\bin\Debug\DAO.pdb
 C:\Users\admin\Downloads\Desktop\DoAnWinform_23-06-2020\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\BUS\bin\Debug\EntityFramework.xml
-C:\Users\admin\Downloads\Desktop\DoAnWinform_23-06-2020\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\BUS\obj\Debug\BUS.csprojResolveAssemblyReference.cache
 C:\Users\admin\Downloads\Desktop\DoAnWinform_23-06-2020\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\BUS\obj\Debug\BUS.dll
 C:\Users\admin\Downloads\Desktop\DoAnWinform_23-06-2020\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\BUS\obj\Debug\BUS.pdb
+C:\Users\admin\Downloads\Desktop\DoAnWinform_23-06-2020\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\BUS\bin\Debug\DAO.dll.config
+C:\Users\admin\Downloads\Desktop\DoAnWinform_23-06-2020\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\BUS\obj\Debug\BUS.csprojAssemblyReference.cache
+C:\Users\admin\Downloads\Desktop\DoAnWinform_23-06-2020\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
+C:\Users\admin\Downloads\Desktop\DoAnWinform_23-06-2020\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\BUS\obj\Debug\BUS.csproj.CopyComplete

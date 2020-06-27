@@ -59,5 +59,25 @@ namespace DAO
                 return false;
             }
         }
+        public bool KiemTraDangNhap(out TaiKhoanDTO tk, string TenDN, string MatKh)
+        {
+            bool flag = false;
+
+            TaiKhoanDTO KiemTra = db.TAI_KHOAN.Where(u => u.TRANGTHAIXOA == false && u.TENDANGNHAP == TenDN && u.MATKHAU == MatKh).Select(v => new TaiKhoanDTO
+            {
+                Manv = v.MANV,
+                Loaitaikhoan = v.LOAITAIKHOAN,
+                Tendangnhap = v.TENDANGNHAP,
+                Matkhau = v.MATKHAU,
+                Tennv = v.NHAN_VIEN.TENNV
+            }).SingleOrDefault();
+
+            if (KiemTra != null)
+                tk = KiemTra;
+            else
+                tk = null;
+
+            return flag;
+        }
     }
 }

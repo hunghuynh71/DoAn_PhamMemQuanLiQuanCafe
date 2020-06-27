@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.adminToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kếToánToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tínhTiềnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -39,26 +38,9 @@
             this.tàiKhoảngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.đăngXuấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editAcountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.picImageHome = new System.Windows.Forms.PictureBox();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picImageHome)).BeginInit();
             this.SuspendLayout();
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.adminToolStripMenuItem,
-            this.kếToánToolStripMenuItem,
-            this.quanLyToolStripMenuItem,
-            this.tàiKhoảngToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1091, 28);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
             // 
             // adminToolStripMenuItem
             // 
@@ -136,34 +118,38 @@
             this.editAcountToolStripMenuItem.Text = "Edit Acount";
             this.editAcountToolStripMenuItem.Click += new System.EventHandler(this.editAcountToolStripMenuItem_Click);
             // 
-            // picImageHome
+            // menuStrip1
             // 
-            this.picImageHome.BackgroundImage = global::DoAn_Winform.Properties.Resources.AnhTrangChu;
-            this.picImageHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picImageHome.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.picImageHome.Location = new System.Drawing.Point(0, 33);
-            this.picImageHome.Margin = new System.Windows.Forms.Padding(4);
-            this.picImageHome.Name = "picImageHome";
-            this.picImageHome.Size = new System.Drawing.Size(1089, 496);
-            this.picImageHome.TabIndex = 1;
-            this.picImageHome.TabStop = false;
+            this.menuStrip1.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.adminToolStripMenuItem,
+            this.kếToánToolStripMenuItem,
+            this.quanLyToolStripMenuItem,
+            this.tàiKhoảngToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(932, 28);
+            this.menuStrip1.TabIndex = 0;
+            this.menuStrip1.Text = "menuStrip1";
             // 
             // frmHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.ClientSize = new System.Drawing.Size(1091, 532);
-            this.Controls.Add(this.picImageHome);
+            this.ClientSize = new System.Drawing.Size(932, 653);
             this.Controls.Add(this.menuStrip1);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmHome";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Home";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picImageHome)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -171,17 +157,16 @@
 
         #endregion
 
-        private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem adminToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem kếToánToolStripMenuItem;
-        private System.Windows.Forms.PictureBox picImageHome;
-        private System.Windows.Forms.ToolStripMenuItem tàiKhoảngToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem đăngXuấtToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem editAcountToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tínhTiềnToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem xemThôngTinHóaĐơnToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem quanLyToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem đặtHàngToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem phiếuNhậpToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem tínhTiềnToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem xemThôngTinHóaĐơnToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tàiKhoảngToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem đăngXuấtToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem editAcountToolStripMenuItem;
+        private System.Windows.Forms.MenuStrip menuStrip1;
     }
 }

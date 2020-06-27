@@ -29,5 +29,11 @@ namespace DoAn_Winform
             f.ShowDialog();
         }
 
+        private void btnXemBaoCao_Click(object sender, EventArgs e)
+        {
+            frmChonBaoCao f = new frmChonBaoCao();
+            f.ShowDialog();
+        }
+
     }
 }

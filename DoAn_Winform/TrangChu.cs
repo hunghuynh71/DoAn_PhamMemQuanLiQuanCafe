@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DTO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,27 +13,36 @@ namespace DoAn_Winform
 {
     public partial class frmHome : Form
     {
+        TaiKhoanDTO TaiKhoanGlobal = new TaiKhoanDTO();
         public frmHome()
         {
+            InitializeComponent();
+        }
+        public frmHome(TaiKhoanDTO tk)
+        {
+            TaiKhoanGlobal = tk;
             InitializeComponent();
         }
 
         private void adminToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmAdmin f = new frmAdmin();
-            f.ShowDialog();
+            f.MdiParent = this;
+            f.Show();
         }
 
         private void tínhTiềnToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmBanHang f = new frmBanHang();
-            f.ShowDialog();
+            frmBanHang f = new frmBanHang(TaiKhoanGlobal);
+            f.MdiParent = this;
+            f.Show();
         }
         
         private void xemThôngTinHóaĐơnToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmThongKeDoanhThu f = new frmThongKeDoanhThu();
-            f.ShowDialog();
+            f.MdiParent = this;
+            f.Show();
         }
 
         
@@ -40,29 +50,27 @@ namespace DoAn_Winform
         private void đặtHàngToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmDatHang f = new frmDatHang();
-            f.ShowDialog();
+            f.MdiParent = this;
+            f.Show();
         }
 
         private void phiếuNhậpToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmPhieuNhaphag f = new frmPhieuNhaphag();
-            f.ShowDialog();
+            f.MdiParent = this;
+            f.Show();
         }
 
         private void editAcountToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmAccount f = new frmAccount();
-            f.ShowDialog();
+            f.MdiParent = this;
+            f.Show();
         }
 
         private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
-       
-
-
-
     }
 }
