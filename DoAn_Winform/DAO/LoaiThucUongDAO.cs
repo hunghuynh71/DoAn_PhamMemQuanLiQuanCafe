@@ -13,13 +13,13 @@ namespace DAO
 
         public List<LoaiThucUongDTO> LoadDsLoaiTU()
         {
-            return db.LOAI_THUC_UONG.Where(p => p.TRANGTHAIXOA == false).Select(p => new LoaiThucUongDTO 
+            return db.LOAI_THUC_UONG.Where(p => p.TRANGTHAIXOA == false).Select(p => new LoaiThucUongDTO
             { Maloaitu = p.MALOAITU, Tenloaitu = p.TENLOAITU }).ToList();
         }
 
         public LoaiThucUongDTO TimKiemLoaiTU(string tenLTU)
         {
-            return db.LOAI_THUC_UONG.Where(p => p.TRANGTHAIXOA == false && p.TENLOAITU == tenLTU).Select(p => new LoaiThucUongDTO 
+            return db.LOAI_THUC_UONG.Where(p => p.TRANGTHAIXOA == false && p.TENLOAITU == tenLTU).Select(p => new LoaiThucUongDTO
             { Maloaitu = p.MALOAITU, Tenloaitu = p.TENLOAITU }).SingleOrDefault();
         }
 
@@ -27,9 +27,9 @@ namespace DAO
         {
             try
             {
-                LOAI_THUC_UONG ltuDB=new LOAI_THUC_UONG
+                LOAI_THUC_UONG ltuDB = new LOAI_THUC_UONG
                 {
-                    TENLOAITU=ltu.Tenloaitu
+                    TENLOAITU = ltu.Tenloaitu
                 };
                 db.LOAI_THUC_UONG.Add(ltuDB);
                 db.SaveChanges();
@@ -61,7 +61,7 @@ namespace DAO
             try
             {
                 LOAI_THUC_UONG ltuDB = db.LOAI_THUC_UONG.SingleOrDefault(p => p.MALOAITU == maLoaiTU && p.TRANGTHAIXOA == false);
-                ltuDB.TRANGTHAIXOA=true;
+                ltuDB.TRANGTHAIXOA = true;
                 db.SaveChanges();
                 return true;
             }
@@ -69,6 +69,20 @@ namespace DAO
             {
                 return false;
             }
+        }
+
+        public string TimLoaiThucUongTheoTenTU(string TenTU)
+        {
+            string TenLoaiTU;
+            try
+            {
+                TenLoaiTU = db.LOAI_THUC_UONG.Where(u => u.TENLOAITU == TenTU).SingleOrDefault().TENLOAITU;
+            }
+            catch (Exception e)
+            {
+                TenLoaiTU = string.Empty;
+            }
+            return TenLoaiTU;
         }
     }
 }

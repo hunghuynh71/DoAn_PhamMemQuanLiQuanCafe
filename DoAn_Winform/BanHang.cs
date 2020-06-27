@@ -240,6 +240,17 @@ namespace DoAn_Winform
                 }
             }
         }
+        private void cboThucUong_Leave(object sender, EventArgs e)
+        {
+            LoaiThucUongBUS ltubus = new LoaiThucUongBUS();
+            string LoaiTU = ltubus.TimLoaiTUTheoTenloai(cboThucUong.Text);
+            if (LoaiTU != string.Empty)
+            {
+                cboLoaiThucUong.Text = LoaiTU;
+            }
+        }
         #endregion
+
+
     }
 }

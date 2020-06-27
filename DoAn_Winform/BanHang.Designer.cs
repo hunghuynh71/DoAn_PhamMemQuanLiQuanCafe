@@ -169,6 +169,7 @@
             this.cboThucUong.Name = "cboThucUong";
             this.cboThucUong.Size = new System.Drawing.Size(174, 21);
             this.cboThucUong.TabIndex = 3;
+            this.cboThucUong.Leave += new System.EventHandler(this.cboThucUong_Leave);
             // 
             // lvwHoaDon
             // 
