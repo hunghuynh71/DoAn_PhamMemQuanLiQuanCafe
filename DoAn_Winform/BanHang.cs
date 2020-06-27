@@ -55,7 +55,7 @@ namespace DoAn_Winform
                 Button button = new Button() { Width=70, Height=70};
 
                 button.Click += button_Click;
-
+                button.Leave += button_Leave;
                 button.Tag = item;
 
                 if(item.Trangthai==0)
@@ -72,6 +72,8 @@ namespace DoAn_Winform
                 flpBan.Controls.Add(button);
             }
         }
+
+
 
         HoaDonBUS hdBUS = new HoaDonBUS();
         ChiTietHoaDonBUS cthdBUS = new ChiTietHoaDonBUS();
@@ -117,7 +119,21 @@ namespace DoAn_Winform
         private void button_Click(object sender, EventArgs e)
         {
             int maBan = ((sender as Button).Tag as BanDTO).Soban;
+            (sender as Button).Text += " Đang Chọn";
             LoadThongTinHD(maBan);
+        }
+
+        void button_Leave(object sender, EventArgs e)
+        {
+            BanDTO item = (sender as Button).Tag as BanDTO;
+            if (item.Trangthai == 0)
+            {
+                (sender as Button).BackColor = Color.LightGreen;
+            }
+            else if (item.Trangthai == 1)
+            {
+                (sender as Button).BackColor = Color.LightPink;
+            }
         }
 
         #endregion
