@@ -36,5 +36,11 @@ namespace BUS
         {
             return loaituTam.XoaLoaiTU(maLoaiTU);
         }
+    
+        public string TimLoaiTUTheoTenloai(string tenTU)
+        {
+            return loaituTam.TimLoaiThucUongTheoTenTU(tenTU);
+        }
+
     }
 }

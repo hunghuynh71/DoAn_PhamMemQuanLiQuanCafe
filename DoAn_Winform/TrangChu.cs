@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DTO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,8 +13,14 @@ namespace DoAn_Winform
 {
     public partial class frmHome : Form
     {
+        TaiKhoanDTO TaiKhoanGlobal = new TaiKhoanDTO();
         public frmHome()
         {
+            InitializeComponent();
+        }
+        public frmHome(TaiKhoanDTO tk)
+        {
+            TaiKhoanGlobal = tk;
             InitializeComponent();
         }
 
@@ -26,7 +33,7 @@ namespace DoAn_Winform
 
         private void tínhTiềnToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmBanHang f = new frmBanHang();
+            frmBanHang f = new frmBanHang(TaiKhoanGlobal);
             f.MdiParent = this;
             f.Show();
         }

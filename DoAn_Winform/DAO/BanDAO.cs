@@ -71,5 +71,43 @@ namespace DAO
                 return false;
             }
         }
+        public bool KiemTraBanCoNguoiKhong(string TenBanChuyen)
+        {
+            // true : Bàn Có Người và ngược Lại
+            if (db.BANs.Where(u => u.TENBAN == TenBanChuyen && u.TRANGTHAI == 0).Count() > 0)
+                return true;
+            else
+                return false;
+        }
+        public bool ChuyenBan(BanDTO banHienTai, string TenBanMoi)
+        {
+            try
+            {
+                BAN banMoi = db.BANs.Where(u => u.TENBAN == TenBanMoi).SingleOrDefault();
+                BAN banCu = db.BANs.Where(u => u.SOBAN == banHienTai.Soban).SingleOrDefault();
+                if (banMoi != null && banMoi.TRANGTHAI == 0)
+                {                   
+                    banCu.TRANGTHAI = 0;
+                    banMoi.TRANGTHAI = 1;
+                    HOA_DON hd = new HOA_DON();
+                    hd = db.HOA_DON.Where(u => u.SOBAN == banHienTai.Soban && u.TRANGTHAI == 0 && u.TRANGTHAIXOA == false).SingleOrDefault();
+                    hd.SOBAN = banMoi.SOBAN;
+                    db.SaveChanges();
+                }
+                else
+                {
+                    banCu.TRANGTHAI = 0;
+                    HOA_DON hd = new HOA_DON();
+                    hd = db.HOA_DON.Where(u => u.SOBAN == banHienTai.Soban && u.TRANGTHAI == 0 && u.TRANGTHAIXOA == false).SingleOrDefault();
+                    hd.SOBAN = banMoi.SOBAN;
+                    db.SaveChanges();
+                }
+                return true;
+            }catch(Exception e)
+            {
+                return false;
+            }
+                
+        }
     }
 }

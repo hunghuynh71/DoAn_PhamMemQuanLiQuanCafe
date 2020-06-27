@@ -31,5 +31,10 @@ namespace BUS
         {
             return tkTam.XoaTK(tenDN);
         }
+        public bool KiemTraDangNhap(out TaiKhoanDTO tk , string TenDN,string MatKh)
+        {
+            return tkTam.KiemTraDangNhap(out tk, TenDN, MatKh);
+        }
+    
     }
 }
