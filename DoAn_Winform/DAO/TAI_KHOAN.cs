@@ -16,9 +16,10 @@ namespace DAO
     {
         public string TENDANGNHAP { get; set; }
         public string MATKHAU { get; set; }
-        public string LOAITAIKHOAN { get; set; }
+        public int LOAITAIKHOAN { get; set; }
         public bool TRANGTHAIXOA { get; set; }
         public int MANV { get; set; }
+    
         public virtual NHAN_VIEN NHAN_VIEN { get; set; }
     }
 }

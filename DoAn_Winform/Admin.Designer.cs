@@ -160,7 +160,6 @@
             this.btnThemTaiKhoan = new System.Windows.Forms.Button();
             this.txtMatKhau = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
-            this.txtLoaiTaiKhoan = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.txtTenDangNhap = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
@@ -192,6 +191,7 @@
             this.colDiaChiNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colSDTNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colChucVu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cboLoaiTaiKhoan = new System.Windows.Forms.ComboBox();
             this.tbcAdmin.SuspendLayout();
             this.tbpDoanhThu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvTraCuuHoaDon)).BeginInit();
@@ -1394,13 +1394,13 @@
             // 
             // grbChiTietTaiKhoan
             // 
+            this.grbChiTietTaiKhoan.Controls.Add(this.cboLoaiTaiKhoan);
             this.grbChiTietTaiKhoan.Controls.Add(this.cboTenNVCuaTK);
             this.grbChiTietTaiKhoan.Controls.Add(this.label31);
             this.grbChiTietTaiKhoan.Controls.Add(this.btnXoaTaiKhoan);
             this.grbChiTietTaiKhoan.Controls.Add(this.btnThemTaiKhoan);
             this.grbChiTietTaiKhoan.Controls.Add(this.txtMatKhau);
             this.grbChiTietTaiKhoan.Controls.Add(this.label22);
-            this.grbChiTietTaiKhoan.Controls.Add(this.txtLoaiTaiKhoan);
             this.grbChiTietTaiKhoan.Controls.Add(this.label15);
             this.grbChiTietTaiKhoan.Controls.Add(this.txtTenDangNhap);
             this.grbChiTietTaiKhoan.Controls.Add(this.label16);
@@ -1464,13 +1464,6 @@
             this.label22.Size = new System.Drawing.Size(70, 17);
             this.label22.TabIndex = 0;
             this.label22.Text = "Mật khẩu:";
-            // 
-            // txtLoaiTaiKhoan
-            // 
-            this.txtLoaiTaiKhoan.Location = new System.Drawing.Point(129, 202);
-            this.txtLoaiTaiKhoan.Name = "txtLoaiTaiKhoan";
-            this.txtLoaiTaiKhoan.Size = new System.Drawing.Size(219, 22);
-            this.txtLoaiTaiKhoan.TabIndex = 3;
             // 
             // label15
             // 
@@ -1751,6 +1744,14 @@
             this.colChucVu.HeaderText = "Chức vụ";
             this.colChucVu.Name = "colChucVu";
             // 
+            // cboLoaiTaiKhoan
+            // 
+            this.cboLoaiTaiKhoan.FormattingEnabled = true;
+            this.cboLoaiTaiKhoan.Location = new System.Drawing.Point(129, 202);
+            this.cboLoaiTaiKhoan.Name = "cboLoaiTaiKhoan";
+            this.cboLoaiTaiKhoan.Size = new System.Drawing.Size(219, 24);
+            this.cboLoaiTaiKhoan.TabIndex = 7;
+            // 
             // frmAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1888,7 +1889,6 @@
         private System.Windows.Forms.GroupBox grbChiTietTaiKhoan;
         private System.Windows.Forms.Button btnXoaTaiKhoan;
         private System.Windows.Forms.Button btnThemTaiKhoan;
-        private System.Windows.Forms.TextBox txtLoaiTaiKhoan;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TextBox txtTenDangNhap;
         private System.Windows.Forms.Label label16;
@@ -1982,5 +1982,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colLoaiTaiKhoan;
         private System.Windows.Forms.DataGridViewTextBoxColumn colTenNVCuaTK;
         private System.Windows.Forms.ComboBox cboTenNVCuaTK;
+        private System.Windows.Forms.ComboBox cboLoaiTaiKhoan;
     }
 }

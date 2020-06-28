@@ -73,7 +73,10 @@ namespace DAO
             }).SingleOrDefault();
 
             if (KiemTra != null)
+            {
                 tk = KiemTra;
+                flag = true;
+            }
             else
                 tk = null;
 

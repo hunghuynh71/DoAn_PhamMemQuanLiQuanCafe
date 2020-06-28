@@ -74,14 +74,20 @@ namespace DAO
         public string TimLoaiThucUongTheoTenTU(string TenTU)
         {
             string TenLoaiTU;
-            try
-            {
-                TenLoaiTU = db.LOAI_THUC_UONG.Where(u => u.TENLOAITU == TenTU).SingleOrDefault().TENLOAITU;
-            }
-            catch (Exception e)
-            {
-                TenLoaiTU = string.Empty;
-            }
+            
+                try
+                {   
+                    THUC_UONG tu = db.THUC_UONG.Where(u => u.TENTU == TenTU && u.TRANGTHAIXOA == false).SingleOrDefault();
+                    if(tu != null)
+                        TenLoaiTU = db.LOAI_THUC_UONG.Where(u => u.MALOAITU == tu.MALOAITU).SingleOrDefault().TENLOAITU;
+                    else
+                        TenLoaiTU = "";
+                }
+                catch (Exception e)
+                {
+                    TenLoaiTU = "";
+                }
+            
             return TenLoaiTU;
         }
     }

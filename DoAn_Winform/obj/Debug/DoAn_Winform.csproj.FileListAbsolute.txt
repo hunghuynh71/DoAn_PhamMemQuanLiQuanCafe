@@ -1,54 +1,3 @@
-D:\DoAn_PhanMemQuanLiQuanCafe\DoAn_Winform\bin\Debug\DoAn_Winform.exe.config
-D:\DoAn_PhanMemQuanLiQuanCafe\DoAn_Winform\bin\Debug\DoAn_Winform.exe
-D:\DoAn_PhanMemQuanLiQuanCafe\DoAn_Winform\bin\Debug\DoAn_Winform.pdb
-D:\DoAn_PhanMemQuanLiQuanCafe\DoAn_Winform\obj\Debug\DoAn_Winform.csprojResolveAssemblyReference.cache
-D:\DoAn_PhanMemQuanLiQuanCafe\DoAn_Winform\obj\Debug\DoAn_Winform.frmAccount.resources
-D:\DoAn_PhanMemQuanLiQuanCafe\DoAn_Winform\obj\Debug\DoAn_Winform.frmBanHang.resources
-D:\DoAn_PhanMemQuanLiQuanCafe\DoAn_Winform\obj\Debug\DoAn_Winform.frmHoaDon.resources
-D:\DoAn_PhanMemQuanLiQuanCafe\DoAn_Winform\obj\Debug\DoAn_Winform.frmLogin.resources
-D:\DoAn_PhanMemQuanLiQuanCafe\DoAn_Winform\obj\Debug\DoAn_Winform.frmPhieuNhaphag.resources
-D:\DoAn_PhanMemQuanLiQuanCafe\DoAn_Winform\obj\Debug\DoAn_Winform.Properties.Resources.resources
-D:\DoAn_PhanMemQuanLiQuanCafe\DoAn_Winform\obj\Debug\DoAn_Winform.frmHome.resources
-D:\DoAn_PhanMemQuanLiQuanCafe\DoAn_Winform\obj\Debug\DoAn_Winform.frmDatHang.resources
-D:\DoAn_PhanMemQuanLiQuanCafe\DoAn_Winform\obj\Debug\DoAn_Winform.csproj.GenerateResource.Cache
-D:\DoAn_PhanMemQuanLiQuanCafe\DoAn_Winform\obj\Debug\DoAn_Winform.exe
-D:\DoAn_PhanMemQuanLiQuanCafe\DoAn_Winform\obj\Debug\DoAn_Winform.pdb
-D:\DoAn_PhanMemQuanLiQuanCafe\DoAn_Winform\obj\Debug\DoAn_Winform.frmAdmin.resources
-D:\DoAn_PhanMemQuanLiQuanCafe\DoAn_Winform\obj\Debug\DoAn_Winform.frmThongKeDoanhThu.resources
-D:\DoAn_PhanMemQuanLiQuanCafe\DoAn_Winform\obj\Debug\DoAn_Winform.frmTraCuuPhieuNhapHang.resources
-D:\DoAn_PhanMemQuanLiQuanCafe\DoAn_Winform\bin\Debug\EntityFramework.dll
-D:\DoAn_PhanMemQuanLiQuanCafe\DoAn_Winform\bin\Debug\EntityFramework.SqlServer.dll
-D:\DoAn_PhanMemQuanLiQuanCafe\DoAn_Winform\bin\Debug\EntityFramework.xml
-D:\DoAn_PhanMemQuanLiQuanCafe\DoAn_Winform\bin\Debug\EntityFramework.SqlServer.xml
-D:\DoAn_PhanMemQuanLiQuanCafe\Project\DoAn_Winform\bin\Debug\DoAn_Winform.exe.config
-D:\DoAn_PhanMemQuanLiQuanCafe\Project\DoAn_Winform\obj\Debug\DoAn_Winform.exe
-D:\DoAn_PhanMemQuanLiQuanCafe\Project\DoAn_Winform\obj\Debug\DoAn_Winform.pdb
-D:\DoAn_PhanMemQuanLiQuanCafe\Project\DoAn_Winform\obj\Debug\DoAn_Winform.csprojResolveAssemblyReference.cache
-D:\DoAn_PhanMemQuanLiQuanCafe\Project\DoAn_Winform\obj\Debug\DoAn_Winform.frmAccount.resources
-D:\DoAn_PhanMemQuanLiQuanCafe\Project\DoAn_Winform\obj\Debug\DoAn_Winform.frmAdmin.resources
-D:\DoAn_PhanMemQuanLiQuanCafe\Project\DoAn_Winform\obj\Debug\DoAn_Winform.frmBanHang.resources
-D:\DoAn_PhanMemQuanLiQuanCafe\Project\DoAn_Winform\obj\Debug\DoAn_Winform.frmHoaDon.resources
-D:\DoAn_PhanMemQuanLiQuanCafe\Project\DoAn_Winform\obj\Debug\DoAn_Winform.frmLogin.resources
-D:\DoAn_PhanMemQuanLiQuanCafe\Project\DoAn_Winform\obj\Debug\DoAn_Winform.frmPhieuNhaphag.resources
-D:\DoAn_PhanMemQuanLiQuanCafe\Project\DoAn_Winform\obj\Debug\DoAn_Winform.Properties.Resources.resources
-D:\DoAn_PhanMemQuanLiQuanCafe\Project\DoAn_Winform\obj\Debug\DoAn_Winform.frmThongKeDoanhThu.resources
-D:\DoAn_PhanMemQuanLiQuanCafe\Project\DoAn_Winform\obj\Debug\DoAn_Winform.frmTraCuuPhieuNhapHang.resources
-D:\DoAn_PhanMemQuanLiQuanCafe\Project\DoAn_Winform\obj\Debug\DoAn_Winform.frmHome.resources
-D:\DoAn_PhanMemQuanLiQuanCafe\Project\DoAn_Winform\obj\Debug\DoAn_Winform.frmDatHang.resources
-D:\DoAn_PhanMemQuanLiQuanCafe\Project\DoAn_Winform\obj\Debug\DoAn_Winform.csproj.GenerateResource.Cache
-D:\DoAn_PhanMemQuanLiQuanCafe\Project\DoAn_Winform\bin\Debug\DoAn_Winform.exe
-D:\DoAn_PhanMemQuanLiQuanCafe\Project\DoAn_Winform\bin\Debug\DoAn_Winform.pdb
-D:\DoAn_PhanMemQuanLiQuanCafe\Project\DoAn_Winform\bin\Debug\BUS.dll
-D:\DoAn_PhanMemQuanLiQuanCafe\Project\DoAn_Winform\bin\Debug\DAO.dll
-D:\DoAn_PhanMemQuanLiQuanCafe\Project\DoAn_Winform\bin\Debug\EntityFramework.dll
-D:\DoAn_PhanMemQuanLiQuanCafe\Project\DoAn_Winform\bin\Debug\EntityFramework.SqlServer.dll
-D:\DoAn_PhanMemQuanLiQuanCafe\Project\DoAn_Winform\bin\Debug\BUS.pdb
-D:\DoAn_PhanMemQuanLiQuanCafe\Project\DoAn_Winform\bin\Debug\DAO.pdb
-D:\DoAn_PhanMemQuanLiQuanCafe\Project\DoAn_Winform\bin\Debug\EntityFramework.xml
-D:\DoAn_PhanMemQuanLiQuanCafe\Project\DoAn_Winform\bin\Debug\EntityFramework.SqlServer.xml
-D:\DoAn_PhanMemQuanLiQuanCafe\Project\DoAn_Winform\bin\Debug\DTO.dll
-D:\DoAn_PhanMemQuanLiQuanCafe\Project\DoAn_Winform\bin\Debug\DTO.pdb
-C:\Users\hungh\OneDrive\Desktop\Đồ án\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\bin\Debug\EntityFramework.xml
 C:\Users\hungh\OneDrive\Desktop\Đồ án\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\bin\Debug\DoAn_Winform.exe.config
 C:\Users\hungh\OneDrive\Desktop\Đồ án\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\bin\Debug\DoAn_Winform.exe
 C:\Users\hungh\OneDrive\Desktop\Đồ án\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\bin\Debug\DoAn_Winform.pdb
@@ -60,7 +9,7 @@ C:\Users\hungh\OneDrive\Desktop\Đồ án\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winfor
 C:\Users\hungh\OneDrive\Desktop\Đồ án\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\bin\Debug\DTO.pdb
 C:\Users\hungh\OneDrive\Desktop\Đồ án\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\bin\Debug\BUS.pdb
 C:\Users\hungh\OneDrive\Desktop\Đồ án\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\bin\Debug\DAO.pdb
-C:\Users\hungh\OneDrive\Desktop\Đồ án\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\hungh\OneDrive\Desktop\Đồ án\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\bin\Debug\EntityFramework.xml
 C:\Users\hungh\OneDrive\Desktop\Đồ án\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\obj\Debug\DoAn_Winform.csprojResolveAssemblyReference.cache
 C:\Users\hungh\OneDrive\Desktop\Đồ án\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\obj\Debug\DoAn_Winform.frmAccount.resources
 C:\Users\hungh\OneDrive\Desktop\Đồ án\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\obj\Debug\DoAn_Winform.frmAdmin.resources
@@ -76,40 +25,5 @@ C:\Users\hungh\OneDrive\Desktop\Đồ án\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winfor
 C:\Users\hungh\OneDrive\Desktop\Đồ án\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\obj\Debug\DoAn_Winform.frmHome.resources
 C:\Users\hungh\OneDrive\Desktop\Đồ án\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\obj\Debug\DoAn_Winform.frmDatHang.resources
 C:\Users\hungh\OneDrive\Desktop\Đồ án\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\obj\Debug\DoAn_Winform.csproj.GenerateResource.Cache
-<<<<<<< HEAD
-C:\Users\admin\Downloads\Desktop\DoAnWinform_23-06-2020\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\bin\Debug\DoAn_Winform.exe.config
-C:\Users\admin\Downloads\Desktop\DoAnWinform_23-06-2020\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\obj\Debug\DoAn_Winform.exe
-C:\Users\admin\Downloads\Desktop\DoAnWinform_23-06-2020\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\obj\Debug\DoAn_Winform.pdb
-C:\Users\admin\Downloads\Desktop\DoAnWinform_23-06-2020\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\bin\Debug\DoAn_Winform.exe
-C:\Users\admin\Downloads\Desktop\DoAnWinform_23-06-2020\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\bin\Debug\DoAn_Winform.pdb
-C:\Users\admin\Downloads\Desktop\DoAnWinform_23-06-2020\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\bin\Debug\BUS.dll
-C:\Users\admin\Downloads\Desktop\DoAnWinform_23-06-2020\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\bin\Debug\DAO.dll
-C:\Users\admin\Downloads\Desktop\DoAnWinform_23-06-2020\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\bin\Debug\DTO.dll
-C:\Users\admin\Downloads\Desktop\DoAnWinform_23-06-2020\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\bin\Debug\EntityFramework.dll
-C:\Users\admin\Downloads\Desktop\DoAnWinform_23-06-2020\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\bin\Debug\EntityFramework.SqlServer.dll
-C:\Users\admin\Downloads\Desktop\DoAnWinform_23-06-2020\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\bin\Debug\DTO.pdb
-C:\Users\admin\Downloads\Desktop\DoAnWinform_23-06-2020\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\bin\Debug\BUS.pdb
-C:\Users\admin\Downloads\Desktop\DoAnWinform_23-06-2020\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\bin\Debug\DAO.pdb
-C:\Users\admin\Downloads\Desktop\DoAnWinform_23-06-2020\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\bin\Debug\EntityFramework.xml
-C:\Users\admin\Downloads\Desktop\DoAnWinform_23-06-2020\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\admin\Downloads\Desktop\DoAnWinform_23-06-2020\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\obj\Debug\DoAn_Winform.csprojResolveAssemblyReference.cache
-C:\Users\admin\Downloads\Desktop\DoAnWinform_23-06-2020\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\obj\Debug\DoAn_Winform.frmAccount.resources
-C:\Users\admin\Downloads\Desktop\DoAnWinform_23-06-2020\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\obj\Debug\DoAn_Winform.frmAdmin.resources
-C:\Users\admin\Downloads\Desktop\DoAnWinform_23-06-2020\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\obj\Debug\DoAn_Winform.frmBanHang.resources
-C:\Users\admin\Downloads\Desktop\DoAnWinform_23-06-2020\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\obj\Debug\DoAn_Winform.frmHoaDon.resources
-C:\Users\admin\Downloads\Desktop\DoAnWinform_23-06-2020\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\obj\Debug\DoAn_Winform.frmLogin.resources
-C:\Users\admin\Downloads\Desktop\DoAnWinform_23-06-2020\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\obj\Debug\DoAn_Winform.frmPhieuNhaphag.resources
-C:\Users\admin\Downloads\Desktop\DoAnWinform_23-06-2020\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\obj\Debug\DoAn_Winform.Properties.Resources.resources
-C:\Users\admin\Downloads\Desktop\DoAnWinform_23-06-2020\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\obj\Debug\DoAn_Winform.frmThongKeDoanhThu.resources
-C:\Users\admin\Downloads\Desktop\DoAnWinform_23-06-2020\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\obj\Debug\DoAn_Winform.frmTraCuuPhieuNhapHang.resources
-C:\Users\admin\Downloads\Desktop\DoAnWinform_23-06-2020\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\obj\Debug\DoAn_Winform.frmHome.resources
-C:\Users\admin\Downloads\Desktop\DoAnWinform_23-06-2020\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\obj\Debug\DoAn_Winform.frmDatHang.resources
-C:\Users\admin\Downloads\Desktop\DoAnWinform_23-06-2020\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\obj\Debug\DoAn_Winform.csproj.GenerateResource.Cache
-=======
 C:\Users\hungh\OneDrive\Desktop\Đồ án\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\obj\Debug\DoAn_Winform.exe
 C:\Users\hungh\OneDrive\Desktop\Đồ án\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\obj\Debug\DoAn_Winform.pdb
->>>>>>> 919dbf186da30df3f900625977858f88d0591689
-C:\Users\admin\Downloads\Desktop\DoAnWinform_23-06-2020\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\obj\Debug\DoAn_Winform.csprojAssemblyReference.cache
-C:\Users\admin\Downloads\Desktop\DoAnWinform_23-06-2020\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\obj\Debug\DoAn_Winform.frmChonBaoCao.resources
-C:\Users\admin\Downloads\Desktop\DoAnWinform_23-06-2020\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\obj\Debug\DoAn_Winform.frmXemBaoCao.resources
-C:\Users\admin\Downloads\Desktop\DoAnWinform_23-06-2020\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\obj\Debug\DoAn_Winform.csproj.CoreCompileInputs.cache

@@ -773,7 +773,7 @@ namespace DoAn_Winform
                 DataGridViewRow dtr = dtgvTaiKhoan.SelectedRows[0];
                 txtTenDangNhap.Text = dtr.Cells[0].Value.ToString();
                 txtMatKhau.Text = dtr.Cells[1].Value.ToString();
-                txtLoaiTaiKhoan.Text = dtr.Cells[2].Value.ToString();
+                cboLoaiTaiKhoan.SelectedValue = dtr.Cells[2].Value;
                 cboTenNVCuaTK.SelectedValue = dtr.Cells[3].Value;
             }
         }
@@ -793,7 +793,7 @@ namespace DoAn_Winform
                         dtgvTaiKhoan.CurrentCell = dtgvTaiKhoan.Rows[row.Index].Cells[0];
                         txtTenDangNhap.Text = tkTam.Tendangnhap;
                         txtMatKhau.Text = tkTam.Matkhau;
-                        txtLoaiTaiKhoan.Text = tkTam.Loaitaikhoan;
+                        cboLoaiTaiKhoan.SelectedValue = tkTam.Loaitaikhoan;
                         cboTenNVCuaTK.SelectedValue = tkTam.Manv;
                     }
                 }
@@ -807,7 +807,7 @@ namespace DoAn_Winform
         private void btnThemTaiKhoan_Click(object sender, EventArgs e)
         {
             TaiKhoanDTO tkTam = new TaiKhoanDTO();
-            if(txtTenDangNhap.Text==string.Empty||txtMatKhau.Text==string.Empty||txtLoaiTaiKhoan.Text==string.Empty)
+            if(txtTenDangNhap.Text==string.Empty||txtMatKhau.Text==string.Empty)
             {
                 MessageBox.Show("Bạn chưa nhập đầy đủ thông tin!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
@@ -815,7 +815,7 @@ namespace DoAn_Winform
             {
                 tkTam.Tendangnhap = txtTenDangNhap.Text;
                 tkTam.Matkhau = txtMatKhau.Text;
-                tkTam.Loaitaikhoan = txtLoaiTaiKhoan.Text;
+                tkTam.Loaitaikhoan = Convert.ToInt32(cboLoaiTaiKhoan.SelectedValue.ToString());
                 tkTam.Manv = Convert.ToInt32(cboTenNVCuaTK.SelectedValue);
             }
             
@@ -962,5 +962,6 @@ namespace DoAn_Winform
         }
 
         #endregion 
+
     }
 }

@@ -40,9 +40,6 @@ namespace BUS
         {
             return banTam.KiemTraBanCoNguoiKhong(TenBan);
         }
-        public bool ChuyenBan(BanDTO ban , string TenBan)
-        {
-            return banTam.ChuyenBan(ban, TenBan);
-        }
+       
     }
 }

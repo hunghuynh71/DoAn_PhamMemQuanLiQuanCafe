@@ -15,72 +15,54 @@ namespace DoAn_Winform
 {
     public partial class frmBanHang : Form
     {
-        //QUAN_LI_QUAN_CAFE_HBKEntities db=new QUAN_LI_QUAN_CAFE_HBKEntities();
         BanDTO BanGlobal = new BanDTO();
         TaiKhoanDTO TaiKhoanGlobal = new TaiKhoanDTO();
         HoaDonBUS hdbus = new HoaDonBUS();
         BanBUS banBUS = new BanBUS();
         public frmBanHang()
         {
-            InitializeComponent();
-            //LoadDsLoaiThucUong();
-            //LoadDsThucUong();
+            InitializeComponent();      
         }
         public frmBanHang(TaiKhoanDTO tk)
         {
             TaiKhoanGlobal = tk;
             InitializeComponent();
         }
-
-
-        
+       
         #region Method
         private void frmBanHang_Load(object sender, EventArgs e)
         {
-            LoadDsBan();
+            LoadDsBan(BanGlobal);
             LoadcboChuyenBan();
             LoadcboLoaiThucUong();
             LoadcboThucUong();
-        }
-
-
-        //void LoadDsLoaiThucUong()
-        //{
-        //    var result = from c in db.LOAI_THUC_UONG
-        //                 where c.TRANGTHAIXOA == false
-        //                 select c.TENLOAITU;
-        //    cboLoaiThucUong.DataSource = result.ToList();
-        //}
-
-        //void LoadDsThucUong()
-        //{
-        //    var result = from c in db.THUC_UONG
-        //                 where c.TRANGTHAIXOA == false
-        //                 select c.TENTU;
-        //    cboThucUong.DataSource = result.ToList();
-        //}
-   
-        void LoadDsBan()
+        }   
+       public  void LoadDsBan(BanDTO banglobal)
         {
+            flpBan.Controls.Clear();
             List<BanDTO> dsBan = banBUS.LoadDsBan();
 
             foreach(BanDTO item in dsBan)
             {
                 Button button = new Button() { Width=70, Height=70};
 
-                button.Click += button_Click;
-                button.Leave += button_Leave;
-                button.Tag = item;
-
+                button.Click += button_Click;           
+                button.Tag = item;                
                 if(item.Trangthai==0)
                 {
                     button.Text = item.Tenban + "\nTrống";
-                    button.BackColor = Color.LightGreen;
+                    if (banglobal.Soban != item.Soban)
+                        button.BackColor = Color.LightGreen;
+                    else
+                        button.BackColor = Color.SkyBlue;
                 }
                 else
                 {
                     button.Text = item.Tenban + "\nCó người";
-                    button.BackColor = Color.LightPink;
+                    if (banglobal.Soban != item.Soban)
+                         button.BackColor = Color.LightPink;
+                    else
+                        button.BackColor = Color.SkyBlue;
                 }
 
                 flpBan.Controls.Add(button);
@@ -115,44 +97,38 @@ namespace DoAn_Winform
             {
                 cboChuyenBan.Items.Add(bann.Tenban);
             }
-        }
-
-
-       
-        void LoadThongTinHD(int maBan)
+        }   
+        public void LoadThongTinHD(int maBan)
         {
-            HoaDonBUS hdBUS = new HoaDonBUS();
-            ChiTietHoaDonBUS cthdBUS = new ChiTietHoaDonBUS();
-            lvwHoaDon.Items.Clear();
-            HoaDonDTO hdTam = hdBUS.LoadHDChuaThanhToanTheoMaBan(maBan);
-            
-            //int maHD = hdBUS.LoadHDChuaThanhToanTheoMaBan(maBan).Mahd;
-            if (hdTam != null)
+            if (maBan != null)
             {
-                List<ChiTietHoaDonDTO> dsCT = cthdBUS.LoadDsCTHDTheoMaHD(hdTam.Mahd);
-                double tongTien = 0;
+                HoaDonBUS hdBUS = new HoaDonBUS();
+                ChiTietHoaDonBUS cthdBUS = new ChiTietHoaDonBUS();
+                lvwHoaDon.Items.Clear();
+                HoaDonDTO hdTam = hdBUS.LoadHDChuaThanhToanTheoMaBan(maBan);
 
-                foreach (ChiTietHoaDonDTO item in dsCT)
+                //int maHD = hdBUS.LoadHDChuaThanhToanTheoMaBan(maBan).Mahd;
+                if (hdTam != null)
                 {
-                    ListViewItem lvi = new ListViewItem(item.Tentu);
-                    lvi.SubItems.Add(item.Soluong.ToString());
-                    lvi.SubItems.Add(item.Gianiemyet.ToString());
-                    lvi.SubItems.Add(item.Thanhtien.ToString());
+                    List<ChiTietHoaDonDTO> dsCT = cthdBUS.LoadDsCTHDTheoMaHD(hdTam.Mahd);
+                    double tongTien = 0;
 
-                    lvwHoaDon.Items.Add(lvi);
+                    foreach (ChiTietHoaDonDTO item in dsCT)
+                    {
+                        ListViewItem lvi = new ListViewItem(item.Tentu);
+                        lvi.SubItems.Add(item.Soluong.ToString());
+                        lvi.SubItems.Add(item.Gianiemyet.ToString());
+                        lvi.SubItems.Add(item.Thanhtien.ToString());
 
-                    tongTien += item.Thanhtien;
+                        lvwHoaDon.Items.Add(lvi);
+
+                        tongTien += item.Thanhtien;
+                    }
+                    tongTien = tongTien - (tongTien * Convert.ToDouble(nmrPhanTramGiamGia.Value) / 100);
+                    txtTongTien.Text = tongTien.ToString();
+                    txtTongTien.ReadOnly = true;
                 }
-
-                txtTongTien.Text = tongTien.ToString();
-                txtTongTien.ReadOnly = true;
-            }
-            //else if (hdTam == null)
-            //{
-            //    //hdDTO = new HoaDonDTO();
-            //    MessageBox.Show("ĐMM");
-            //}               
-            
+            }                     
         }
 
         #endregion
@@ -162,11 +138,14 @@ namespace DoAn_Winform
 
         private void button_Click(object sender, EventArgs e)
         {
+
+
             BanGlobal = ((sender as Button).Tag as BanDTO);
             int maBan = ((sender as Button).Tag as BanDTO).Soban;
-            (sender as Button).Text += " Đang Chọn";
+            (sender as Button).BackColor= Color.SkyBlue;
             LoadThongTinHD(maBan);
             btnThemThucUong.Enabled = true;
+            LoadDsBan(BanGlobal);
             if(lvwHoaDon.Items.Count > 0)
             {
                 btnThanhToan.Enabled = true;
@@ -179,28 +158,17 @@ namespace DoAn_Winform
             }
 
         }
-
-        void button_Leave(object sender, EventArgs e)
-        {
-           BanDTO item = (sender as Button).Tag as BanDTO;
-            if (item.Trangthai == 0)
-            {
-                (sender as Button).Text = item.Tenban + "\nTrống";
-                (sender as Button).BackColor = Color.LightGreen;
-            }
-            else if (item.Trangthai == 1)
-            {
-                (sender as Button).Text = item.Tenban + "\nCó người";
-                (sender as Button).BackColor = Color.LightPink;
-            }
-        }
-
         private void btnThemThucUong_Click(object sender, EventArgs e)
         {
             if (cboThucUong.Text != null && cboLoaiThucUong != null)
             {
                 if (hdbus.ThemThucUongTheoBan(BanGlobal, TaiKhoanGlobal.Manv, cboThucUong.Text, cboLoaiThucUong.Text, Convert.ToInt32(nmrSoLuong.Value)))
+                { 
                     MessageBox.Show("Thêm Thành Công", "Thông Báo");
+                    BanGlobal.Trangthai = 1;
+                    LoadThongTinHD(BanGlobal.Soban);              
+                    LoadDsBan(BanGlobal);
+                }
                 else
                     MessageBox.Show("Thêm Thất Bại", "Thông Báo");
             }
@@ -213,8 +181,12 @@ namespace DoAn_Winform
             DialogResult mes = MessageBox.Show("Ông Có Chắc Là Ông Muốn Thanh Toán Không ", "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if(mes==DialogResult.Yes)
             {
-                if(hdbus.ThanhToan(BanGlobal))
+                if (hdbus.ThanhToan(BanGlobal))
+                {
                     MessageBox.Show("Thanh Toán Thành Công", "Thông Báo");
+                    LoadDsBan(BanGlobal);
+                    lvwHoaDon.Items.Clear();
+                }
             }   
             else
             {
@@ -224,7 +196,7 @@ namespace DoAn_Winform
         }
         private void btnChuyenBan_Click(object sender, EventArgs e)
         {
-            if (banBUS.KiemTraBanCoNguoiChua(cboChuyenBan.Text))
+            if (!banBUS.KiemTraBanCoNguoiChua(cboChuyenBan.Text) && cboChuyenBan.Text !="" && cboChuyenBan.Text != BanGlobal.Tenban)
             {
                 DialogResult res = MessageBox.Show("Bàn Đã Có Người. Bàn Muốn Sự Lựa Chọn Khác Không?  ", "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (res == DialogResult.Yes)
@@ -232,32 +204,67 @@ namespace DoAn_Winform
                     res = MessageBox.Show(" Thêm Các Món Vào Bàn Đã Chọn (Quen Biết) ?", "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                     if (res == DialogResult.Yes)
                     {
-                        if (banBUS.ChuyenBan(BanGlobal, cboChuyenBan.Text))
+                        if (hdbus.ChuyenBan(BanGlobal, cboChuyenBan.Text,TaiKhoanGlobal.Manv))
+                        { 
                             MessageBox.Show(" Thành Công", "Thông Báo");
+                            LoadDsBan(BanGlobal);
+                        }
                         else
                             MessageBox.Show(" Thất Bại", "Thông Báo");
                     }
                 }
             }
+            else if (cboChuyenBan.Text != "" && cboChuyenBan.Text != BanGlobal.Tenban)
+            {
+                if (hdbus.ChuyenBan(BanGlobal, cboChuyenBan.Text,TaiKhoanGlobal.Manv))
+                        { 
+                            MessageBox.Show(" Thành Công", "Thông Báo");
+                            LoadDsBan(BanGlobal);
+                        }
+                        else
+                            MessageBox.Show("Thất Bại", "Thông Báo");
+            }
+            else
+                MessageBox.Show("Thông Tin Nhập Không Đúng Hoặc Thiếu!", "Thông Báo");
+            cboChuyenBan.Text = string.Empty;
         }
-        private void cboThucUong_Leave(object sender, EventArgs e)
+     
+        private void cboThucUong_TextChanged(object sender, EventArgs e)
         {
             LoaiThucUongBUS ltubus = new LoaiThucUongBUS();
             string LoaiTU = ltubus.TimLoaiTUTheoTenloai(cboThucUong.Text);
-            if (LoaiTU != string.Empty)
+            if (LoaiTU != "")
             {
                 cboLoaiThucUong.Text = LoaiTU;
             }
         }
+        private void cboLoaiThucUong_TextChanged(object sender, EventArgs e)
+        {
+            ThucUongBUS tubus = new ThucUongBUS();
+            List<ThucUongDTO> ListTUDTO = tubus.TimDrinkTheoTenLoaiDrink(cboLoaiThucUong.Text);
+            if (ListTUDTO.Count() > 0)
+            {
+                cboThucUong.Items.Clear();
+                foreach (ThucUongDTO tu in ListTUDTO)
+                {
+                    cboThucUong.Items.Add(tu.Tentu);
+                }
+            }
+        }
+        private void cboLoaiThucUong_Click(object sender, EventArgs e)
+        {
+            cboThucUong.Text = "";
+        }
+
+ 
+        
         #endregion
 
-<<<<<<< HEAD
-        private void btnThemThucUong_Click(object sender, EventArgs e)
-        {
+        
 
-        }
-=======
->>>>>>> 2024f99f5a72c5e39e9e1d16dda60788dc75d079
+    
+
+
 
     }
 }

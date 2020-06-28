@@ -23,5 +23,9 @@ namespace BUS
         {
             return hdTam.ThanhToan(ban);
         }
+        public bool ChuyenBan(BanDTO ban, string TenBan,int MavnLap)
+        {
+            return hdTam.ChuyenBan(ban, TenBan,MavnLap);
+        }
     }
 }

@@ -74,5 +74,32 @@ namespace DAO
                 return false;
             }
         }
+        
+        public List<ThucUongDTO> TimDrinkTheoTenLoaiTU(string TenLoaiTU)
+        {
+            List<ThucUongDTO> ListTU = new List<ThucUongDTO>();
+            if(TenLoaiTU == "Tất Cả")
+            {
+                ListTU = db.THUC_UONG.Where(v=> v.TRANGTHAIXOA==false).Select(u => new ThucUongDTO
+                    {
+                        Tentu = u.TENTU,
+                        Gia = u.GIA,
+                        Maloaitu = u.MALOAITU,
+                        Matu = u.MATU
+                    }).ToList();
+            }
+            else
+            {
+                ListTU = db.THUC_UONG.Where(u => u.LOAI_THUC_UONG.TENLOAITU == TenLoaiTU).Select(u => new ThucUongDTO
+                {
+                    Tentu = u.TENTU,
+                    Gia = u.GIA,
+                    Maloaitu = u.MALOAITU,
+                    Matu = u.MATU
+                }).ToList();
+            }
+            return ListTU;
+        }
+    
     }
 }

@@ -174,11 +174,11 @@
     <Property Name="TRANGTHAIDUYET" Type="Boolean" Nullable="false" />
     <Property Name="MANCC" Type="Int32" Nullable="false" />
     <Property Name="NGAYGIAO" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="TRANGTHAITAODON" Type="Boolean" Nullable="false" />
     <NavigationProperty Name="CHI_TIET_DON_DAT_HANG" Relationship="QUAN_LI_QUAN_CAFE_HBKModel.FK__CHI_TIET___MADDH__4316F928" FromRole="DON_DAT_HANG" ToRole="CHI_TIET_DON_DAT_HANG" />
     <NavigationProperty Name="NHAN_VIEN" Relationship="QUAN_LI_QUAN_CAFE_HBKModel.FK__DON_DAT_H__MANVL__3E52440B" FromRole="DON_DAT_HANG" ToRole="NHAN_VIEN" />
     <NavigationProperty Name="PHIEU_NHAP_HANG" Relationship="QUAN_LI_QUAN_CAFE_HBKModel.FK_DDH" FromRole="DON_DAT_HANG" ToRole="PHIEU_NHAP_HANG" />
     <NavigationProperty Name="NHA_CUNG_CAP" Relationship="QUAN_LI_QUAN_CAFE_HBKModel.FK_DON_DAT_HANG_NHA_CUNG_CAP" FromRole="DON_DAT_HANG" ToRole="NHA_CUNG_CAP" />
-    <Property Name="TRANGTHAITAODON" Type="Boolean" Nullable="false" />
   </EntityType>
   <EntityType Name="HANG_HOA">
     <Key>
@@ -273,7 +273,7 @@
     </Key>
     <Property Name="TENDANGNHAP" Type="String" Nullable="false" MaxLength="50" FixedLength="true" Unicode="false" />
     <Property Name="MATKHAU" Type="String" Nullable="false" MaxLength="1000" FixedLength="false" Unicode="true" />
-    <Property Name="LOAITAIKHOAN" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LOAITAIKHOAN" Type="Int32" Nullable="false" />
     <Property Name="TRANGTHAIXOA" Type="Boolean" Nullable="false" />
     <Property Name="MANV" Type="Int32" Nullable="false" />
     <NavigationProperty Name="NHAN_VIEN" Relationship="QUAN_LI_QUAN_CAFE_HBKModel.FK_TAI_KHOAN_NHAN_VIEN" FromRole="TAI_KHOAN" ToRole="NHAN_VIEN" />

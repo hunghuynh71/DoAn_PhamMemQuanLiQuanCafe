@@ -24,9 +24,9 @@ namespace DTO
             set { manv = value; }
         }
 
-        private string loaitaikhoan;
+        private int loaitaikhoan;
 
-        public string Loaitaikhoan
+        public int Loaitaikhoan
         {
             get { return loaitaikhoan; }
             set { loaitaikhoan = value; }

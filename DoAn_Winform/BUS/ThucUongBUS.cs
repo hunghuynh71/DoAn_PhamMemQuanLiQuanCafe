@@ -36,6 +36,9 @@ namespace BUS
         {
             return tuTam.XoaTU(maTU);
         }
-
+        public List<ThucUongDTO> TimDrinkTheoTenLoaiDrink(string TenLoaiTU)
+        {
+            return tuTam.TimDrinkTheoTenLoaiTU(TenLoaiTU);
+        }
     }
 }

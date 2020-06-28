@@ -27,7 +27,6 @@ namespace DAO
         public bool TRANGTHAIDUYET { get; set; }
         public int MANCC { get; set; }
         public System.DateTime NGAYGIAO { get; set; }
-        public bool TRANGTHAITAODON { get; set; }
     
         public virtual ICollection<CHI_TIET_DON_DAT_HANG> CHI_TIET_DON_DAT_HANG { get; set; }
         public virtual NHAN_VIEN NHAN_VIEN { get; set; }

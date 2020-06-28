@@ -129,7 +129,7 @@
     </Key>
     <Property Name="TENDANGNHAP" Type="char" MaxLength="50" Nullable="false" />
     <Property Name="MATKHAU" Type="nvarchar" MaxLength="1000" Nullable="false" />
-    <Property Name="LOAITAIKHOAN" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="LOAITAIKHOAN" Type="int" Nullable="false" />
     <Property Name="TRANGTHAIXOA" Type="bit" Nullable="false" />
     <Property Name="MANV" Type="int" Nullable="false" />
   </EntityType>
