@@ -793,7 +793,8 @@ namespace DoAn_Winform
                         dtgvTaiKhoan.CurrentCell = dtgvTaiKhoan.Rows[row.Index].Cells[0];
                         txtTenDangNhap.Text = tkTam.Tendangnhap;
                         txtMatKhau.Text = tkTam.Matkhau;
-                        cboLoaiTaiKhoan.SelectedValue = tkTam.Loaitaikhoan;
+                        string LayLoaiTK = tkTam.Loaitaikhoan == 1  ? "Chủ_Cửa_Hàng" : tkTam.Loaitaikhoan  == 2 ? "Admin" : tkTam.Loaitaikhoan == 3 ? "Thu_Ngân" : "Quản_Lí_Kho";
+                        cboLoaiTaiKhoan.SelectedValue = LayLoaiTK;
                         cboTenNVCuaTK.SelectedValue = tkTam.Manv;
                     }
                 }
@@ -815,7 +816,8 @@ namespace DoAn_Winform
             {
                 tkTam.Tendangnhap = txtTenDangNhap.Text;
                 tkTam.Matkhau = txtMatKhau.Text;
-                tkTam.Loaitaikhoan = Convert.ToInt32(cboLoaiTaiKhoan.SelectedValue.ToString());
+                int LayLoaiTK = cboLoaiTaiKhoan.Text == "Chủ_Cửa_Hàng"?1: cboLoaiTaiKhoan.Text == "Admin"?2:cboLoaiTaiKhoan.Text == "Thu_Ngân"?3:4;
+                tkTam.Loaitaikhoan = LayLoaiTK;
                 tkTam.Manv = Convert.ToInt32(cboTenNVCuaTK.SelectedValue);
             }
             

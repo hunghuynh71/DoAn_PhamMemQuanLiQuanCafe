@@ -21,6 +21,7 @@ namespace DoAn_Winform
         public frmHome(TaiKhoanDTO tk)
         {
             TaiKhoanGlobal = tk;
+            PhanQuyenTK();
             InitializeComponent();
         }
 
@@ -70,7 +71,45 @@ namespace DoAn_Winform
 
         private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            toolThuNgan.Enabled = true;
+            ToolLapHoaDon.Enabled = true;
+            toolXemThongKEThuChi.Enabled = true;
+
+            toolQuanLikho.Enabled = true;
+            toolLapPHieuNhap.Enabled = true;
+            toolDatHang.Enabled = true;
+
+            toolAdmin.Enabled = true;
             this.Close();
+        }
+        void PhanQuyenTK()
+        {
+            if(TaiKhoanGlobal.Loaitaikhoan==2)
+            {
+                toolThuNgan.Enabled = false;
+                ToolLapHoaDon.Enabled = false;
+                toolXemThongKEThuChi.Enabled = false;
+
+                toolQuanLikho.Enabled = false;
+                toolLapPHieuNhap.Enabled = false;
+                toolDatHang.Enabled = false;
+            }
+            else if (TaiKhoanGlobal.Loaitaikhoan == 3)
+            {
+                toolAdmin.Enabled = false;
+
+                toolQuanLikho.Enabled = false;
+                toolLapPHieuNhap.Enabled = false;
+                toolDatHang.Enabled = false;
+            }
+            else if(TaiKhoanGlobal.Loaitaikhoan == 4)
+            {
+                toolThuNgan.Enabled = false;              
+                toolLapPHieuNhap.Enabled = false;
+                toolXemThongKEThuChi.Enabled = false;
+
+                toolAdmin.Enabled = false;
+            }
         }
     }
 }
