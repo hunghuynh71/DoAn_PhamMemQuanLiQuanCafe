@@ -82,5 +82,20 @@ namespace DAO
 
             return flag;
         }
+        public bool SuaTK(TaiKhoanDTO tkSUa,string MatKhaucu,string MatKhauMoi)
+        {
+            try { 
+            TAI_KHOAN tk = new TAI_KHOAN();
+            tk = db.TAI_KHOAN.Where(u=> u.TENDANGNHAP == tkSUa.Tendangnhap && u.MATKHAU == MatKhaucu).SingleOrDefault();
+            if (tk == null)
+                return false;
+            tk.MATKHAU = MatKhauMoi;
+            db.SaveChanges();
+            return true;
+            }catch(Exception e)
+            {
+                return false;
+            }
+        }
     }
 }

@@ -207,6 +207,7 @@ namespace DoAn_Winform
                         if (hdbus.ChuyenBan(BanGlobal, cboChuyenBan.Text,TaiKhoanGlobal.Manv))
                         { 
                             MessageBox.Show(" Thành Công", "Thông Báo");
+                            BanGlobal.Trangthai = 0;
                             LoadDsBan(BanGlobal);
                         }
                         else
@@ -219,6 +220,7 @@ namespace DoAn_Winform
                 if (hdbus.ChuyenBan(BanGlobal, cboChuyenBan.Text,TaiKhoanGlobal.Manv))
                         { 
                             MessageBox.Show(" Thành Công", "Thông Báo");
+                            BanGlobal.Trangthai = 0;
                             LoadDsBan(BanGlobal);
                         }
                         else

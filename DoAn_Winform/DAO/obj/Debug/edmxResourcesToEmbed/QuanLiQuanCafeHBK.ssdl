@@ -50,7 +50,6 @@
     <Property Name="TRANGTHAIDUYET" Type="bit" Nullable="false" />
     <Property Name="MANCC" Type="int" Nullable="false" />
     <Property Name="NGAYGIAO" Type="date" Nullable="false" />
-    <Property Name="TRANGTHAITAODON" Type="bit" Nullable="false" />
   </EntityType>
   <EntityType Name="HANG_HOA">
     <Key>

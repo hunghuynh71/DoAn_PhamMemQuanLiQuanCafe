@@ -68,7 +68,6 @@
     <EntitySetMapping Name="DON_DAT_HANG">
       <EntityTypeMapping TypeName="QUAN_LI_QUAN_CAFE_HBKModel.DON_DAT_HANG">
         <MappingFragment StoreEntitySet="DON_DAT_HANG">
-          <ScalarProperty Name="TRANGTHAITAODON" ColumnName="TRANGTHAITAODON" />
           <ScalarProperty Name="NGAYGIAO" ColumnName="NGAYGIAO" />
           <ScalarProperty Name="MANCC" ColumnName="MANCC" />
           <ScalarProperty Name="TRANGTHAIDUYET" ColumnName="TRANGTHAIDUYET" />

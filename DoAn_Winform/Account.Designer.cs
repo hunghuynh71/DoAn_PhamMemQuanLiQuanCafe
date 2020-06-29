@@ -37,7 +37,7 @@
             this.txtMatKhauMoi = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtNhapLaiMatKhau = new System.Windows.Forms.TextBox();
-            this.txtCapNhatTaiKhoan = new System.Windows.Forms.Button();
+            this.btnCapNhap = new System.Windows.Forms.Button();
             this.btnThoat = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -129,16 +129,16 @@
             this.txtNhapLaiMatKhau.Size = new System.Drawing.Size(200, 22);
             this.txtNhapLaiMatKhau.TabIndex = 4;
             // 
-            // txtCapNhatTaiKhoan
+            // btnCapNhap
             // 
-            this.txtCapNhatTaiKhoan.Location = new System.Drawing.Point(90, 334);
-            this.txtCapNhatTaiKhoan.Margin = new System.Windows.Forms.Padding(4);
-            this.txtCapNhatTaiKhoan.Name = "txtCapNhatTaiKhoan";
-            this.txtCapNhatTaiKhoan.Size = new System.Drawing.Size(96, 28);
-            this.txtCapNhatTaiKhoan.TabIndex = 5;
-            this.txtCapNhatTaiKhoan.Text = "Cập nhật ";
-            this.txtCapNhatTaiKhoan.UseVisualStyleBackColor = true;
-            this.txtCapNhatTaiKhoan.Click += new System.EventHandler(this.btnThayDoiAccount_Click);
+            this.btnCapNhap.Location = new System.Drawing.Point(90, 334);
+            this.btnCapNhap.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCapNhap.Name = "btnCapNhap";
+            this.btnCapNhap.Size = new System.Drawing.Size(96, 28);
+            this.btnCapNhap.TabIndex = 5;
+            this.btnCapNhap.Text = "Cập nhật ";
+            this.btnCapNhap.UseVisualStyleBackColor = true;
+            this.btnCapNhap.Click += new System.EventHandler(this.btnThayDoiAccount_Click);
             // 
             // btnThoat
             // 
@@ -149,7 +149,7 @@
             this.btnThoat.TabIndex = 6;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = true;
-            this.btnThoat.Click += new System.EventHandler(this.btnThayDoiAccount_Click);
+            this.btnThoat.Click += new System.EventHandler(this.btnThoatAccount_Click);
             // 
             // frmAccount
             // 
@@ -157,7 +157,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(448, 398);
             this.Controls.Add(this.btnThoat);
-            this.Controls.Add(this.txtCapNhatTaiKhoan);
+            this.Controls.Add(this.btnCapNhap);
             this.Controls.Add(this.txtNhapLaiMatKhau);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtMatKhauMoi);
@@ -187,7 +187,7 @@
         private System.Windows.Forms.TextBox txtMatKhauMoi;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtNhapLaiMatKhau;
-        private System.Windows.Forms.Button txtCapNhatTaiKhoan;
+        private System.Windows.Forms.Button btnCapNhap;
         private System.Windows.Forms.Button btnThoat;
     }
 }

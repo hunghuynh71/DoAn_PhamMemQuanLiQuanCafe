@@ -12,6 +12,10 @@ namespace BUS
     {
         TaiKhoanDAO tkTam = new TaiKhoanDAO();
 
+        public bool SuaTK(TaiKhoanDTO tkSUa,string MatkhauCu,string MatKhauMoi)
+        {
+            return tkTam.SuaTK(tkSUa, MatkhauCu, MatKhauMoi);
+        }
         public List<TaiKhoanDTO> LoadDsTK()
         {
             return tkTam.LoadDsTK();

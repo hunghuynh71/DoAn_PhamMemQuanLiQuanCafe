@@ -20,9 +20,9 @@ namespace DoAn_Winform
         }
         public frmHome(TaiKhoanDTO tk)
         {
-            TaiKhoanGlobal = tk;
-            PhanQuyenTK();
+            TaiKhoanGlobal = tk;           
             InitializeComponent();
+            PhanQuyenTK();
         }
 
         private void adminToolStripMenuItem_Click(object sender, EventArgs e)
@@ -64,7 +64,7 @@ namespace DoAn_Winform
 
         private void editAcountToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmAccount f = new frmAccount();
+            frmAccount f = new frmAccount(TaiKhoanGlobal);
             f.MdiParent = this;
             f.Show();
         }
@@ -82,7 +82,7 @@ namespace DoAn_Winform
             toolAdmin.Enabled = true;
             this.Close();
         }
-        void PhanQuyenTK()
+      public  void PhanQuyenTK()
         {
             if(TaiKhoanGlobal.Loaitaikhoan==2)
             {
@@ -110,6 +110,11 @@ namespace DoAn_Winform
 
                 toolAdmin.Enabled = false;
             }
+        }
+
+        private void frmHome_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
