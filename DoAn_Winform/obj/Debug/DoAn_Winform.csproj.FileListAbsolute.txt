@@ -27,3 +27,4 @@ C:\Users\hungh\OneDrive\Desktop\Đồ án\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winfor
 C:\Users\hungh\OneDrive\Desktop\Đồ án\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\obj\Debug\DoAn_Winform.csproj.GenerateResource.Cache
 C:\Users\hungh\OneDrive\Desktop\Đồ án\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\obj\Debug\DoAn_Winform.exe
 C:\Users\hungh\OneDrive\Desktop\Đồ án\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\obj\Debug\DoAn_Winform.pdb
+C:\Users\hungh\OneDrive\Desktop\Đồ án\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\obj\Debug\DoAn_Winform.exe.licenses

@@ -17,9 +17,14 @@ namespace BUS
             return ddhDAO.LoadDsDDH();
         }
 
-        public bool ThemDDH(DonDatHangDTO ddh)
+        public bool ThemDDH(DonDatHangDTO ddh, out int maDDH)
         {
-            return ddhDAO.ThemDDH(ddh);
+            return ddhDAO.ThemDDH(ddh, out maDDH);
+        }
+
+        public void DuyetDDH(int maDDH)
+        {
+            ddhDAO.DuyetDDH(maDDH);
         }
     }
 }

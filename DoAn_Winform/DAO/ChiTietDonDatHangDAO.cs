@@ -13,7 +13,7 @@ namespace DAO
 
         public List<ChiTietDonDatHangDTO> LoadDsChiTietDDHTheoMaDDH(int maDDH)
         {
-            return db.CHI_TIET_DON_DAT_HANG.Where(p => p.MADDH == maDDH).Select(p => new ChiTietDonDatHangDTO {Maddh=p.MADDH, Mahh=p.MAHH, Sl=p.SL, Tenhh=p.HANG_HOA.TENHH}).ToList();
+            return db.CHI_TIET_DON_DAT_HANG.Where(p => p.MADDH == maDDH).Select(p => new ChiTietDonDatHangDTO { Maddh = p.MADDH, Mahh = p.MAHH, Sl = p.SL, Tenhh = p.HANG_HOA.TENHH, Slton = p.HANG_HOA.SLTON }).ToList();
         }
 
         public bool ThemChiTietDDH(ChiTietDonDatHangDTO ctddh)
@@ -29,7 +29,7 @@ namespace DAO
                 db.SaveChanges();
                 return true;
             }
-            catch(Exception e)
+            catch (Exception r)
             {
                 return false;
             }
@@ -44,7 +44,7 @@ namespace DAO
                 db.SaveChanges();
                 return true;
             }
-            catch (Exception e)
+            catch (Exception r)
             {
                 return false;
             }
@@ -59,7 +59,7 @@ namespace DAO
                 db.SaveChanges();
                 return true;
             }
-            catch (Exception e)
+            catch (Exception r)
             {
                 return false;
             }

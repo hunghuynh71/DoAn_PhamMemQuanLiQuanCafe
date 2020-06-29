@@ -8,6 +8,14 @@ namespace DTO
 {
     public class ChiTietDonDatHangDTO
     {
+        private int slton;
+
+        public int Slton
+        {
+            get { return slton; }
+            set { slton = value; }
+        }
+
         private string tenhh;
 
         public string Tenhh
@@ -39,5 +47,7 @@ namespace DTO
             get { return maddh; }
             set { maddh = value; }
         }
+
+
     }
 }

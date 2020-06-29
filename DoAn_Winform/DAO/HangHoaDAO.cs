@@ -75,5 +75,10 @@ namespace DAO
                 return false;
             }
         }
+
+        public string LoadTenHHTheoMaHH(int maHH)
+        {
+            return db.HANG_HOA.Where(p => p.MAHH == maHH).Select(p => p.TENHH).SingleOrDefault();
+        }
     }
 }

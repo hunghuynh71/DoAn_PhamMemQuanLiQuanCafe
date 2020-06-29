@@ -36,5 +36,10 @@ namespace BUS
         {
             return hhTam.XoaHH(maHH);
         }
+
+        public string LoadTenhhTheoMaHH(int maHH)
+        {
+            return hhTam.LoadTenHHTheoMaHH(maHH);
+        }
     }
 }
