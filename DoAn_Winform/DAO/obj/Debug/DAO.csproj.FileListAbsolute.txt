@@ -31,6 +31,7 @@ C:\Users\hungh\OneDrive\Desktop\Đồ án\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winfor
 C:\Users\hungh\OneDrive\Desktop\Đồ án\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\DAO\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\hungh\OneDrive\Desktop\Đồ án\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\DAO\bin\Debug\DTO.pdb
 C:\Users\hungh\OneDrive\Desktop\Đồ án\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\DAO\bin\Debug\EntityFramework.xml
+C:\Users\hungh\OneDrive\Desktop\Đồ án\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\DAO\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\hungh\OneDrive\Desktop\Đồ án\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\DAO\obj\Debug\DAO.csprojResolveAssemblyReference.cache
 C:\Users\hungh\OneDrive\Desktop\Đồ án\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\DAO\obj\Debug\DAO.dll
 C:\Users\hungh\OneDrive\Desktop\Đồ án\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\DAO\obj\Debug\DAO.pdb

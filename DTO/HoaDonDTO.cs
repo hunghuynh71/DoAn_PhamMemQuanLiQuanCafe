@@ -8,13 +8,29 @@ namespace DTO
 {
     public class HoaDonDTO
     {
-        private double thanhtien;
+        private string tenban;
 
-        public double Thanhtien
+        public string Tenban
         {
-            get { return thanhtien; }
-            set { thanhtien = value; }
+            get { return tenban; }
+            set { tenban = value; }
         }
+
+        private string tennvlap;
+
+        public string Tennvlap
+        {
+            get { return tennvlap; }
+            set { tennvlap = value; }
+        }
+
+        //private double tongtien;
+
+        //public double Tongtien
+        //{
+        //    get { return Tongtien; }
+        //    set { Tongtien = value; }
+        //}
 
         private double giaban;
 

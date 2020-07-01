@@ -16,6 +16,40 @@ namespace DAO
             return db.HOA_DON.Where(p => p.SOBAN == maBan && p.TRANGTHAI == 0).Select(u => new HoaDonDTO 
             { Mahd = u.MAHD, Ngaylap = u.NGAYLAP, Manvlap = u.MANVLAP, Soban = u.SOBAN, Trangthai = u.TRANGTHAI }).SingleOrDefault();
         }
+
+        public double TinhTongTienCuaHD(int maHD)
+        {
+            double tong = 0;
+            ChiTietHoaDonDAO ctDAO = new ChiTietHoaDonDAO();
+            List<ChiTietHoaDonDTO> ListCTHD = ctDAO.LoadDsCTHDTheoMaHD(maHD);
+            foreach (ChiTietHoaDonDTO ct in ListCTHD)
+            {
+                tong += ct.Thanhtien;
+            }
+            return tong;
+        }
+
+        public List<HoaDonDTO> LoadDsHDTrongNgay()
+        {
+            List<HoaDonDTO> kq = new List<HoaDonDTO>();
+            kq = db.HOA_DON.Where(p => p.TRANGTHAIXOA == false && p.NGAYLAP == DateTime.Today && p.TRANGTHAI == 1).Select(p => new HoaDonDTO 
+            { 
+                Mahd = p.MAHD, 
+                Tennvlap=p.NHAN_VIEN.TENNV,
+                Tenban=p.BAN.TENBAN
+                //Manvlap = p.MANVLAP, 
+                //Soban = p.SOBAN,
+                //Tongtien=0
+            }).ToList();
+            //if (kq != null)
+            //{
+            //    foreach (HoaDonDTO hd in kq)
+            //    {
+            //        hd.Tongtien = TinhTongTienCuaHD(hd.Mahd);
+            //    }
+            //}
+            return kq;
+        }
     
         public bool ThemThucUongTheoBan(BanDTO ban,int MaNVLap , string TenTU, string LoaiTU,int SoLg)
         {

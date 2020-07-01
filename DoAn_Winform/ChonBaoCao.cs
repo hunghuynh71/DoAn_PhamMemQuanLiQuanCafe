@@ -19,8 +19,12 @@ namespace DoAn_Winform
 
         private void btnXemBaoCao_Click(object sender, EventArgs e)
         {
-            frmXemBaoCao f = new frmXemBaoCao();
-            f.ShowDialog();
+            if(radBCDoanhThuTrongNgay.Checked)
+            {
+                frmXemBaoCao f = new frmXemBaoCao();
+                f.BaoCaoDoanhThuTrongNgay();
+                f.ShowDialog();
+            }
         }
     }
 }

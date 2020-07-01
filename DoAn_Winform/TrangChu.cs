@@ -41,7 +41,7 @@ namespace DoAn_Winform
         
         private void xemThôngTinHóaĐơnToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmThongKeDoanhThu f = new frmThongKeDoanhThu();
+            frmChonBaoCao f = new frmChonBaoCao();
             f.MdiParent = this;
             f.Show();
         }

@@ -44,7 +44,7 @@ namespace DoAn_Winform
 
             foreach(BanDTO item in dsBan)
             {
-                Button button = new Button() { Width=70, Height=70};
+                Button button = new Button() { Width=120, Height=120};
 
                 button.Click += button_Click;           
                 button.Tag = item;                

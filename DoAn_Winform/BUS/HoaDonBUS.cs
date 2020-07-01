@@ -15,6 +15,12 @@ namespace BUS
         {
             return hdTam.LoadHDChuaThanhToanTheoMaBan(maBan);
         }
+
+        public List<HoaDonDTO> LoadDsHDTrongNgay()
+        {
+            return hdTam.LoadDsHDTrongNgay();
+        }
+
         public bool ThemThucUongTheoBan(BanDTO ban , int Manv , string TenTU, string LoaiTU,int SoLg)
         {
             return hdTam.ThemThucUongTheoBan(ban,Manv,TenTU,LoaiTU,SoLg);

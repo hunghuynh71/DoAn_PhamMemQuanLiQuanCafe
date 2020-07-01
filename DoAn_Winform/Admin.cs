@@ -233,6 +233,9 @@ namespace DoAn_Winform
             //Tab nhân viên
             LoadDsNhanVien();
             AutoCompleteNV();
+
+            //Duyệt ddh
+            loadDSDonDaT();
         }       
 
         //Bàn
@@ -963,7 +966,47 @@ namespace DoAn_Winform
             }
         }
 
-        #endregion 
+        //duyệt đơn dặt hàng
 
+        void loadDSDonDaT()
+        {
+            DonDatHangBUS ddhBUS = new DonDatHangBUS();
+            dtgvDanhSachYeuCauDatHang.AutoGenerateColumns = false;
+            dtgvDanhSachYeuCauDatHang.DataSource = ddhBUS.LoadDsDDH();
+        }
+
+        
+
+        private void btnDuyetDDH_Click(object sender, EventArgs e)
+        {
+            int maDDH = Convert.ToInt32(dtgvDanhSachYeuCauDatHang.SelectedCells[0].OwningRow.Cells["colMaDonDatHang"].Value.ToString());
+            DonDatHangBUS ddhBUS = new DonDatHangBUS();
+            ddhBUS.DuyetDDH(maDDH);
+            dtgvDanhSachYeuCauDatHang.AutoGenerateColumns = false;
+            dtgvDanhSachYeuCauDatHang.DataSource=ddhBUS.LoadDsDDH();
+        }
+
+        private void dtgvDanhSachYeuCauDatHang_MouseClick(object sender, MouseEventArgs e)
+        {
+            //if (radTatCa.Checked) { }
+            //load chi tiet theo don dat hang duoc chon
+            foreach (ListViewItem item in lvwChiTietDDH.Items)
+            {
+                item.Remove();
+            }
+            int maDDH = Convert.ToInt32(dtgvDanhSachYeuCauDatHang.SelectedCells[0].OwningRow.Cells["colMaDonDatHang"].Value.ToString());
+            ChiTietDonDatHangBUS ctBUS = new ChiTietDonDatHangBUS();
+            List<ChiTietDonDatHangDTO> listCtDDH = ctBUS.LoadDsChiTietDDHtheoMaDDH(maDDH);
+            foreach (ChiTietDonDatHangDTO item in listCtDDH)
+            {
+                ListViewItem lvi = new ListViewItem(item.Tenhh);
+                lvi.SubItems.Add(item.Sl.ToString());
+                lvi.SubItems.Add(item.Slton.ToString());
+                lvwChiTietDDH.Items.Add(lvi);
+            }
+        }
+
+
+        #endregion
     }
 }
