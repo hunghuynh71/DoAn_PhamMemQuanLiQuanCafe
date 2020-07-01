@@ -33,5 +33,9 @@ namespace BUS
         {
             return hdTam.ChuyenBan(ban, TenBan,MavnLap);
         }
+        public List<HoaDonDTO> loadDoanhThu_frmAmin(bool TraCuuTheoNgay, DateTime Start, DateTime End)
+        {
+            return hdTam.loadDoanhThu_FrmAmin(TraCuuTheoNgay, Start, End);
+        }
     }
 }

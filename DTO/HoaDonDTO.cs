@@ -24,6 +24,8 @@ namespace DTO
             set { tennvlap = value; }
         }
 
+        double tongTien;
+        public double TongTien { get => tongTien; set => tongTien = value; }
         //private double tongtien;
 
         //public double Tongtien
@@ -111,5 +113,7 @@ namespace DTO
             get { return mahd; }
             set { mahd = value; }
         }
+
+     
     }
 }

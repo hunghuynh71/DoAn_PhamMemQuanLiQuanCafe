@@ -236,7 +236,19 @@ namespace DoAn_Winform
 
             //Duyệt ddh
             loadDSDonDaT();
-        }       
+            loadDoanhthu();
+        }
+
+        //Hoa Don
+        void loadDoanhthu()
+        {
+            radTatCaDoanhThu.Checked = true;
+            tbpDoanhThu.Click += TbpDoanhThu_Click;
+        }
+        private void TbpDoanhThu_Click(object sender, EventArgs e)
+        {
+            radTatCaDoanhThu.Checked = true;
+        }
 
         //Bàn
         BanBUS banBus= new BanBUS();
@@ -1003,10 +1015,36 @@ namespace DoAn_Winform
                 lvi.SubItems.Add(item.Sl.ToString());
                 lvi.SubItems.Add(item.Slton.ToString());
                 lvwChiTietDDH.Items.Add(lvi);
+            }           
+        }
+        private void radChonTheoNgay_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radChonTheoNgay.Checked == true)
+            {
+                dtpTuNgay.Enabled = true;
+                dtpDenNgay.Enabled = true;
+            }
+        }
+        private void radTatCaDoanhThu_CheckedChanged(object sender, EventArgs e)
+        {
+            if(radTatCaDoanhThu.Checked==true)
+            {
+                dtpTuNgay.Enabled = false;
+                dtpDenNgay.Enabled = false;
             }
         }
 
-
         #endregion
+
+        private void btnSearchHD_Click(object sender, EventArgs e)
+        {
+            List<HoaDonDTO> ListHDdto = new List<HoaDonDTO>();
+            HoaDonBUS hdbus = new HoaDonBUS();
+            ListHDdto = hdbus.loadDoanhThu_frmAmin(radChonTheoNgay.Checked, dtpTuNgay.Value, dtpDenNgay.Value);
+            if(ListHDdto.Count() > 0)
+            {
+                dtgvTraCuuHoaDon.DataSource = ListHDdto;
+            }
+        }
     }
 }

@@ -200,6 +200,19 @@ namespace DAO
             }
 
         }
-    
+        
+        public List<HoaDonDTO> loadDoanhThu_FrmAmin(bool TraCuuTheoNgay,DateTime Start , DateTime End)
+        {
+            ChiTietHoaDonDAO cthd = new ChiTietHoaDonDAO();
+            return db.HOA_DON.Where(u => u.TRANGTHAIXOA == false && u.TRANGTHAI == 1 && (TraCuuTheoNgay == true ? u.NGAYLAP >= Start && u.NGAYLAP <= End : true)).Select(v => new HoaDonDTO
+            {
+                Mahd = v.MAHD,
+                Ngaylap = v.NGAYLAP,
+                Tenban = v.BAN.TENBAN,
+                Tennvlap = v.NHAN_VIEN.TENNV,
+                TongTien = TinhTongTienCuaHD(v.MAHD)
+            }
+            ).ToList();
+        }
     }
 }
