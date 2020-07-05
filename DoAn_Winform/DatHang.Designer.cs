@@ -43,15 +43,15 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dtgvDsDDH = new System.Windows.Forms.DataGridView();
-            this.colMaDonDatHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colNgayLap = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colTenNhanVienLap = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colTrangThaiDuyet = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnDatHang = new System.Windows.Forms.Button();
             this.lvwChiTietDDh = new System.Windows.Forms.ListView();
             this.colTenHH = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colSoLuong = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.colMaDonDatHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colNgayLap = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colTenNhanVienLap = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colTrangThaiDuyet = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.grbThongTinHangDat.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nmrSoLuong)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvDsDDH)).BeginInit();
@@ -229,35 +229,6 @@
             this.dtgvDsDDH.MouseMove += new System.Windows.Forms.MouseEventHandler(this.dtgvDsDDH_MouseMove);
             this.dtgvDsDDH.Move += new System.EventHandler(this.dtgvDsDDH_Move);
             // 
-            // colMaDonDatHang
-            // 
-            this.colMaDonDatHang.DataPropertyName = "Maddh";
-            this.colMaDonDatHang.HeaderText = "Mã đơn đặt hàng";
-            this.colMaDonDatHang.MinimumWidth = 6;
-            this.colMaDonDatHang.Name = "colMaDonDatHang";
-            // 
-            // colNgayLap
-            // 
-            this.colNgayLap.DataPropertyName = "Ngaylap";
-            this.colNgayLap.HeaderText = "Ngày lập";
-            this.colNgayLap.MinimumWidth = 6;
-            this.colNgayLap.Name = "colNgayLap";
-            // 
-            // colTenNhanVienLap
-            // 
-            this.colTenNhanVienLap.DataPropertyName = "Tennvlap";
-            this.colTenNhanVienLap.HeaderText = "Tên nhân viên lập";
-            this.colTenNhanVienLap.MinimumWidth = 6;
-            this.colTenNhanVienLap.Name = "colTenNhanVienLap";
-            // 
-            // colTrangThaiDuyet
-            // 
-            this.colTrangThaiDuyet.DataPropertyName = "Trangthaiduyet";
-            this.colTrangThaiDuyet.HeaderText = "Trạng thái duyệt";
-            this.colTrangThaiDuyet.MinimumWidth = 6;
-            this.colTrangThaiDuyet.Name = "colTrangThaiDuyet";
-            this.colTrangThaiDuyet.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
             // btnDatHang
             // 
             this.btnDatHang.Location = new System.Drawing.Point(472, 109);
@@ -291,6 +262,36 @@
             // colSoLuong
             // 
             this.colSoLuong.Text = "Số lượng";
+            // 
+            // colMaDonDatHang
+            // 
+            this.colMaDonDatHang.DataPropertyName = "Maddh";
+            this.colMaDonDatHang.HeaderText = "Mã đơn đặt hàng";
+            this.colMaDonDatHang.MinimumWidth = 6;
+            this.colMaDonDatHang.Name = "colMaDonDatHang";
+            // 
+            // colNgayLap
+            // 
+            this.colNgayLap.DataPropertyName = "Ngaylap";
+            this.colNgayLap.HeaderText = "Ngày lập";
+            this.colNgayLap.MinimumWidth = 6;
+            this.colNgayLap.Name = "colNgayLap";
+            // 
+            // colTenNhanVienLap
+            // 
+            this.colTenNhanVienLap.DataPropertyName = "Tennvlap";
+            this.colTenNhanVienLap.HeaderText = "Tên nhân viên lập";
+            this.colTenNhanVienLap.MinimumWidth = 6;
+            this.colTenNhanVienLap.Name = "colTenNhanVienLap";
+            // 
+            // colTrangThaiDuyet
+            // 
+            this.colTrangThaiDuyet.DataPropertyName = "Trangthaiduyet";
+            this.colTrangThaiDuyet.HeaderText = "Trạng thái duyệt";
+            this.colTrangThaiDuyet.MinimumWidth = 6;
+            this.colTrangThaiDuyet.Name = "colTrangThaiDuyet";
+            this.colTrangThaiDuyet.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.colTrangThaiDuyet.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // frmDatHang
             // 
@@ -339,13 +340,13 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dtgvDsDDH;
         private System.Windows.Forms.Button btnDatHang;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colMaDonDatHang;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colNgayLap;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colTenNhanVienLap;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colTrangThaiDuyet;
         private System.Windows.Forms.ListView lvwChiTietDDh;
         private System.Windows.Forms.ColumnHeader colTenHH;
         private System.Windows.Forms.ColumnHeader colSoLuong;
         private System.Windows.Forms.BindingSource bindingSource1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colMaDonDatHang;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colNgayLap;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colTenNhanVienLap;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn colTrangThaiDuyet;
     }
 }

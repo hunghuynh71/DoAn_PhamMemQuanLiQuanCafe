@@ -9,7 +9,7 @@ namespace DAO
 {     
     public class BanDAO
     {
-        QUAN_LI_QUAN_CAFE_HBK_Entities1 db = new QUAN_LI_QUAN_CAFE_HBK_Entities1();
+        QUAN_LI_QUAN_CAFE_HBKEntities1 db = new QUAN_LI_QUAN_CAFE_HBKEntities1();
         public List<BanDTO> LoadDsBan()
         {
             return db.BANs.Where(p => p.TRANGTHAIXOA == false).Select(p => new BanDTO 

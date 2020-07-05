@@ -51,81 +51,75 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BAN.cs">
-      <DependentUpon>QuanLiQuanCafeHBK.tt</DependentUpon>
+      <DependentUpon>QLQCafe.tt</DependentUpon>
     </Compile>
     <Compile Include="BanDAO.cs" />
     <Compile Include="ChiTietDonDatHangDAO.cs" />
     <Compile Include="ChiTietHoaDonDAO.cs" />
     <Compile Include="ChiTietPhieuNhapDAO.cs" />
     <Compile Include="CHI_TIET_DON_DAT_HANG.cs">
-      <DependentUpon>QuanLiQuanCafeHBK.tt</DependentUpon>
+      <DependentUpon>QLQCafe.tt</DependentUpon>
     </Compile>
     <Compile Include="CHI_TIET_HOA_DON.cs">
-      <DependentUpon>QuanLiQuanCafeHBK.tt</DependentUpon>
+      <DependentUpon>QLQCafe.tt</DependentUpon>
     </Compile>
     <Compile Include="CHI_TIET_PHIEU_NHAP_HANG.cs">
-      <DependentUpon>QuanLiQuanCafeHBK.tt</DependentUpon>
+      <DependentUpon>QLQCafe.tt</DependentUpon>
     </Compile>
     <Compile Include="DonDatHangDAO.cs" />
     <Compile Include="DON_DAT_HANG.cs">
-      <DependentUpon>QuanLiQuanCafeHBK.tt</DependentUpon>
+      <DependentUpon>QLQCafe.tt</DependentUpon>
     </Compile>
     <Compile Include="HangHoaDAO.cs" />
     <Compile Include="HANG_HOA.cs">
-      <DependentUpon>QuanLiQuanCafeHBK.tt</DependentUpon>
+      <DependentUpon>QLQCafe.tt</DependentUpon>
     </Compile>
     <Compile Include="HoaDonDAO.cs" />
     <Compile Include="HOA_DON.cs">
-      <DependentUpon>QuanLiQuanCafeHBK.tt</DependentUpon>
+      <DependentUpon>QLQCafe.tt</DependentUpon>
     </Compile>
     <Compile Include="LoaiThucUongDAO.cs" />
     <Compile Include="LOAI_THUC_UONG.cs">
-      <DependentUpon>QuanLiQuanCafeHBK.tt</DependentUpon>
+      <DependentUpon>QLQCafe.tt</DependentUpon>
     </Compile>
     <Compile Include="NhaCungCapDAO.cs" />
     <Compile Include="NhanVienDAO.cs" />
     <Compile Include="NHAN_VIEN.cs">
-      <DependentUpon>QuanLiQuanCafeHBK.tt</DependentUpon>
+      <DependentUpon>QLQCafe.tt</DependentUpon>
     </Compile>
     <Compile Include="NHA_CUNG_CAP.cs">
-      <DependentUpon>QuanLiQuanCafeHBK.tt</DependentUpon>
+      <DependentUpon>QLQCafe.tt</DependentUpon>
     </Compile>
     <Compile Include="PhieuNhapHangDAO.cs" />
     <Compile Include="PHIEU_NHAP_HANG.cs">
-      <DependentUpon>QuanLiQuanCafeHBK.tt</DependentUpon>
+      <DependentUpon>QLQCafe.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="QuanLiQuanCafeHBK.Context.cs">
+    <Compile Include="QLQCafe.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>QuanLiQuanCafeHBK.Context.tt</DependentUpon>
+      <DependentUpon>QLQCafe.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="QuanLiQuanCafeHBK.cs">
+    <Compile Include="QLQCafe.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>QuanLiQuanCafeHBK.tt</DependentUpon>
+      <DependentUpon>QLQCafe.tt</DependentUpon>
     </Compile>
-    <Compile Include="QuanLiQuanCafeHBK.Designer.cs">
+    <Compile Include="QLQCafe.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>QuanLiQuanCafeHBK.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="sp_helpdiagramdefinition_Result.cs">
-      <DependentUpon>QuanLiQuanCafeHBK.tt</DependentUpon>
-    </Compile>
-    <Compile Include="sp_helpdiagrams_Result.cs">
-      <DependentUpon>QuanLiQuanCafeHBK.tt</DependentUpon>
+      <DependentUpon>QLQCafe.edmx</DependentUpon>
     </Compile>
     <Compile Include="sysdiagram.cs">
-      <DependentUpon>QuanLiQuanCafeHBK.tt</DependentUpon>
+      <DependentUpon>QLQCafe.tt</DependentUpon>
     </Compile>
     <Compile Include="TaiKhoanDAO.cs" />
     <Compile Include="TAI_KHOAN.cs">
-      <DependentUpon>QuanLiQuanCafeHBK.tt</DependentUpon>
+      <DependentUpon>QLQCafe.tt</DependentUpon>
     </Compile>
     <Compile Include="ThucUongDAO.cs" />
     <Compile Include="THUC_UONG.cs">
-      <DependentUpon>QuanLiQuanCafeHBK.tt</DependentUpon>
+      <DependentUpon>QLQCafe.tt</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -134,22 +128,22 @@
   <ItemGroup>
     <None Include="App.Config" />
     <None Include="packages.config" />
-    <EntityDeploy Include="QuanLiQuanCafeHBK.edmx">
+    <EntityDeploy Include="QLQCafe.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>QuanLiQuanCafeHBK.Designer.cs</LastGenOutput>
+      <LastGenOutput>QLQCafe.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="QuanLiQuanCafeHBK.Context.tt">
+    <None Include="QLQCafe.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>QuanLiQuanCafeHBK.edmx</DependentUpon>
-      <LastGenOutput>QuanLiQuanCafeHBK.Context.cs</LastGenOutput>
+      <DependentUpon>QLQCafe.edmx</DependentUpon>
+      <LastGenOutput>QLQCafe.Context.cs</LastGenOutput>
     </None>
-    <None Include="QuanLiQuanCafeHBK.edmx.diagram">
-      <DependentUpon>QuanLiQuanCafeHBK.edmx</DependentUpon>
+    <None Include="QLQCafe.edmx.diagram">
+      <DependentUpon>QLQCafe.edmx</DependentUpon>
     </None>
-    <None Include="QuanLiQuanCafeHBK.tt">
+    <None Include="QLQCafe.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>QuanLiQuanCafeHBK.edmx</DependentUpon>
-      <LastGenOutput>QuanLiQuanCafeHBK.cs</LastGenOutput>
+      <DependentUpon>QLQCafe.edmx</DependentUpon>
+      <LastGenOutput>QLQCafe.cs</LastGenOutput>
     </None>
   </ItemGroup>
   <ItemGroup>

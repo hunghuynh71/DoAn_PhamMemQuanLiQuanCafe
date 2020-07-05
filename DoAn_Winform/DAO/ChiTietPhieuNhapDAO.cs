@@ -8,7 +8,7 @@ namespace DAO
 {
     public class ChiTietPhieuNhapDAO
     {
-        QUAN_LI_QUAN_CAFE_HBK_Entities1 db = new QUAN_LI_QUAN_CAFE_HBK_Entities1();
+        QUAN_LI_QUAN_CAFE_HBKEntities1 db = new QUAN_LI_QUAN_CAFE_HBKEntities1();
         public List<ChiTietPhieuNhapHangDTO> LoadDsChiTietPNHTheoMa(int maPNH)
         {
             return db.CHI_TIET_PHIEU_NHAP_HANG.Where(p => p.MAPNH == maPNH).Select(p => new ChiTietPhieuNhapHangDTO

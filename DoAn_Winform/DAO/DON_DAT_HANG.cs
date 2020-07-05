@@ -21,7 +21,7 @@ namespace DAO
         }
     
         public int MADDH { get; set; }
-        public System.DateTime NGAYLAP { get; set; }
+        public Nullable<System.DateTime> NGAYLAP { get; set; }
         public int MANVLAP { get; set; }
         public bool TRANGTHAIXOA { get; set; }
         public bool TRANGTHAIDUYET { get; set; }

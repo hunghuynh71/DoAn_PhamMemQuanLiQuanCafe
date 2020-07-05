@@ -111,26 +111,58 @@
     <Compile Include="ChonBaoCao.Designer.cs">
       <DependentUpon>ChonBaoCao.cs</DependentUpon>
     </Compile>
-    <Compile Include="crptDTTrongNgay.cs">
+    <Compile Include="crptChiTieuTrongKhoan.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>crptDTTrongNgay.rpt</DependentUpon>
+      <DependentUpon>crptChiTieuTrongKhoan.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="DataSetDTTrongNgay.cs">
-      <DependentUpon>DataSetDTTrongNgay.xsd</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="DataSetDTTrongNgay.Designer.cs">
+    <Compile Include="crptChiTieuTrongNgay.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DataSetDTTrongNgay.xsd</DependentUpon>
+      <DependentUpon>crptChiTieuTrongNgay.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
-    <Compile Include="TraCuuHoaDon.cs">
-      <SubType>Form</SubType>
+    <Compile Include="crptDoanhThuTrongKhoan.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crptDoanhThuTrongKhoan.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
-    <Compile Include="TraCuuHoaDon.Designer.cs">
-      <DependentUpon>TraCuuHoaDon.cs</DependentUpon>
+    <Compile Include="crptDoanhThuTrongNgay.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crptDoanhThuTrongNgay.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="crptDoanhThuTungSPTrongThang.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crptDoanhThuTungSPTrongThang.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DataSetChiTieu.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetChiTieu.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetDoanhThu.cs">
+      <DependentUpon>DataSetDoanhThu.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DataSetDoanhThu.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetDoanhThu.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetDoanhThuTungSP.cs">
+      <DependentUpon>DataSetDoanhThuTungSP.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DataSetDoanhThuTungSP.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetDoanhThuTungSP.xsd</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -146,12 +178,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TraCuuPhieuNhapHang.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TraCuuPhieuNhapHang.Designer.cs">
-      <DependentUpon>TraCuuPhieuNhapHang.cs</DependentUpon>
-    </Compile>
     <Compile Include="TrangChu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -182,14 +208,27 @@
     <EmbeddedResource Include="ChonBaoCao.resx">
       <DependentUpon>ChonBaoCao.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="crptDTTrongNgay.rpt">
+    <EmbeddedResource Include="crptChiTieuTrongKhoan.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>crptDTTrongNgay.cs</LastGenOutput>
+      <LastGenOutput>crptChiTieuTrongKhoan.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="crptChiTieuTrongNgay.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crptChiTieuTrongNgay.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="crptDoanhThuTrongKhoan.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crptDoanhThuTrongKhoan.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="crptDoanhThuTrongNgay.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crptDoanhThuTrongNgay.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="crptDoanhThuTungSPTrongThang.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crptDoanhThuTungSPTrongThang.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
-    <EmbeddedResource Include="TraCuuHoaDon.resx">
-      <DependentUpon>TraCuuHoaDon.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -206,9 +245,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="TraCuuPhieuNhapHang.resx">
-      <DependentUpon>TraCuuPhieuNhapHang.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="TrangChu.resx">
       <DependentUpon>TrangChu.cs</DependentUpon>
     </EmbeddedResource>
@@ -219,16 +255,38 @@
       <DependentUpon>XemBaoCao.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.Config" />
-    <None Include="DataSetDTTrongNgay.xsc">
-      <DependentUpon>DataSetDTTrongNgay.xsd</DependentUpon>
+    <None Include="DataSetChiTieu.xsc">
+      <DependentUpon>DataSetChiTieu.xsd</DependentUpon>
     </None>
-    <None Include="DataSetDTTrongNgay.xsd">
+    <None Include="DataSetChiTieu.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DataSetDTTrongNgay.Designer.cs</LastGenOutput>
+      <LastGenOutput>DataSetChiTieu.Designer.cs</LastGenOutput>
     </None>
-    <None Include="DataSetDTTrongNgay.xss">
-      <DependentUpon>DataSetDTTrongNgay.xsd</DependentUpon>
+    <None Include="DataSetChiTieu.xss">
+      <DependentUpon>DataSetChiTieu.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetDoanhThu.xsc">
+      <DependentUpon>DataSetDoanhThu.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetDoanhThu.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetDoanhThu.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetDoanhThu.xss">
+      <DependentUpon>DataSetDoanhThu.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetDoanhThuTungSP.xsc">
+      <DependentUpon>DataSetDoanhThuTungSP.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetDoanhThuTungSP.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetDoanhThuTungSP.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetDoanhThuTungSP.xss">
+      <DependentUpon>DataSetDoanhThuTungSP.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

@@ -9,7 +9,7 @@ namespace DAO
 {
     public class ChiTietDonDatHangDAO
     {
-        QUAN_LI_QUAN_CAFE_HBK_Entities1 db = new QUAN_LI_QUAN_CAFE_HBK_Entities1();
+        QUAN_LI_QUAN_CAFE_HBKEntities1 db = new QUAN_LI_QUAN_CAFE_HBKEntities1();
 
         public List<ChiTietDonDatHangDTO> LoadDsChiTietDDHTheoMaDDH(int maDDH)
         {
@@ -26,6 +26,8 @@ namespace DAO
                 ct.SL = ctddh.Sl;
 
                 db.CHI_TIET_DON_DAT_HANG.Add(ct);
+                
+                
                 db.SaveChanges();
                 return true;
             }

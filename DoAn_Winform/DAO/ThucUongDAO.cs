@@ -9,7 +9,7 @@ namespace DAO
 {
     public class ThucUongDAO
     {
-        QUAN_LI_QUAN_CAFE_HBK_Entities1 db = new QUAN_LI_QUAN_CAFE_HBK_Entities1();
+        QUAN_LI_QUAN_CAFE_HBKEntities1 db = new QUAN_LI_QUAN_CAFE_HBKEntities1();
 
         public List<ThucUongDTO> LoadDsThucUong()
         {

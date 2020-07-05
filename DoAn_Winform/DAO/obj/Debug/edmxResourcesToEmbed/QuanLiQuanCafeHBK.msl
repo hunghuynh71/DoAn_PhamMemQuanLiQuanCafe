@@ -92,6 +92,7 @@
     <EntitySetMapping Name="HOA_DON">
       <EntityTypeMapping TypeName="QUAN_LI_QUAN_CAFE_HBKModel.HOA_DON">
         <MappingFragment StoreEntitySet="HOA_DON">
+          <ScalarProperty Name="TONGTIEN" ColumnName="TONGTIEN" />
           <ScalarProperty Name="TRANGTHAIXOA" ColumnName="TRANGTHAIXOA" />
           <ScalarProperty Name="TRANGTHAI" ColumnName="TRANGTHAI" />
           <ScalarProperty Name="SOBAN" ColumnName="SOBAN" />
@@ -107,17 +108,6 @@
           <ScalarProperty Name="TRANGTHAIXOA" ColumnName="TRANGTHAIXOA" />
           <ScalarProperty Name="TENLOAITU" ColumnName="TENLOAITU" />
           <ScalarProperty Name="MALOAITU" ColumnName="MALOAITU" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="NHA_CUNG_CAP">
-      <EntityTypeMapping TypeName="QUAN_LI_QUAN_CAFE_HBKModel.NHA_CUNG_CAP">
-        <MappingFragment StoreEntitySet="NHA_CUNG_CAP">
-          <ScalarProperty Name="TRANGTHAIXOA" ColumnName="TRANGTHAIXOA" />
-          <ScalarProperty Name="SDT" ColumnName="SDT" />
-          <ScalarProperty Name="DIACHI" ColumnName="DIACHI" />
-          <ScalarProperty Name="TENNCC" ColumnName="TENNCC" />
-          <ScalarProperty Name="MANCC" ColumnName="MANCC" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

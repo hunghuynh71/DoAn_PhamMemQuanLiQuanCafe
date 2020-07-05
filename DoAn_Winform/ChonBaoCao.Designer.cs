@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.radBCThuChiTrongKhoanTG = new System.Windows.Forms.RadioButton();
+            this.radBCDoanhThuTrongKhoan = new System.Windows.Forms.RadioButton();
             this.radBCDoanhThuTrongNgay = new System.Windows.Forms.RadioButton();
             this.btnXemBaoCao = new System.Windows.Forms.Button();
             this.dtpTuNgay = new System.Windows.Forms.DateTimePicker();
@@ -36,25 +36,27 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.radBCDoanhThuTheoTungLoaiSP = new System.Windows.Forms.RadioButton();
+            this.radBCDoanhThuTungSPTrongThang = new System.Windows.Forms.RadioButton();
+            this.radBCChiTieuTrongNgay = new System.Windows.Forms.RadioButton();
+            this.radBCChiTieuTrongKhoan = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
-            // radBCThuChiTrongKhoanTG
+            // radBCDoanhThuTrongKhoan
             // 
-            this.radBCThuChiTrongKhoanTG.AutoSize = true;
-            this.radBCThuChiTrongKhoanTG.Location = new System.Drawing.Point(50, 293);
-            this.radBCThuChiTrongKhoanTG.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.radBCThuChiTrongKhoanTG.Name = "radBCThuChiTrongKhoanTG";
-            this.radBCThuChiTrongKhoanTG.Size = new System.Drawing.Size(284, 29);
-            this.radBCThuChiTrongKhoanTG.TabIndex = 0;
-            this.radBCThuChiTrongKhoanTG.TabStop = true;
-            this.radBCThuChiTrongKhoanTG.Text = "Thu chi trong khoản thời gian";
-            this.radBCThuChiTrongKhoanTG.UseVisualStyleBackColor = true;
+            this.radBCDoanhThuTrongKhoan.AutoSize = true;
+            this.radBCDoanhThuTrongKhoan.Location = new System.Drawing.Point(228, 246);
+            this.radBCDoanhThuTrongKhoan.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.radBCDoanhThuTrongKhoan.Name = "radBCDoanhThuTrongKhoan";
+            this.radBCDoanhThuTrongKhoan.Size = new System.Drawing.Size(231, 29);
+            this.radBCDoanhThuTrongKhoan.TabIndex = 0;
+            this.radBCDoanhThuTrongKhoan.TabStop = true;
+            this.radBCDoanhThuTrongKhoan.Text = "Doanh thu trong khoản";
+            this.radBCDoanhThuTrongKhoan.UseVisualStyleBackColor = true;
             // 
             // radBCDoanhThuTrongNgay
             // 
             this.radBCDoanhThuTrongNgay.AutoSize = true;
-            this.radBCDoanhThuTrongNgay.Location = new System.Drawing.Point(50, 186);
+            this.radBCDoanhThuTrongNgay.Location = new System.Drawing.Point(228, 170);
             this.radBCDoanhThuTrongNgay.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.radBCDoanhThuTrongNgay.Name = "radBCDoanhThuTrongNgay";
             this.radBCDoanhThuTrongNgay.Size = new System.Drawing.Size(220, 29);
@@ -65,7 +67,7 @@
             // 
             // btnXemBaoCao
             // 
-            this.btnXemBaoCao.Location = new System.Drawing.Point(454, 495);
+            this.btnXemBaoCao.Location = new System.Drawing.Point(511, 525);
             this.btnXemBaoCao.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnXemBaoCao.Name = "btnXemBaoCao";
             this.btnXemBaoCao.Size = new System.Drawing.Size(188, 70);
@@ -76,7 +78,7 @@
             // 
             // dtpTuNgay
             // 
-            this.dtpTuNgay.Location = new System.Drawing.Point(401, 310);
+            this.dtpTuNgay.Location = new System.Drawing.Point(228, 358);
             this.dtpTuNgay.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dtpTuNgay.Name = "dtpTuNgay";
             this.dtpTuNgay.Size = new System.Drawing.Size(298, 30);
@@ -84,7 +86,7 @@
             // 
             // dtpDenNgay
             // 
-            this.dtpDenNgay.Location = new System.Drawing.Point(764, 315);
+            this.dtpDenNgay.Location = new System.Drawing.Point(744, 358);
             this.dtpDenNgay.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dtpDenNgay.Name = "dtpDenNgay";
             this.dtpDenNgay.Size = new System.Drawing.Size(298, 30);
@@ -93,7 +95,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(396, 272);
+            this.label1.Location = new System.Drawing.Point(223, 320);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(90, 25);
@@ -103,7 +105,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(759, 272);
+            this.label2.Location = new System.Drawing.Point(739, 315);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(102, 25);
@@ -114,24 +116,48 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(296, 30);
+            this.label3.Location = new System.Drawing.Point(367, 32);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(508, 69);
             this.label3.TabIndex = 3;
             this.label3.Text = "Báo cáo thống kê";
             // 
-            // radBCDoanhThuTheoTungLoaiSP
+            // radBCDoanhThuTungSPTrongThang
             // 
-            this.radBCDoanhThuTheoTungLoaiSP.AutoSize = true;
-            this.radBCDoanhThuTheoTungLoaiSP.Location = new System.Drawing.Point(50, 418);
-            this.radBCDoanhThuTheoTungLoaiSP.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.radBCDoanhThuTheoTungLoaiSP.Name = "radBCDoanhThuTheoTungLoaiSP";
-            this.radBCDoanhThuTheoTungLoaiSP.Size = new System.Drawing.Size(257, 29);
-            this.radBCDoanhThuTheoTungLoaiSP.TabIndex = 0;
-            this.radBCDoanhThuTheoTungLoaiSP.TabStop = true;
-            this.radBCDoanhThuTheoTungLoaiSP.Text = "Doanh thu theo sản phẩm";
-            this.radBCDoanhThuTheoTungLoaiSP.UseVisualStyleBackColor = true;
+            this.radBCDoanhThuTungSPTrongThang.AutoSize = true;
+            this.radBCDoanhThuTungSPTrongThang.Location = new System.Drawing.Point(228, 450);
+            this.radBCDoanhThuTungSPTrongThang.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.radBCDoanhThuTungSPTrongThang.Name = "radBCDoanhThuTungSPTrongThang";
+            this.radBCDoanhThuTungSPTrongThang.Size = new System.Drawing.Size(360, 29);
+            this.radBCDoanhThuTungSPTrongThang.TabIndex = 0;
+            this.radBCDoanhThuTungSPTrongThang.TabStop = true;
+            this.radBCDoanhThuTungSPTrongThang.Text = "Doanh thu từng sản phẩm trong tháng\r\n";
+            this.radBCDoanhThuTungSPTrongThang.UseVisualStyleBackColor = true;
+            // 
+            // radBCChiTieuTrongNgay
+            // 
+            this.radBCChiTieuTrongNgay.AutoSize = true;
+            this.radBCChiTieuTrongNgay.Location = new System.Drawing.Point(744, 170);
+            this.radBCChiTieuTrongNgay.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.radBCChiTieuTrongNgay.Name = "radBCChiTieuTrongNgay";
+            this.radBCChiTieuTrongNgay.Size = new System.Drawing.Size(196, 29);
+            this.radBCChiTieuTrongNgay.TabIndex = 0;
+            this.radBCChiTieuTrongNgay.TabStop = true;
+            this.radBCChiTieuTrongNgay.Text = "Chi tiêu trong ngày";
+            this.radBCChiTieuTrongNgay.UseVisualStyleBackColor = true;
+            // 
+            // radBCChiTieuTrongKhoan
+            // 
+            this.radBCChiTieuTrongKhoan.AutoSize = true;
+            this.radBCChiTieuTrongKhoan.Location = new System.Drawing.Point(744, 246);
+            this.radBCChiTieuTrongKhoan.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.radBCChiTieuTrongKhoan.Name = "radBCChiTieuTrongKhoan";
+            this.radBCChiTieuTrongKhoan.Size = new System.Drawing.Size(207, 29);
+            this.radBCChiTieuTrongKhoan.TabIndex = 0;
+            this.radBCChiTieuTrongKhoan.TabStop = true;
+            this.radBCChiTieuTrongKhoan.Text = "Chi tiêu trong khoản";
+            this.radBCChiTieuTrongKhoan.UseVisualStyleBackColor = true;
             // 
             // frmChonBaoCao
             // 
@@ -145,9 +171,11 @@
             this.Controls.Add(this.dtpDenNgay);
             this.Controls.Add(this.dtpTuNgay);
             this.Controls.Add(this.btnXemBaoCao);
+            this.Controls.Add(this.radBCChiTieuTrongNgay);
             this.Controls.Add(this.radBCDoanhThuTrongNgay);
-            this.Controls.Add(this.radBCDoanhThuTheoTungLoaiSP);
-            this.Controls.Add(this.radBCThuChiTrongKhoanTG);
+            this.Controls.Add(this.radBCDoanhThuTungSPTrongThang);
+            this.Controls.Add(this.radBCChiTieuTrongKhoan);
+            this.Controls.Add(this.radBCDoanhThuTrongKhoan);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmChonBaoCao";
@@ -160,7 +188,7 @@
 
         #endregion
 
-        private System.Windows.Forms.RadioButton radBCThuChiTrongKhoanTG;
+        private System.Windows.Forms.RadioButton radBCDoanhThuTrongKhoan;
         private System.Windows.Forms.RadioButton radBCDoanhThuTrongNgay;
         private System.Windows.Forms.Button btnXemBaoCao;
         private System.Windows.Forms.DateTimePicker dtpTuNgay;
@@ -168,6 +196,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.RadioButton radBCDoanhThuTheoTungLoaiSP;
+        private System.Windows.Forms.RadioButton radBCDoanhThuTungSPTrongThang;
+        private System.Windows.Forms.RadioButton radBCChiTieuTrongNgay;
+        private System.Windows.Forms.RadioButton radBCChiTieuTrongKhoan;
     }
 }

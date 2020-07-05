@@ -8,6 +8,8 @@ namespace DTO
 {
     public class HoaDonDTO
     {
+
+
         private string tenban;
 
         public string Tenban
@@ -24,10 +26,12 @@ namespace DTO
             set { tennvlap = value; }
         }
 
-        double tongTien;
-        public double TongTien { get => tongTien; set => tongTien = value; }
+        //double tongTien;
+        //public double TongTien { get => tongTien; set => tongTien = value; }
+        
         //private double tongtien;
 
+        public double Tongtien { get; set; }
         //public double Tongtien
         //{
         //    get { return Tongtien; }

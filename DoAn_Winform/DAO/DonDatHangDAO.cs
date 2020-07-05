@@ -9,11 +9,11 @@ namespace DAO
 {
     public class DonDatHangDAO
     {
-        QUAN_LI_QUAN_CAFE_HBK_Entities1 db = new QUAN_LI_QUAN_CAFE_HBK_Entities1();
+        QUAN_LI_QUAN_CAFE_HBKEntities1 db = new QUAN_LI_QUAN_CAFE_HBKEntities1();
 
         public List<DonDatHangDTO> LoadDsDDH()
         {
-            return db.DON_DAT_HANG.Where(p => p.TRANGTHAIXOA == false).OrderByDescending(p => p.MADDH).Select(p => new DonDatHangDTO { Maddh = p.MADDH, Ngaylap = p.NGAYLAP, Manvlap = p.MANVLAP, Mancc = p.MANCC, Ngaygiao = p.NGAYGIAO, Trangthaiduyet = p.TRANGTHAIDUYET, Tennvlap = p.NHAN_VIEN.TENNV }).ToList();
+            return db.DON_DAT_HANG.Where(p => p.TRANGTHAIXOA == false).OrderByDescending(p => p.MADDH).Select(p => new DonDatHangDTO { Maddh = p.MADDH, Ngaylap = p.NGAYLAP.Value, Manvlap = p.MANVLAP, Mancc = p.MANCC, Ngaygiao = p.NGAYGIAO, Trangthaiduyet = p.TRANGTHAIDUYET, Tennvlap = p.NHAN_VIEN.TENNV}).ToList();
         }
 
         public bool ThemDDH(DonDatHangDTO ddh, out int maDDH)
@@ -25,6 +25,7 @@ namespace DAO
             try
             {
                 DON_DAT_HANG ddhtam = new DON_DAT_HANG();
+                ddh.Maddh = 1;
                 ddhtam.MANVLAP = ddh.Manvlap;
                 ddhtam.MANCC = ddh.Mancc;
                 ddhtam.NGAYLAP = DateTime.Now;
@@ -41,12 +42,14 @@ namespace DAO
 
         public int GetMaxIdOfDDH()
         {
-            return db.DON_DAT_HANG.Max(p => p.MADDH);
+            int kq;
+            kq=db.DON_DAT_HANG.Max(p => p.MADDH);
+            return kq;
         }
 
         public bool CheckTonTaiDDH()
         {
-            if (db.DON_DAT_HANG.Select(p => p).ToList() == null)
+            if (db.DON_DAT_HANG.Select(p => p).ToList().Count==0)
             {
                 return false;
             }

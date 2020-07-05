@@ -25,6 +25,30 @@ namespace DoAn_Winform
                 f.BaoCaoDoanhThuTrongNgay();
                 f.ShowDialog();
             }
+            else if(radBCChiTieuTrongNgay.Checked)
+            {
+                frmXemBaoCao f = new frmXemBaoCao();
+                f.BaoCaoChiTieuTrongNgay();
+                f.ShowDialog();
+            }
+            else if(radBCDoanhThuTrongKhoan.Checked)
+            {
+                frmXemBaoCao f = new frmXemBaoCao();
+                f.BaoCaoDoanhThuTrongKhoan(dtpTuNgay.Value,dtpDenNgay.Value);
+                f.ShowDialog();
+            }
+            else if (radBCChiTieuTrongKhoan.Checked)
+            {
+                frmXemBaoCao f = new frmXemBaoCao();
+                f.BaoCaoChiTieuTrongKhoan(dtpTuNgay.Value, dtpDenNgay.Value);
+                f.ShowDialog();
+            }
+            else if (radBCDoanhThuTungSPTrongThang.Checked)
+            {
+                frmXemBaoCao f = new frmXemBaoCao();
+                f.BaoCaoDoanhThuTungSPTrongThang();
+                f.ShowDialog();
+            }
         }
     }
 }

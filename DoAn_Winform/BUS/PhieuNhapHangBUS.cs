@@ -11,12 +11,12 @@ namespace BUS
     {
         PhieuNhapHangDAO pnhDAO = new PhieuNhapHangDAO();
 
-        public List<PhieunhapHangDTO> loadDsPNH()
+        public List<PhieuNhapHangDTO> loadDsPNH()
         {
             return pnhDAO.loadDsPNH();
         }
 
-        public bool ThemPNH(PhieunhapHangDTO pnh, out int maPNH)
+        public bool ThemPNH(PhieuNhapHangDTO pnh, out int maPNH)
         {
             return pnhDAO.ThemPNH(pnh, out maPNH);
         }

@@ -9,7 +9,7 @@ namespace DAO
 {
     public class HoaDonDAO
     {
-        QUAN_LI_QUAN_CAFE_HBK_Entities1 db = new QUAN_LI_QUAN_CAFE_HBK_Entities1();
+        QUAN_LI_QUAN_CAFE_HBKEntities1 db = new QUAN_LI_QUAN_CAFE_HBKEntities1();
 
         public HoaDonDTO LoadHDChuaThanhToanTheoMaBan(int maBan)
         {
@@ -20,34 +20,31 @@ namespace DAO
         public double TinhTongTienCuaHD(int maHD)
         {
             double tong = 0;
-            ChiTietHoaDonDAO ctDAO = new ChiTietHoaDonDAO();
-            List<ChiTietHoaDonDTO> ListCTHD = ctDAO.LoadDsCTHDTheoMaHD(maHD);
+            List<ChiTietHoaDonDTO> ListCTHD = db.CHI_TIET_HOA_DON.Where(u => u.MAHD == maHD).Select(v => new ChiTietHoaDonDTO { 
+                Giaban =v.GIABAN,
+                Soluong=v.SL
+            }).ToList();
             foreach (ChiTietHoaDonDTO ct in ListCTHD)
             {
-                tong += ct.Thanhtien;
+                tong += (ct.Soluong*ct.Giaban);
             }
+
+            tong /= ListCTHD.Count();
             return tong;
         }
 
         public List<HoaDonDTO> LoadDsHDTrongNgay()
         {
             List<HoaDonDTO> kq = new List<HoaDonDTO>();
-            kq = db.HOA_DON.Where(p => p.TRANGTHAIXOA == false && p.NGAYLAP == DateTime.Today && p.TRANGTHAI == 1).Select(p => new HoaDonDTO 
-            { 
-                Mahd = p.MAHD, 
-                Tennvlap=p.NHAN_VIEN.TENNV,
-                Tenban=p.BAN.TENBAN
-                //Manvlap = p.MANVLAP, 
-                //Soban = p.SOBAN,
-                //Tongtien=0
+            kq = db.HOA_DON.Where(p => p.TRANGTHAIXOA == false && p.NGAYLAP.Day == DateTime.Now.Day && p.NGAYLAP.Month == DateTime.Now.Month && p.NGAYLAP.Year == DateTime.Now.Year && p.TRANGTHAI == 1).Select(p => new HoaDonDTO
+            {
+                Mahd = p.MAHD,
+                Tennvlap = p.NHAN_VIEN.TENNV,
+                Tenban = p.BAN.TENBAN,
+                Manvlap = p.MANVLAP,
+                Soban = p.SOBAN,
+                Tongtien = p.TONGTIEN
             }).ToList();
-            //if (kq != null)
-            //{
-            //    foreach (HoaDonDTO hd in kq)
-            //    {
-            //        hd.Tongtien = TinhTongTienCuaHD(hd.Mahd);
-            //    }
-            //}
             return kq;
         }
     
@@ -115,12 +112,13 @@ namespace DAO
             return flag;
         }
         
-        public bool ThanhToan(BanDTO ban)
+        public bool ThanhToan(BanDTO ban, double tongTien)
         {
             bool flag;
             try
             {
-                HOA_DON hd = db.HOA_DON.Where(u => u.SOBAN == ban.Soban && u.TRANGTHAI== 0).SingleOrDefault();
+                HOA_DON hd = db.HOA_DON.Where(u => u.SOBAN == ban.Soban && u.TRANGTHAI == 0).SingleOrDefault();
+                hd.TONGTIEN = tongTien;
                 hd.TRANGTHAI = 1;
                 db.SaveChanges();
                 BAN bandb = db.BANs.Where(u => u.SOBAN == ban.Soban).SingleOrDefault();
@@ -152,7 +150,6 @@ namespace DAO
                 }
                 else //Ban Có Người
                 {
-
                     banCu.TRANGTHAI = 0;
                     //Lay
                     HOA_DON hd = new HOA_DON();
@@ -201,18 +198,37 @@ namespace DAO
 
         }
         
+        public List<HoaDonDTO> LoadDsHD()
+        {
+            return db.HOA_DON.Where(p => p.TRANGTHAIXOA == false).Select(p => new HoaDonDTO
+            {
+                Mahd = p.MAHD,
+                Ngaylap = p.NGAYLAP,
+                Tenban = p.BAN.TENBAN,
+                Tennvlap=p.NHAN_VIEN.TENNV,
+                Tongtien= p.TONGTIEN
+            }).ToList();
+        }
+
         public List<HoaDonDTO> loadDoanhThu_FrmAmin(bool TraCuuTheoNgay,DateTime Start , DateTime End)
         {
             ChiTietHoaDonDAO cthd = new ChiTietHoaDonDAO();
-            return db.HOA_DON.Where(u => u.TRANGTHAIXOA == false && u.TRANGTHAI == 1 && (TraCuuTheoNgay == true ? u.NGAYLAP >= Start && u.NGAYLAP <= End : true)).Select(v => new HoaDonDTO
+            List<HoaDonDTO> kq=db.HOA_DON.Where(u => u.TRANGTHAIXOA == false && u.TRANGTHAI == 1 && (TraCuuTheoNgay == true ? u.NGAYLAP >= Start && u.NGAYLAP <= End : true)).Select(v => new HoaDonDTO
             {
                 Mahd = v.MAHD,
                 Ngaylap = v.NGAYLAP,
                 Tenban = v.BAN.TENBAN,
                 Tennvlap = v.NHAN_VIEN.TENNV,
-                TongTien = TinhTongTienCuaHD(v.MAHD)
-            }
-            ).ToList();
+                Tongtien = v.TONGTIEN
+            }).ToList();
+            //if (kq != null)
+            //{
+            //    foreach (HoaDonDTO hd in kq)
+            //    {
+            //        hd.Tongtien = TinhTongTienCuaHD(hd.Mahd);
+            //    }
+            //}
+            return kq;
         }
     }
 }

@@ -6,8 +6,32 @@ using System.Threading.Tasks;
 
 namespace DTO
 {
-    public class PhieunhapHangDTO
+    public class PhieuNhapHangDTO
     {
+        private string tenncc;
+
+        public string Tenncc
+        {
+            get { return tenncc; }
+            set { tenncc = value; }
+        }
+
+        private string tennvlap;
+
+        public string Tennvlap
+        {
+            get { return tennvlap; }
+            set { tennvlap = value; }
+        }
+
+        private double tongtien;
+
+        public double Tongtien
+        {
+            get { return tongtien; }
+            set { tongtien = value; }
+        }
+
         private int mapnh;
 
         public int Mapnh

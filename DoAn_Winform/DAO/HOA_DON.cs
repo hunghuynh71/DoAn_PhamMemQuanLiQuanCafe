@@ -25,6 +25,7 @@ namespace DAO
         public int SOBAN { get; set; }
         public int TRANGTHAI { get; set; }
         public bool TRANGTHAIXOA { get; set; }
+        public double TONGTIEN { get; set; }
     
         public virtual BAN BAN { get; set; }
         public virtual ICollection<CHI_TIET_HOA_DON> CHI_TIET_HOA_DON { get; set; }

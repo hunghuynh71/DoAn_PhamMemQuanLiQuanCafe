@@ -37,7 +37,7 @@ namespace DoAn_Winform
             LoadcboLoaiThucUong();
             LoadcboThucUong();
         }   
-       public  void LoadDsBan(BanDTO banglobal)
+       public void LoadDsBan(BanDTO banglobal)
         {
             flpBan.Controls.Clear();
             List<BanDTO> dsBan = banBUS.LoadDsBan();
@@ -117,7 +117,7 @@ namespace DoAn_Winform
                     {
                         ListViewItem lvi = new ListViewItem(item.Tentu);
                         lvi.SubItems.Add(item.Soluong.ToString());
-                        lvi.SubItems.Add(item.Gianiemyet.ToString());
+                        lvi.SubItems.Add(item.Giaban.ToString());
                         lvi.SubItems.Add(item.Thanhtien.ToString());
 
                         lvwHoaDon.Items.Add(lvi);
@@ -138,8 +138,6 @@ namespace DoAn_Winform
 
         private void button_Click(object sender, EventArgs e)
         {
-
-
             BanGlobal = ((sender as Button).Tag as BanDTO);
             int maBan = ((sender as Button).Tag as BanDTO).Soban;
             (sender as Button).BackColor= Color.SkyBlue;
@@ -181,7 +179,7 @@ namespace DoAn_Winform
             DialogResult mes = MessageBox.Show("Ông Có Chắc Là Ông Muốn Thanh Toán Không ", "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if(mes==DialogResult.Yes)
             {
-                if (hdbus.ThanhToan(BanGlobal))
+                if (hdbus.ThanhToan(BanGlobal,Convert.ToDouble(txtTongTien.Text)))
                 {
                     MessageBox.Show("Thanh Toán Thành Công", "Thông Báo");
                     LoadDsBan(BanGlobal);

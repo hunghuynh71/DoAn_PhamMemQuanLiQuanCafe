@@ -71,6 +71,7 @@
     <Property Name="SOBAN" Type="int" Nullable="false" />
     <Property Name="TRANGTHAI" Type="int" Nullable="false" />
     <Property Name="TRANGTHAIXOA" Type="bit" Nullable="false" />
+    <Property Name="TONGTIEN" Type="float" Nullable="false" />
   </EntityType>
   <EntityType Name="LOAI_THUC_UONG">
     <Key>

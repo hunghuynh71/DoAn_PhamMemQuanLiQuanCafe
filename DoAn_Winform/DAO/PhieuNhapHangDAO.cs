@@ -8,19 +8,22 @@ namespace DAO
 {
     public class PhieuNhapHangDAO
     {
-        QUAN_LI_QUAN_CAFE_HBK_Entities1 db = new QUAN_LI_QUAN_CAFE_HBK_Entities1();
-        public List<PhieunhapHangDTO> loadDsPNH()
+        QUAN_LI_QUAN_CAFE_HBKEntities1 db = new QUAN_LI_QUAN_CAFE_HBKEntities1();
+        public List<PhieuNhapHangDTO> loadDsPNH()
         {
-            return db.PHIEU_NHAP_HANG.Where(p => p.TRANGTHAIXOA == true).Select(v => new PhieunhapHangDTO
+            return db.PHIEU_NHAP_HANG.Where(p => p.TRANGTHAIXOA == false).Select(v => new PhieuNhapHangDTO
             {
                 Mapnh = v.MAPNH,
                 Maddh = v.MADDH,
                 Mancc = v.MANCC,
                 Manvlap = v.MANVLAP,
-                Ngaylap = v.NGAYLAP
+                Ngaylap = v.NGAYLAP,
+                Tennvlap = v.NHAN_VIEN.TENNV,
+                Tenncc = v.NHA_CUNG_CAP.TENNCC,
+                Tongtien = v.TONGTIEN
             }).ToList();
         }
-        public bool ThemPNH(PhieunhapHangDTO ddh, out int maPNH)
+        public bool ThemPNH(PhieuNhapHangDTO ddh, out int maPNH)
         {
 
             if (this.CheckTonTaiPNH() == false)
@@ -29,10 +32,13 @@ namespace DAO
                 maPNH = GetMaxIdOfPNH() + 1;
             try
             {
+
                 PHIEU_NHAP_HANG phn = new PHIEU_NHAP_HANG();
                 phn.MANVLAP = ddh.Manvlap;
                 phn.MANCC = ddh.Mancc;
                 phn.NGAYLAP = DateTime.Now;
+                phn.MADDH = ddh.Maddh;
+                phn.TONGTIEN = ddh.Tongtien;
 
                 db.PHIEU_NHAP_HANG.Add(phn);
                 db.SaveChanges();
@@ -51,7 +57,7 @@ namespace DAO
 
         public bool CheckTonTaiPNH()
         {
-            if (db.PHIEU_NHAP_HANG.Select(p => p).ToList() == null)
+            if (db.PHIEU_NHAP_HANG.Select(p => p).ToList().Count==0)
             {
                 return false;
             }

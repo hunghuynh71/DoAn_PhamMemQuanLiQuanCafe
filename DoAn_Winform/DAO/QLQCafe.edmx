@@ -49,7 +49,7 @@
             <PropertyRef Name="MADDH" />
           </Key>
           <Property Name="MADDH" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="NGAYLAP" Type="date" Nullable="false" />
+          <Property Name="NGAYLAP" Type="datetime" />
           <Property Name="MANVLAP" Type="int" Nullable="false" />
           <Property Name="TRANGTHAIXOA" Type="bit" Nullable="false" />
           <Property Name="TRANGTHAIDUYET" Type="bit" Nullable="false" />
@@ -76,6 +76,7 @@
           <Property Name="SOBAN" Type="int" Nullable="false" />
           <Property Name="TRANGTHAI" Type="int" Nullable="false" />
           <Property Name="TRANGTHAIXOA" Type="bit" Nullable="false" />
+          <Property Name="TONGTIEN" Type="float" Nullable="false" />
         </EntityType>
         <EntityType Name="LOAI_THUC_UONG">
           <Key>
@@ -116,6 +117,7 @@
           <Property Name="MANVLAP" Type="int" Nullable="false" />
           <Property Name="MADDH" Type="int" Nullable="false" />
           <Property Name="TRANGTHAIXOA" Type="bit" Nullable="false" />
+          <Property Name="TONGTIEN" Type="float" Nullable="false" />
         </EntityType>
         <EntityType Name="sysdiagrams">
           <Key>
@@ -327,37 +329,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
-        <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
-          <Parameter Name="owner_id" Type="int" Mode="In" />
-          <Parameter Name="version" Type="int" Mode="In" />
-          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
-        </Function>
-        <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
-          <Parameter Name="owner_id" Type="int" Mode="In" />
-          <Parameter Name="version" Type="int" Mode="In" />
-          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
-        </Function>
-        <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
-          <Parameter Name="owner_id" Type="int" Mode="In" />
-        </Function>
-        <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
-          <Parameter Name="owner_id" Type="int" Mode="In" />
-        </Function>
-        <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
-          <Parameter Name="owner_id" Type="int" Mode="In" />
-        </Function>
-        <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
-          <Parameter Name="owner_id" Type="int" Mode="In" />
-          <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
-        </Function>
-        <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <EntityContainer Name="QUAN_LI_QUAN_CAFE_HBKModelStoreContainer">
           <EntitySet Name="BAN" EntityType="Self.BAN" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="CHI_TIET_DON_DAT_HANG" EntityType="Self.CHI_TIET_DON_DAT_HANG" Schema="dbo" store:Type="Tables" />
@@ -438,37 +409,7 @@
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="QUAN_LI_QUAN_CAFE_HBKModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityContainer Name="QUAN_LI_QUAN_CAFE_HBK_Entities1" annotation:LazyLoadingEnabled="true">
-          <FunctionImport Name="sp_alterdiagram">
-            <Parameter Name="diagramname" Mode="In" Type="String" />
-            <Parameter Name="owner_id" Mode="In" Type="Int32" />
-            <Parameter Name="version" Mode="In" Type="Int32" />
-            <Parameter Name="definition" Mode="In" Type="Binary" />
-          </FunctionImport>
-          <FunctionImport Name="sp_creatediagram">
-            <Parameter Name="diagramname" Mode="In" Type="String" />
-            <Parameter Name="owner_id" Mode="In" Type="Int32" />
-            <Parameter Name="version" Mode="In" Type="Int32" />
-            <Parameter Name="definition" Mode="In" Type="Binary" />
-          </FunctionImport>
-          <FunctionImport Name="sp_dropdiagram">
-            <Parameter Name="diagramname" Mode="In" Type="String" />
-            <Parameter Name="owner_id" Mode="In" Type="Int32" />
-          </FunctionImport>
-          <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(QUAN_LI_QUAN_CAFE_HBKModel.sp_helpdiagramdefinition_Result)">
-            <Parameter Name="diagramname" Mode="In" Type="String" />
-            <Parameter Name="owner_id" Mode="In" Type="Int32" />
-          </FunctionImport>
-          <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(QUAN_LI_QUAN_CAFE_HBKModel.sp_helpdiagrams_Result)">
-            <Parameter Name="diagramname" Mode="In" Type="String" />
-            <Parameter Name="owner_id" Mode="In" Type="Int32" />
-          </FunctionImport>
-          <FunctionImport Name="sp_renamediagram">
-            <Parameter Name="diagramname" Mode="In" Type="String" />
-            <Parameter Name="owner_id" Mode="In" Type="Int32" />
-            <Parameter Name="new_diagramname" Mode="In" Type="String" />
-          </FunctionImport>
-          <FunctionImport Name="sp_upgraddiagrams" />
+        <EntityContainer Name="QUAN_LI_QUAN_CAFE_HBKEntities1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="BANs" EntityType="QUAN_LI_QUAN_CAFE_HBKModel.BAN" />
           <EntitySet Name="CHI_TIET_DON_DAT_HANG" EntityType="QUAN_LI_QUAN_CAFE_HBKModel.CHI_TIET_DON_DAT_HANG" />
           <EntitySet Name="CHI_TIET_HOA_DON" EntityType="QUAN_LI_QUAN_CAFE_HBKModel.CHI_TIET_HOA_DON" />
@@ -543,18 +484,7 @@
             <End Role="NHAN_VIEN" EntitySet="NHAN_VIEN" />
             <End Role="TAI_KHOAN" EntitySet="TAI_KHOAN" />
           </AssociationSet>
-          </EntityContainer>
-        <ComplexType Name="sp_helpdiagramdefinition_Result">
-          <Property Type="Int32" Name="version" Nullable="true" />
-          <Property Type="Binary" Name="definition" Nullable="true" />
-        </ComplexType>
-        <ComplexType Name="sp_helpdiagrams_Result">
-          <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
-          <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
-          <Property Type="Int32" Name="ID" Nullable="false" />
-          <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
-          <Property Type="Int32" Name="OwnerID" Nullable="false" />
-        </ComplexType>
+        </EntityContainer>
         <EntityType Name="BAN">
           <Key>
             <PropertyRef Name="SOBAN" />
@@ -606,7 +536,7 @@
             <PropertyRef Name="MADDH" />
           </Key>
           <Property Name="MADDH" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="NGAYLAP" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="NGAYLAP" Type="DateTime" Precision="3" />
           <Property Name="MANVLAP" Type="Int32" Nullable="false" />
           <Property Name="TRANGTHAIXOA" Type="Boolean" Nullable="false" />
           <Property Name="TRANGTHAIDUYET" Type="Boolean" Nullable="false" />
@@ -639,6 +569,7 @@
           <Property Name="SOBAN" Type="Int32" Nullable="false" />
           <Property Name="TRANGTHAI" Type="Int32" Nullable="false" />
           <Property Name="TRANGTHAIXOA" Type="Boolean" Nullable="false" />
+          <Property Name="TONGTIEN" Type="Double" Nullable="false" />
           <NavigationProperty Name="BAN" Relationship="QUAN_LI_QUAN_CAFE_HBKModel.FK__HOA_DON__SOBAN__5BE2A6F2" FromRole="HOA_DON" ToRole="BAN" />
           <NavigationProperty Name="CHI_TIET_HOA_DON" Relationship="QUAN_LI_QUAN_CAFE_HBKModel.FK__CHI_TIET_H__MAHD__5EBF139D" FromRole="HOA_DON" ToRole="CHI_TIET_HOA_DON" />
           <NavigationProperty Name="NHAN_VIEN" Relationship="QUAN_LI_QUAN_CAFE_HBKModel.FK__HOA_DON__MANVLAP__5AEE82B9" FromRole="HOA_DON" ToRole="NHAN_VIEN" />
@@ -689,6 +620,7 @@
           <Property Name="MANVLAP" Type="Int32" Nullable="false" />
           <Property Name="MADDH" Type="Int32" Nullable="false" />
           <Property Name="TRANGTHAIXOA" Type="Boolean" Nullable="false" />
+          <Property Name="TONGTIEN" Type="Double" Nullable="false" />
           <NavigationProperty Name="CHI_TIET_PHIEU_NHAP_HANG" Relationship="QUAN_LI_QUAN_CAFE_HBKModel.FK__CHI_TIET___MAPNH__4D94879B" FromRole="PHIEU_NHAP_HANG" ToRole="CHI_TIET_PHIEU_NHAP_HANG" />
           <NavigationProperty Name="DON_DAT_HANG" Relationship="QUAN_LI_QUAN_CAFE_HBKModel.FK_DDH" FromRole="PHIEU_NHAP_HANG" ToRole="DON_DAT_HANG" />
           <NavigationProperty Name="NHA_CUNG_CAP" Relationship="QUAN_LI_QUAN_CAFE_HBKModel.FK__PHIEU_NHA__MANCC__49C3F6B7" FromRole="PHIEU_NHAP_HANG" ToRole="NHA_CUNG_CAP" />
@@ -912,31 +844,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="QUAN_LI_QUAN_CAFE_HBKModelStoreContainer" CdmEntityContainer="QUAN_LI_QUAN_CAFE_HBK_Entities1">
-          <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="QUAN_LI_QUAN_CAFE_HBKModel.Store.sp_alterdiagram" />
-          <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="QUAN_LI_QUAN_CAFE_HBKModel.Store.sp_creatediagram" />
-          <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="QUAN_LI_QUAN_CAFE_HBKModel.Store.sp_dropdiagram" />
-          <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="QUAN_LI_QUAN_CAFE_HBKModel.Store.sp_helpdiagramdefinition">
-            <ResultMapping>
-              <ComplexTypeMapping TypeName="QUAN_LI_QUAN_CAFE_HBKModel.sp_helpdiagramdefinition_Result">
-                <ScalarProperty Name="version" ColumnName="version" />
-                <ScalarProperty Name="definition" ColumnName="definition" />
-              </ComplexTypeMapping>
-            </ResultMapping>
-          </FunctionImportMapping>
-          <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="QUAN_LI_QUAN_CAFE_HBKModel.Store.sp_helpdiagrams">
-            <ResultMapping>
-              <ComplexTypeMapping TypeName="QUAN_LI_QUAN_CAFE_HBKModel.sp_helpdiagrams_Result">
-                <ScalarProperty Name="Database" ColumnName="Database" />
-                <ScalarProperty Name="Name" ColumnName="Name" />
-                <ScalarProperty Name="ID" ColumnName="ID" />
-                <ScalarProperty Name="Owner" ColumnName="Owner" />
-                <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
-              </ComplexTypeMapping>
-            </ResultMapping>
-          </FunctionImportMapping>
-          <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="QUAN_LI_QUAN_CAFE_HBKModel.Store.sp_renamediagram" />
-          <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="QUAN_LI_QUAN_CAFE_HBKModel.Store.sp_upgraddiagrams" />
+        <EntityContainerMapping StorageEntityContainer="QUAN_LI_QUAN_CAFE_HBKModelStoreContainer" CdmEntityContainer="QUAN_LI_QUAN_CAFE_HBKEntities1">
           <EntitySetMapping Name="BANs">
             <EntityTypeMapping TypeName="QUAN_LI_QUAN_CAFE_HBKModel.BAN">
               <MappingFragment StoreEntitySet="BAN">
@@ -1004,6 +912,7 @@
           <EntitySetMapping Name="HOA_DON">
             <EntityTypeMapping TypeName="QUAN_LI_QUAN_CAFE_HBKModel.HOA_DON">
               <MappingFragment StoreEntitySet="HOA_DON">
+                <ScalarProperty Name="TONGTIEN" ColumnName="TONGTIEN" />
                 <ScalarProperty Name="TRANGTHAIXOA" ColumnName="TRANGTHAIXOA" />
                 <ScalarProperty Name="TRANGTHAI" ColumnName="TRANGTHAI" />
                 <ScalarProperty Name="SOBAN" ColumnName="SOBAN" />
@@ -1048,6 +957,7 @@
           <EntitySetMapping Name="PHIEU_NHAP_HANG">
             <EntityTypeMapping TypeName="QUAN_LI_QUAN_CAFE_HBKModel.PHIEU_NHAP_HANG">
               <MappingFragment StoreEntitySet="PHIEU_NHAP_HANG">
+                <ScalarProperty Name="TONGTIEN" ColumnName="TONGTIEN" />
                 <ScalarProperty Name="TRANGTHAIXOA" ColumnName="TRANGTHAIXOA" />
                 <ScalarProperty Name="MADDH" ColumnName="MADDH" />
                 <ScalarProperty Name="MANVLAP" ColumnName="MANVLAP" />
@@ -1090,7 +1000,7 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          </EntityContainerMapping>
+        </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
   </edmx:Runtime>

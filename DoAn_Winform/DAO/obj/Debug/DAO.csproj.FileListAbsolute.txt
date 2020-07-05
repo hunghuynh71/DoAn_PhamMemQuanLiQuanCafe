@@ -36,3 +36,15 @@ C:\Users\hungh\OneDrive\Desktop\Đồ án\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winfor
 C:\Users\hungh\OneDrive\Desktop\Đồ án\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\DAO\obj\Debug\DAO.dll
 C:\Users\hungh\OneDrive\Desktop\Đồ án\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\DAO\obj\Debug\DAO.pdb
 C:\Users\admin\Downloads\Desktop\DoAnWinform_23-06-2020\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\DAO\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\hungh\OneDrive\Desktop\New folder\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\DAO\bin\Debug\DAO.dll.config
+C:\Users\hungh\OneDrive\Desktop\New folder\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\DAO\bin\Debug\DAO.dll
+C:\Users\hungh\OneDrive\Desktop\New folder\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\DAO\bin\Debug\DAO.pdb
+C:\Users\hungh\OneDrive\Desktop\New folder\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\DAO\bin\Debug\DTO.dll
+C:\Users\hungh\OneDrive\Desktop\New folder\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\DAO\bin\Debug\EntityFramework.dll
+C:\Users\hungh\OneDrive\Desktop\New folder\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\DAO\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\hungh\OneDrive\Desktop\New folder\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\DAO\bin\Debug\DTO.pdb
+C:\Users\hungh\OneDrive\Desktop\New folder\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\DAO\bin\Debug\EntityFramework.xml
+C:\Users\hungh\OneDrive\Desktop\New folder\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\DAO\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\hungh\OneDrive\Desktop\New folder\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\DAO\obj\Debug\DAO.csprojResolveAssemblyReference.cache
+C:\Users\hungh\OneDrive\Desktop\New folder\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\DAO\obj\Debug\DAO.dll
+C:\Users\hungh\OneDrive\Desktop\New folder\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\DAO\obj\Debug\DAO.pdb

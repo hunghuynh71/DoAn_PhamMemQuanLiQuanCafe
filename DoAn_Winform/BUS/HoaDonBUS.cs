@@ -25,9 +25,9 @@ namespace BUS
         {
             return hdTam.ThemThucUongTheoBan(ban,Manv,TenTU,LoaiTU,SoLg);
         }
-        public bool ThanhToan(BanDTO ban)
+        public bool ThanhToan(BanDTO ban,double tongTien)
         {
-            return hdTam.ThanhToan(ban);
+            return hdTam.ThanhToan(ban,tongTien);
         }
         public bool ChuyenBan(BanDTO ban, string TenBan,int MavnLap)
         {
@@ -36,6 +36,11 @@ namespace BUS
         public List<HoaDonDTO> loadDoanhThu_frmAmin(bool TraCuuTheoNgay, DateTime Start, DateTime End)
         {
             return hdTam.loadDoanhThu_FrmAmin(TraCuuTheoNgay, Start, End);
+        }
+
+        public List<HoaDonDTO> LoadDsHD()
+        {
+            return hdTam.LoadDsHD();
         }
     }
 }

@@ -9,7 +9,8 @@ namespace DAO
 {
     public class NhaCungCapDAO
     {
-        QUAN_LI_QUAN_CAFE_HBK_Entities1 db = new QUAN_LI_QUAN_CAFE_HBK_Entities1();
+        QUAN_LI_QUAN_CAFE_HBKEntities1 db = new QUAN_LI_QUAN_CAFE_HBKEntities1();
+        
         public List<NhaCungCapDTO> LoadDsNCC()
         {
             return db.NHA_CUNG_CAP.Where(p => p.TRANGTHAIXOA == false).Select(p => new NhaCungCapDTO 
