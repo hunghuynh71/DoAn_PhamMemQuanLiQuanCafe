@@ -50,14 +50,14 @@ namespace DoAn_Winform
 
         private void đặtHàngToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmDatHang f = new frmDatHang();
+            frmDatHang f = new frmDatHang(TaiKhoanGlobal);
             f.MdiParent = this;
             f.Show();
         }
 
         private void phiếuNhậpToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmPhieuNhaphag f = new frmPhieuNhaphag();
+            frmPhieuNhaphag f = new frmPhieuNhaphag(TaiKhoanGlobal);
             f.MdiParent = this;
             f.Show();
         }

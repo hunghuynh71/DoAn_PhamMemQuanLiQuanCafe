@@ -799,8 +799,23 @@ namespace DoAn_Winform
                 DataGridViewRow dtr = dtgvTaiKhoan.SelectedRows[0];
                 txtTenDangNhap.Text = dtr.Cells[0].Value.ToString();
                 txtMatKhau.Text = dtr.Cells[1].Value.ToString();
-                cboLoaiTaiKhoan.SelectedValue = dtr.Cells[2].Value;
-                cboTenNVCuaTK.SelectedValue = dtr.Cells[3].Value;
+                //cboLoaiTaiKhoan.SelectedValue = dtr.Cells[2].Value;
+                object a = dtr.Cells[2].Value;
+                object b=dtr.Cells[3].Value;
+
+
+                if (Convert.ToInt32(a) == 1)
+                    a = "Chủ_Cửa_Hàng";
+                else if (Convert.ToInt32(a) == 2)
+                    a = "Admin";
+                else if (Convert.ToInt32(a) == 3)
+                    a = "Thu_Ngân";
+                else
+                    a = "Quản_Lí_Kho";
+
+
+                cboLoaiTaiKhoan.Text = Convert.ToString(a);
+                cboTenNVCuaTK.Text = Convert.ToString(b);
             }
         }
 
@@ -842,20 +857,26 @@ namespace DoAn_Winform
             {
                 tkTam.Tendangnhap = txtTenDangNhap.Text;
                 tkTam.Matkhau = txtMatKhau.Text;
-                int LayLoaiTK = cboLoaiTaiKhoan.Text == "Chủ_Cửa_Hàng"?1: cboLoaiTaiKhoan.Text == "Admin"?2:cboLoaiTaiKhoan.Text == "Thu_Ngân"?3:4;
+                int LayLoaiTK = cboLoaiTaiKhoan.Text == "Chủ_Cửa_Hàng" ? 1 : cboLoaiTaiKhoan.Text == "Admin" ? 2 : cboLoaiTaiKhoan.Text == "Thu_Ngân" ? 3 : 4;
                 tkTam.Loaitaikhoan = LayLoaiTK;
                 tkTam.Manv = Convert.ToInt32(cboTenNVCuaTK.SelectedValue);
-            }
-            
-            if(tkBUS.ThemTK(tkTam))
-            {
-                MessageBox.Show("Thêm thành công!", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                LoadDsTaiKhoan();
-                AutoCompleteTK();
-            }
-            else
-            {
-                MessageBox.Show("Thêm thất bại!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if (tkBUS.TimKiemTK(tkTam.Tendangnhap) != null)
+                {
+                    MessageBox.Show("Tên đăng nhập này đã tồn tại. Hãy nhập tên khác!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    if (tkBUS.ThemTK(tkTam))
+                    {
+                        MessageBox.Show("Thêm thành công!", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        LoadDsTaiKhoan();
+                        AutoCompleteTK();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Thêm thất bại!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
             }
         }
 
@@ -1021,8 +1042,9 @@ namespace DoAn_Winform
             foreach (ChiTietDonDatHangDTO item in listCtDDH)
             {
                 ListViewItem lvi = new ListViewItem(item.Tenhh);
-                lvi.SubItems.Add(item.Sl.ToString());
+                
                 lvi.SubItems.Add(item.Slton.ToString());
+                lvi.SubItems.Add(item.Sl.ToString());
                 lvwChiTietDDH.Items.Add(lvi);
             }           
         }

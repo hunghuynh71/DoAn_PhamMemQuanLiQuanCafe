@@ -48,7 +48,7 @@ namespace DoAn_Winform
 
                 button.Click += button_Click;           
                 button.Tag = item;                
-                if(item.Trangthai==0)
+                if(item.Trangthai == 1)
                 {
                     button.Text = item.Tenban + "\nTrống";
                     if (banglobal.Soban != item.Soban)
@@ -56,7 +56,7 @@ namespace DoAn_Winform
                     else
                         button.BackColor = Color.SkyBlue;
                 }
-                else
+                else if (item.Trangthai == 2)
                 {
                     button.Text = item.Tenban + "\nCó người";
                     if (banglobal.Soban != item.Soban)
@@ -106,8 +106,6 @@ namespace DoAn_Winform
                 ChiTietHoaDonBUS cthdBUS = new ChiTietHoaDonBUS();
                 lvwHoaDon.Items.Clear();
                 HoaDonDTO hdTam = hdBUS.LoadHDChuaThanhToanTheoMaBan(maBan);
-
-                //int maHD = hdBUS.LoadHDChuaThanhToanTheoMaBan(maBan).Mahd;
                 if (hdTam != null)
                 {
                     List<ChiTietHoaDonDTO> dsCT = cthdBUS.LoadDsCTHDTheoMaHD(hdTam.Mahd);
@@ -124,7 +122,7 @@ namespace DoAn_Winform
 
                         tongTien += item.Thanhtien;
                     }
-                    tongTien = tongTien - (tongTien * Convert.ToDouble(nmrPhanTramGiamGia.Value) / 100);
+                    //tongTien = tongTien - (tongTien * Convert.ToDouble(nmrPhanTramGiamGia.Value) / 100);
                     txtTongTien.Text = tongTien.ToString();
                     txtTongTien.ReadOnly = true;
                 }
@@ -163,7 +161,9 @@ namespace DoAn_Winform
                 if (hdbus.ThemThucUongTheoBan(BanGlobal, TaiKhoanGlobal.Manv, cboThucUong.Text, cboLoaiThucUong.Text, Convert.ToInt32(nmrSoLuong.Value)))
                 { 
                     MessageBox.Show("Thêm Thành Công", "Thông Báo");
-                    BanGlobal.Trangthai = 1;
+                    btnThanhToan.Enabled = true;
+                    btnChuyenBan.Enabled = true;
+                    BanGlobal.Trangthai = 2;
                     LoadThongTinHD(BanGlobal.Soban);              
                     LoadDsBan(BanGlobal);
                 }
@@ -256,15 +256,13 @@ namespace DoAn_Winform
             cboThucUong.Text = "";
         }
 
- 
-        
+        private void btnGiamGia_Click(object sender, EventArgs e)
+        {
+            double tongTien = Convert.ToDouble(txtTongTien.Text);
+            tongTien = tongTien - (tongTien * Convert.ToDouble(nmrPhanTramGiamGia.Value) / 100);
+            txtTongTien.Text = tongTien.ToString();
+        }
+
         #endregion
-
-        
-
-    
-
-
-
     }
 }

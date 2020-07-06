@@ -43,7 +43,7 @@ namespace DoAn_Winform
             if (txtMatKhauCu.Text == "" || txtMatKhauMoi.Text == "" || txtNhapLaiMatKhau.Text == "")
                 MessageBox.Show("Không Để Trống", "Thông Báo");
             else if(txtMatKhauCu.Text == txtMatKhauMoi.Text)
-                MessageBox.Show("Mật Khẩu Mới Trùng Mật Khẩu Củ", "Thông Báo");
+                MessageBox.Show("Mật Khẩu Mới Trùng Mật Khẩu Cũ", "Thông Báo");
             else if (txtMatKhauMoi.Text != txtNhapLaiMatKhau.Text)
                 MessageBox.Show("Nhập Lại Mật Khẩu Mới Không Đúng", "Thông Báo");
             else

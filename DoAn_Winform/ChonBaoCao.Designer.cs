@@ -52,6 +52,7 @@
             this.radBCDoanhThuTrongKhoan.TabStop = true;
             this.radBCDoanhThuTrongKhoan.Text = "Doanh thu trong khoản";
             this.radBCDoanhThuTrongKhoan.UseVisualStyleBackColor = true;
+            this.radBCDoanhThuTrongKhoan.CheckedChanged += new System.EventHandler(this.radBCDoanhThuTrongKhoan_CheckedChanged);
             // 
             // radBCDoanhThuTrongNgay
             // 
@@ -64,6 +65,7 @@
             this.radBCDoanhThuTrongNgay.TabStop = true;
             this.radBCDoanhThuTrongNgay.Text = "Doanh thu trong ngày";
             this.radBCDoanhThuTrongNgay.UseVisualStyleBackColor = true;
+            this.radBCDoanhThuTrongNgay.CheckedChanged += new System.EventHandler(this.radBCDoanhThuTrongNgay_CheckedChanged);
             // 
             // btnXemBaoCao
             // 
@@ -134,6 +136,7 @@
             this.radBCDoanhThuTungSPTrongThang.TabStop = true;
             this.radBCDoanhThuTungSPTrongThang.Text = "Doanh thu từng sản phẩm trong tháng\r\n";
             this.radBCDoanhThuTungSPTrongThang.UseVisualStyleBackColor = true;
+            this.radBCDoanhThuTungSPTrongThang.CheckedChanged += new System.EventHandler(this.radBCDoanhThuTungSPTrongThang_CheckedChanged);
             // 
             // radBCChiTieuTrongNgay
             // 
@@ -146,6 +149,7 @@
             this.radBCChiTieuTrongNgay.TabStop = true;
             this.radBCChiTieuTrongNgay.Text = "Chi tiêu trong ngày";
             this.radBCChiTieuTrongNgay.UseVisualStyleBackColor = true;
+            this.radBCChiTieuTrongNgay.CheckedChanged += new System.EventHandler(this.radBCChiTieuTrongNgay_CheckedChanged);
             // 
             // radBCChiTieuTrongKhoan
             // 
@@ -158,6 +162,7 @@
             this.radBCChiTieuTrongKhoan.TabStop = true;
             this.radBCChiTieuTrongKhoan.Text = "Chi tiêu trong khoản";
             this.radBCChiTieuTrongKhoan.UseVisualStyleBackColor = true;
+            this.radBCChiTieuTrongKhoan.CheckedChanged += new System.EventHandler(this.radBCChiTieuTrongKhoan_CheckedChanged);
             // 
             // frmChonBaoCao
             // 
@@ -181,6 +186,7 @@
             this.Name = "frmChonBaoCao";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Chọn báo cáo";
+            this.Load += new System.EventHandler(this.frmChonBaoCao_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

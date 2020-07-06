@@ -52,17 +52,17 @@ namespace DAO
         {
             bool flag;
             try
-            {//Lay Thong Tin Thuc Uong Theo TenTu Va Loai Tu
+            {
+                //Lay Thong Tin Thuc Uong Theo TenTu Va Loai Tu
                 THUC_UONG MonAn = new THUC_UONG();
                 MonAn = db.THUC_UONG.Where(u => u.TRANGTHAIXOA == false && u.TENTU == TenTU && u.LOAI_THUC_UONG.TENLOAITU == LoaiTU).SingleOrDefault();
+                
                 //Lap Hoa Don
-
-               
-                if (ban.Trangthai == 0)
+                if (ban.Trangthai == 1)
                 {
                     BAN bandb = new BAN();
                     bandb = db.BANs.Where(u => u.SOBAN == ban.Soban).SingleOrDefault();
-                    bandb.TRANGTHAI = 1;
+                    bandb.TRANGTHAI = 2;
                     db.SaveChanges();
                     HOA_DON hdAdd = new HOA_DON
                     {
@@ -122,7 +122,7 @@ namespace DAO
                 hd.TRANGTHAI = 1;
                 db.SaveChanges();
                 BAN bandb = db.BANs.Where(u => u.SOBAN == ban.Soban).SingleOrDefault();
-                bandb.TRANGTHAI = 0;
+                bandb.TRANGTHAI = 1;
                 db.SaveChanges();
                 flag = true;
             }
@@ -137,12 +137,12 @@ namespace DAO
         {
             try
             {
-                BAN banMoi = db.BANs.Where(u => u.TENBAN == TenBanMoi).SingleOrDefault();
-                BAN banCu = db.BANs.Where(u => u.SOBAN == banHienTai.Soban).SingleOrDefault();
-                if (banMoi.TRANGTHAI==0) // Bàn Chưa có người
+                BAN banMoi = db.BANs.Where(u => u.TENBAN == TenBanMoi && u.TRANGTHAI != 0).SingleOrDefault();
+                BAN banCu = db.BANs.Where(u => u.SOBAN == banHienTai.Soban && u.TRANGTHAI != 0).SingleOrDefault();
+                if (banMoi.TRANGTHAI==1) // Bàn Chưa có người
                 {
-                    banCu.TRANGTHAI = 0;
-                    banMoi.TRANGTHAI = 1;
+                    banCu.TRANGTHAI = 1;
+                    banMoi.TRANGTHAI = 2;
                     HOA_DON hd = new HOA_DON();
                     hd = db.HOA_DON.Where(u => u.SOBAN == banHienTai.Soban && u.TRANGTHAI == 0 && u.TRANGTHAIXOA == false).SingleOrDefault();
                     hd.SOBAN = banMoi.SOBAN;
@@ -150,7 +150,7 @@ namespace DAO
                 }
                 else //Ban Có Người
                 {
-                    banCu.TRANGTHAI = 0;
+                    banCu.TRANGTHAI = 1;
                     //Lay
                     HOA_DON hd = new HOA_DON();
                     hd = db.HOA_DON.Where(u => u.SOBAN == banMoi.SOBAN && u.TRANGTHAI == 0 && u.TRANGTHAIXOA == false).SingleOrDefault();
@@ -221,13 +221,6 @@ namespace DAO
                 Tennvlap = v.NHAN_VIEN.TENNV,
                 Tongtien = v.TONGTIEN
             }).ToList();
-            //if (kq != null)
-            //{
-            //    foreach (HoaDonDTO hd in kq)
-            //    {
-            //        hd.Tongtien = TinhTongTienCuaHD(hd.Mahd);
-            //    }
-            //}
             return kq;
         }
     }

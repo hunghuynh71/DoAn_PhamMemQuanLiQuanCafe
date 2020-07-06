@@ -14,8 +14,16 @@ namespace DoAn_Winform
 {
     public partial class frmDatHang : Form
     {
+        TaiKhoanDTO tkGlobal = new TaiKhoanDTO();
+
         public frmDatHang()
         {
+            InitializeComponent();
+        }
+
+        public frmDatHang(TaiKhoanDTO tk)
+        {
+            tkGlobal = tk;
             InitializeComponent();
         }
 
@@ -41,14 +49,8 @@ namespace DoAn_Winform
         {
             DonDatHangBUS ddhBUS = new DonDatHangBUS();
             dtgvDsDDH.AutoGenerateColumns = false;
-            dtgvDsDDH.DataSource = ddhBUS.LoadDsDDH();
+            dtgvDsDDH.DataSource = ddhBUS.LoadDsDDH(tkGlobal);
             dtgvDsDDH.Columns["colNgayLap"].DefaultCellStyle.Format = "dd/MM/yyyy";
-            //foreach(DataRow row in dtgvDsDDH.Rows)
-            //{
-            //    if(Convert.ToUInt32(row["colTrangThaiDuyet"])==1)
-            //        colTrangThaiDuyet
-
-            //}
         }
 
         #endregion
@@ -67,13 +69,6 @@ namespace DoAn_Winform
             //ListViewItem lvi = lvwChiTietDDh.SelectedItems[0];
             //cboTenHangHoa.SelectedItem = lvi.Text.ToString();
             //nmrSoLuong.Value = Convert.ToInt32(lvi.SubItems[1].Text);
-        }
-
-        void LoadDanhSachDDH()
-        {
-            DonDatHangBUS ddhBUS = new DonDatHangBUS();
-            dtgvDsDDH.AutoGenerateColumns = false;
-            dtgvDsDDH.DataSource = ddhBUS.LoadDsDDH();
         }
 
         private void btnThem_Click(object sender, EventArgs e)
@@ -128,7 +123,7 @@ namespace DoAn_Winform
             else
             {
                 DonDatHangDTO ddhDTO = new DonDatHangDTO();
-                ddhDTO.Manvlap = 15;
+                ddhDTO.Manvlap = tkGlobal.Manv;
                 ddhDTO.Mancc = Convert.ToInt32(cboNhaCungCap.SelectedValue);
                 ddhDTO.Ngaygiao = dtpNgayGiao.Value;
 
@@ -146,13 +141,36 @@ namespace DoAn_Winform
                         ctBUS.ThemChiTietDDH(ctDTO);
                     }
                     MessageBox.Show("Đặt hàng thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    LoadDanhSachDDH();
+                    LoadDsDDH();
                 }
                 else
                 {
                     MessageBox.Show("Đặt hàng thất bại!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+
+           // DonDatHangBUS ddhbus = new DonDatHangBUS();
+           // List<HangHoaDTO> listhh = new List<HangHoaDTO>();
+           //foreach(ListViewItem item in lvwChiTietDDh.Items)
+           //{
+           //    HangHoaDTO hhtam = new HangHoaDTO();
+           //    hhtam.Tenhh = item.Text;
+           //    hhtam.Slton = Convert.ToInt32(item.SubItems[1].Text);
+           //    hhtam.Mahh = Convert.ToInt32(item.SubItems[2].Text);
+
+           //    listhh.Add(hhtam);
+           //}
+
+           //if (ddhbus.ThemDonDatHangTest(listhh, dtpNgayGiao.Value, tkGlobal.Manv, Convert.ToInt32(cboNhaCungCap.SelectedValue.ToString())))
+           //{
+           //    { 
+           //        MessageBox.Show("thành công", "thông báo");
+           //        LoadDanhSachDDH();
+           //    }
+           //}
+           //else
+           //    MessageBox.Show("thất bại", "thông báo");
+
         }
 
         private void lvwChiTietDDh_MouseClick(object sender, MouseEventArgs e)
@@ -163,10 +181,7 @@ namespace DoAn_Winform
         private void dtgvDsDDH_MouseClick(object sender, MouseEventArgs e)
         {
             btnThem.Enabled = btnSua.Enabled = btnXoa.Enabled = btnDatHang.Enabled = false;
-            foreach (ListViewItem item in lvwChiTietDDh.Items)
-            {
-                item.Remove();
-            }
+            lvwChiTietDDh.Items.Clear();
             int maDDH = Convert.ToInt32(dtgvDsDDH.SelectedCells[0].OwningRow.Cells["colMaDonDatHang"].Value.ToString());
             ChiTietDonDatHangBUS ctBUS = new ChiTietDonDatHangBUS();
             List<ChiTietDonDatHangDTO> listCtDDH = ctBUS.LoadDsChiTietDDHtheoMaDDH(maDDH);
@@ -182,34 +197,25 @@ namespace DoAn_Winform
             }
         }
 
-        private void dtgvDsDDH_MouseMove(object sender, MouseEventArgs e)
-        {
-
-        }
-
-        private void dtgvDsDDH_MouseDown(object sender, MouseEventArgs e)
-        {
-
-        }
-
-        private void dtgvDsDDH_Move(object sender, EventArgs e)
-        {
-
-        }
-
         private void dtgvDsDDH_Leave(object sender, EventArgs e)
         {
             btnThem.Enabled = btnSua.Enabled = btnXoa.Enabled = btnDatHang.Enabled = true;
         }
 
-        private void dtgvDsDDH_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void btnXoaDDH_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void cboTenHangHoa_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
+            int maDDH = Convert.ToInt32(dtgvDsDDH.SelectedCells[0].OwningRow.Cells["colMaDonDatHang"].Value.ToString());
+            DonDatHangBUS ddhBUS = new DonDatHangBUS();
+            if(ddhBUS.XoaDDH(maDDH))
+            {
+                MessageBox.Show("Xóa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                LoadDsDDH();
+                lvwChiTietDDh.Items.Clear();
+            }
+            else
+            {
+                MessageBox.Show("Xóa thất bại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

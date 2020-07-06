@@ -20,8 +20,6 @@ namespace DoAn_Winform
             InitializeComponent();
         }
 
-        
-
         private void frmLogin_FormClosing(object sender, FormClosingEventArgs e)
         {
             

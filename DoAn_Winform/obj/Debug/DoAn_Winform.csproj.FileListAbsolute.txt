@@ -73,3 +73,4 @@ C:\Users\hungh\OneDrive\Desktop\New folder\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winfo
 C:\Users\hungh\OneDrive\Desktop\New folder\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\obj\Debug\DoAn_Winform.exe.licenses
 C:\Users\hungh\OneDrive\Desktop\New folder\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\obj\Debug\DoAn_Winform.exe
 C:\Users\hungh\OneDrive\Desktop\New folder\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\obj\Debug\DoAn_Winform.pdb
+C:\Users\hungh\OneDrive\Desktop\New folder\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\obj\Debug\DoAn_Winform.frmTraCuuDonDatHang.resources

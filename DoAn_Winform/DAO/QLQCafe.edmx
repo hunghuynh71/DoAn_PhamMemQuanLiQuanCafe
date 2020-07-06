@@ -12,7 +12,6 @@
           <Property Name="SOBAN" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="SOCHO" Type="int" Nullable="false" />
           <Property Name="TRANGTHAI" Type="int" Nullable="false" />
-          <Property Name="TRANGTHAIXOA" Type="bit" Nullable="false" />
           <Property Name="TENBAN" Type="nvarchar" MaxLength="50" Nullable="false" />
         </EntityType>
         <EntityType Name="CHI_TIET_DON_DAT_HANG">
@@ -492,7 +491,6 @@
           <Property Name="SOBAN" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="SOCHO" Type="Int32" Nullable="false" />
           <Property Name="TRANGTHAI" Type="Int32" Nullable="false" />
-          <Property Name="TRANGTHAIXOA" Type="Boolean" Nullable="false" />
           <Property Name="TENBAN" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="HOA_DON" Relationship="QUAN_LI_QUAN_CAFE_HBKModel.FK__HOA_DON__SOBAN__5BE2A6F2" FromRole="BAN" ToRole="HOA_DON" />
         </EntityType>
@@ -849,7 +847,6 @@
             <EntityTypeMapping TypeName="QUAN_LI_QUAN_CAFE_HBKModel.BAN">
               <MappingFragment StoreEntitySet="BAN">
                 <ScalarProperty Name="TENBAN" ColumnName="TENBAN" />
-                <ScalarProperty Name="TRANGTHAIXOA" ColumnName="TRANGTHAIXOA" />
                 <ScalarProperty Name="TRANGTHAI" ColumnName="TRANGTHAI" />
                 <ScalarProperty Name="SOCHO" ColumnName="SOCHO" />
                 <ScalarProperty Name="SOBAN" ColumnName="SOBAN" />

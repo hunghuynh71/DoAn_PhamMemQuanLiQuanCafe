@@ -43,15 +43,16 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dtgvDsDDH = new System.Windows.Forms.DataGridView();
+            this.colMaDonDatHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colNgayLap = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colTenNhanVienLap = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colTrangThaiDuyet = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.btnDatHang = new System.Windows.Forms.Button();
             this.lvwChiTietDDh = new System.Windows.Forms.ListView();
             this.colTenHH = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colSoLuong = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.colMaDonDatHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colNgayLap = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colTenNhanVienLap = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colTrangThaiDuyet = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.btnXoaDDH = new System.Windows.Forms.Button();
             this.grbThongTinHangDat.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nmrSoLuong)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvDsDDH)).BeginInit();
@@ -123,7 +124,6 @@
             this.cboTenHangHoa.Name = "cboTenHangHoa";
             this.cboTenHangHoa.Size = new System.Drawing.Size(198, 33);
             this.cboTenHangHoa.TabIndex = 1;
-            this.cboTenHangHoa.SelectedIndexChanged += new System.EventHandler(this.cboTenHangHoa_SelectedIndexChanged);
             // 
             // btnXoa
             // 
@@ -217,51 +217,14 @@
             this.dtgvDsDDH.Location = new System.Drawing.Point(13, 241);
             this.dtgvDsDDH.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dtgvDsDDH.Name = "dtgvDsDDH";
+            this.dtgvDsDDH.ReadOnly = true;
             this.dtgvDsDDH.RowHeadersWidth = 51;
             this.dtgvDsDDH.RowTemplate.Height = 24;
             this.dtgvDsDDH.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgvDsDDH.Size = new System.Drawing.Size(647, 399);
             this.dtgvDsDDH.TabIndex = 30;
-            this.dtgvDsDDH.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvDsDDH_CellContentClick);
             this.dtgvDsDDH.Leave += new System.EventHandler(this.dtgvDsDDH_Leave);
             this.dtgvDsDDH.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dtgvDsDDH_MouseClick);
-            this.dtgvDsDDH.MouseDown += new System.Windows.Forms.MouseEventHandler(this.dtgvDsDDH_MouseDown);
-            this.dtgvDsDDH.MouseMove += new System.Windows.Forms.MouseEventHandler(this.dtgvDsDDH_MouseMove);
-            this.dtgvDsDDH.Move += new System.EventHandler(this.dtgvDsDDH_Move);
-            // 
-            // btnDatHang
-            // 
-            this.btnDatHang.Location = new System.Drawing.Point(472, 109);
-            this.btnDatHang.Margin = new System.Windows.Forms.Padding(6);
-            this.btnDatHang.Name = "btnDatHang";
-            this.btnDatHang.Size = new System.Drawing.Size(150, 78);
-            this.btnDatHang.TabIndex = 6;
-            this.btnDatHang.Text = "Đặt hàng";
-            this.btnDatHang.UseVisualStyleBackColor = true;
-            this.btnDatHang.Click += new System.EventHandler(this.btnDatHang_Click);
-            // 
-            // lvwChiTietDDh
-            // 
-            this.lvwChiTietDDh.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.colTenHH,
-            this.colSoLuong});
-            this.lvwChiTietDDh.HideSelection = false;
-            this.lvwChiTietDDh.Location = new System.Drawing.Point(668, 241);
-            this.lvwChiTietDDh.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.lvwChiTietDDh.Name = "lvwChiTietDDh";
-            this.lvwChiTietDDh.Size = new System.Drawing.Size(490, 399);
-            this.lvwChiTietDDh.TabIndex = 31;
-            this.lvwChiTietDDh.UseCompatibleStateImageBehavior = false;
-            this.lvwChiTietDDh.View = System.Windows.Forms.View.Details;
-            this.lvwChiTietDDh.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lvwChiTietDDh_MouseClick);
-            // 
-            // colTenHH
-            // 
-            this.colTenHH.Text = "Tên hàng hóa";
-            // 
-            // colSoLuong
-            // 
-            this.colSoLuong.Text = "Số lượng";
             // 
             // colMaDonDatHang
             // 
@@ -293,12 +256,59 @@
             this.colTrangThaiDuyet.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.colTrangThaiDuyet.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
+            // btnDatHang
+            // 
+            this.btnDatHang.Location = new System.Drawing.Point(481, 95);
+            this.btnDatHang.Margin = new System.Windows.Forms.Padding(6);
+            this.btnDatHang.Name = "btnDatHang";
+            this.btnDatHang.Size = new System.Drawing.Size(150, 50);
+            this.btnDatHang.TabIndex = 6;
+            this.btnDatHang.Text = "Đặt hàng ";
+            this.btnDatHang.UseVisualStyleBackColor = true;
+            this.btnDatHang.Click += new System.EventHandler(this.btnDatHang_Click);
+            // 
+            // lvwChiTietDDh
+            // 
+            this.lvwChiTietDDh.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.colTenHH,
+            this.colSoLuong});
+            this.lvwChiTietDDh.HideSelection = false;
+            this.lvwChiTietDDh.Location = new System.Drawing.Point(668, 241);
+            this.lvwChiTietDDh.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.lvwChiTietDDh.Name = "lvwChiTietDDh";
+            this.lvwChiTietDDh.Size = new System.Drawing.Size(490, 399);
+            this.lvwChiTietDDh.TabIndex = 31;
+            this.lvwChiTietDDh.UseCompatibleStateImageBehavior = false;
+            this.lvwChiTietDDh.View = System.Windows.Forms.View.Details;
+            this.lvwChiTietDDh.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lvwChiTietDDh_MouseClick);
+            // 
+            // colTenHH
+            // 
+            this.colTenHH.Text = "Tên hàng hóa";
+            this.colTenHH.Width = 180;
+            // 
+            // colSoLuong
+            // 
+            this.colSoLuong.Text = "Số lượng";
+            this.colSoLuong.Width = 176;
+            // 
+            // btnXoaDDH
+            // 
+            this.btnXoaDDH.Location = new System.Drawing.Point(481, 154);
+            this.btnXoaDDH.Name = "btnXoaDDH";
+            this.btnXoaDDH.Size = new System.Drawing.Size(150, 50);
+            this.btnXoaDDH.TabIndex = 32;
+            this.btnXoaDDH.Text = "Xóa đơn";
+            this.btnXoaDDH.UseVisualStyleBackColor = true;
+            this.btnXoaDDH.Click += new System.EventHandler(this.btnXoaDDH_Click);
+            // 
             // frmDatHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.ClientSize = new System.Drawing.Size(1162, 653);
+            this.Controls.Add(this.btnXoaDDH);
             this.Controls.Add(this.lvwChiTietDDh);
             this.Controls.Add(this.dtgvDsDDH);
             this.Controls.Add(this.label1);
@@ -348,5 +358,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colNgayLap;
         private System.Windows.Forms.DataGridViewTextBoxColumn colTenNhanVienLap;
         private System.Windows.Forms.DataGridViewCheckBoxColumn colTrangThaiDuyet;
+        private System.Windows.Forms.Button btnXoaDDH;
     }
 }

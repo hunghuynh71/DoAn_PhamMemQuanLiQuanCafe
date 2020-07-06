@@ -48,6 +48,7 @@
             this.nmrPhanTramGiamGia = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
             this.cboChuyenBan = new System.Windows.Forms.ComboBox();
+            this.btnGiamGia = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.nmrSoLuong)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nmrPhanTramGiamGia)).BeginInit();
             this.SuspendLayout();
@@ -227,7 +228,7 @@
             // nmrPhanTramGiamGia
             // 
             this.nmrPhanTramGiamGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nmrPhanTramGiamGia.Location = new System.Drawing.Point(727, 613);
+            this.nmrPhanTramGiamGia.Location = new System.Drawing.Point(727, 565);
             this.nmrPhanTramGiamGia.Name = "nmrPhanTramGiamGia";
             this.nmrPhanTramGiamGia.Size = new System.Drawing.Size(110, 30);
             this.nmrPhanTramGiamGia.TabIndex = 9;
@@ -236,7 +237,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(722, 561);
+            this.label2.Location = new System.Drawing.Point(721, 537);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(132, 25);
             this.label2.TabIndex = 11;
@@ -253,6 +254,16 @@
             this.cboChuyenBan.Size = new System.Drawing.Size(126, 33);
             this.cboChuyenBan.TabIndex = 12;
             // 
+            // btnGiamGia
+            // 
+            this.btnGiamGia.Location = new System.Drawing.Point(726, 605);
+            this.btnGiamGia.Name = "btnGiamGia";
+            this.btnGiamGia.Size = new System.Drawing.Size(110, 39);
+            this.btnGiamGia.TabIndex = 13;
+            this.btnGiamGia.Text = "Giảm giá";
+            this.btnGiamGia.UseVisualStyleBackColor = true;
+            this.btnGiamGia.Click += new System.EventHandler(this.btnGiamGia_Click);
+            // 
             // frmBanHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -260,6 +271,7 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.ClientSize = new System.Drawing.Size(1162, 653);
+            this.Controls.Add(this.btnGiamGia);
             this.Controls.Add(this.cboChuyenBan);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.nmrPhanTramGiamGia);
@@ -310,5 +322,6 @@
         private System.Windows.Forms.NumericUpDown nmrPhanTramGiamGia;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cboChuyenBan;
+        private System.Windows.Forms.Button btnGiamGia;
     }
 }

@@ -13,9 +13,27 @@ namespace DoAn_Winform
 {
     public partial class frmPhieuNhaphag : Form
     {
+        TaiKhoanDTO tkGlobal = new TaiKhoanDTO();
+        int maddh;
+        List<ChiTietDonDatHangDTO> listct = new List<ChiTietDonDatHangDTO>();
+
         public frmPhieuNhaphag()
         {
             InitializeComponent();
+        }
+
+        public frmPhieuNhaphag(int ma, List<ChiTietDonDatHangDTO> list,TaiKhoanDTO tk)
+        {
+            maddh = ma;
+            listct = list;
+            tkGlobal = tk;
+            InitializeComponent();
+        }
+
+        public frmPhieuNhaphag(TaiKhoanDTO tk)
+        {
+            InitializeComponent();
+            tkGlobal = tk;
         }
 
         void LoadComboboxTenHH()
@@ -48,12 +66,28 @@ namespace DoAn_Winform
             dtgvPhieuNhapHang.DataSource = pnhBUS.loadDsPNH();
         }
 
+        void LoadDDHDuocChon()
+        {
+            cboDonDatHang.SelectedValue = maddh;
+            lvwChiTietPhieuNhap.Items.Clear();
+            foreach(ChiTietDonDatHangDTO ct in listct)
+            {
+                ListViewItem lvi = new ListViewItem(ct.Tenhh);
+                lvi.SubItems.Add(ct.Sl.ToString());
+                lvi.SubItems.Add("");
+                lvi.SubItems.Add("");
+                lvi.SubItems.Add(ct.Mahh.ToString());
+                lvwChiTietPhieuNhap.Items.Add(lvi);
+            }
+        }
+
         private void frmPhieuNhaphag_Load(object sender, EventArgs e)
         {
             LoadComboboxTenHH();
             LoadComboboxDDH();
             LoadComboboxTenNCC();
             LoadDsPNH();
+            LoadDDHDuocChon();
         }
 
         public bool IsNumber(string pValue)
@@ -137,6 +171,8 @@ namespace DoAn_Winform
                     ListViewItem lv = lvwChiTietPhieuNhap.SelectedItems[0];
                     lv.SubItems[1].Text = nmrSoLuong.Value.ToString();
                     lv.SubItems[2].Text = txtGia.Text;
+                    double thanhTien = Convert.ToDouble(lv.SubItems[1].Text) * Convert.ToDouble(lv.SubItems[2].Text);
+                    lv.SubItems[3].Text = thanhTien.ToString();
                     MessageBox.Show("Sữa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch (Exception r)
@@ -158,10 +194,16 @@ namespace DoAn_Winform
                 double tongTien = 0;
                 foreach(ListViewItem item in lvwChiTietPhieuNhap.Items)
                 {
-                    tongTien += Convert.ToDouble(item.SubItems[1].Text) * Convert.ToInt32(item.SubItems[2].Text);
+                    if (item.SubItems[2].Text=="")
+                    {
+                        MessageBox.Show("Bạn chưa nhập đầy đủ giá, hãy nhập thêm giá!", "Nhập thiếu thông tin", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                    else
+                        tongTien += Convert.ToDouble(item.SubItems[1].Text) * Convert.ToDouble(item.SubItems[2].Text);
                 }
                 PhieuNhapHangDTO pnhDTO = new PhieuNhapHangDTO();
-                pnhDTO.Manvlap = 15;
+                pnhDTO.Manvlap = tkGlobal.Manv;
                 pnhDTO.Maddh = Convert.ToInt32(cboDonDatHang.SelectedValue);
                 pnhDTO.Mancc = Convert.ToInt32(cboNhaCungCap.SelectedValue);
                 pnhDTO.Tongtien=tongTien;
@@ -190,5 +232,37 @@ namespace DoAn_Winform
                 }
             }
         }
+
+        private void btnTraCuuDDH_Click(object sender, EventArgs e)
+        {
+            frmTraCuuDonDatHang f = new frmTraCuuDonDatHang(tkGlobal);
+            this.Close();
+            f.ShowDialog();
+        }
+
+        private void lvwChiTietPhieuNhap_MouseClick(object sender, MouseEventArgs e)
+        {
+            cmbTenHangHoa.Text = lvwChiTietPhieuNhap.SelectedItems[0].Text.ToString();
+            nmrSoLuong.Value = Convert.ToInt32(lvwChiTietPhieuNhap.SelectedItems[0].SubItems[1].Text);
+            txtGia.Text = lvwChiTietPhieuNhap.SelectedItems[0].SubItems[2].Text.ToString();
+        }
+
+        private void dtgvPhieuNhapHang_MouseClick(object sender, MouseEventArgs e)
+        {
+            lvwChiTietPhieuNhap.Items.Clear();
+            int mapnh = Convert.ToInt32(dtgvPhieuNhapHang.SelectedCells[0].OwningRow.Cells["colMaPNH"].Value.ToString());
+            ChiTietPhieuNhapHangBUS ctBUS = new ChiTietPhieuNhapHangBUS();
+            List<ChiTietPhieuNhapHangDTO> dsct = ctBUS.LoadDsChiTietPNHTheoMa(mapnh);
+            foreach(ChiTietPhieuNhapHangDTO ct in dsct)
+            {
+                ListViewItem lvi = new ListViewItem(ct.Tenhh);
+                lvi.SubItems.Add(ct.Gia.ToString());
+                lvi.SubItems.Add(ct.Soluong.ToString());
+                lvi.SubItems.Add((ct.Soluong * ct.Gia).ToString());
+                lvi.SubItems.Add(ct.Mahh.ToString());
+                lvwChiTietPhieuNhap.Items.Add(lvi);
+            }
+        }
+
     }
 }

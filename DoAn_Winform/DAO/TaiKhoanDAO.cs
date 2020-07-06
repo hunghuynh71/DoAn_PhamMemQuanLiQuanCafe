@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DTO;
+using System.Security.Cryptography;
 
 namespace DAO
 {
@@ -23,6 +24,25 @@ namespace DAO
             { Tendangnhap = p.TENDANGNHAP, Matkhau = p.MATKHAU, Loaitaikhoan = p.LOAITAIKHOAN, Manv = p.MANV }).SingleOrDefault();
         }
 
+        public string MaHoaChuoi(string input)
+        {
+            string output;
+
+            MD5 md = MD5.Create();
+
+            byte[] inputSTR = System.Text.Encoding.ASCII.GetBytes(input);
+            byte[] hash = md.ComputeHash(inputSTR);
+            StringBuilder sb = new StringBuilder();
+
+            for (int i = 0; i < hash.Length; i++) 
+            {
+                sb.Append(hash[i].ToString("X"));
+            }
+
+            output = sb.ToString();
+            return output;
+        }
+
         public bool ThemTK(TaiKhoanDTO tk)
         {
             try
@@ -31,7 +51,7 @@ namespace DAO
                 TAI_KHOAN tkDB = new TAI_KHOAN
                 {
                     TENDANGNHAP=tk.Tendangnhap,
-                    MATKHAU=tk.Matkhau,
+                    MATKHAU = MaHoaChuoi(tk.Matkhau),
                     LOAITAIKHOAN=tk.Loaitaikhoan,
                     MANV=tk.Manv
                 };
@@ -62,8 +82,8 @@ namespace DAO
         public bool KiemTraDangNhap(out TaiKhoanDTO tk, string TenDN, string MatKh)
         {
             bool flag = false;
-
-            TaiKhoanDTO KiemTra = db.TAI_KHOAN.Where(u => u.TRANGTHAIXOA == false && u.TENDANGNHAP == TenDN && u.MATKHAU == MatKh).Select(v => new TaiKhoanDTO
+            string mk = MaHoaChuoi(MatKh);
+            TaiKhoanDTO KiemTra = db.TAI_KHOAN.Where(u => u.TRANGTHAIXOA == false && u.TENDANGNHAP == TenDN && u.MATKHAU == mk).Select(v => new TaiKhoanDTO
             {
                 Manv = v.MANV,
                 Loaitaikhoan = v.LOAITAIKHOAN,
@@ -86,10 +106,12 @@ namespace DAO
         {
             try { 
             TAI_KHOAN tk = new TAI_KHOAN();
-            tk = db.TAI_KHOAN.Where(u=> u.TENDANGNHAP == tkSUa.Tendangnhap && u.MATKHAU == MatKhaucu).SingleOrDefault();
+            string mkCu=MaHoaChuoi(MatKhaucu);
+            string mkMoi = MaHoaChuoi(MatKhauMoi);
+            tk = db.TAI_KHOAN.Where(u=> u.TENDANGNHAP == tkSUa.Tendangnhap && u.MATKHAU == mkCu).SingleOrDefault();
             if (tk == null)
                 return false;
-            tk.MATKHAU = MatKhauMoi;
+            tk.MATKHAU = mkMoi;
             db.SaveChanges();
             return true;
             }catch(Exception e)

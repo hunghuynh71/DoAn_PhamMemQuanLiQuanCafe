@@ -12,13 +12,13 @@ namespace DAO
         QUAN_LI_QUAN_CAFE_HBKEntities1 db = new QUAN_LI_QUAN_CAFE_HBKEntities1();
         public List<BanDTO> LoadDsBan()
         {
-            return db.BANs.Where(p => p.TRANGTHAIXOA == false).Select(p => new BanDTO 
+            return db.BANs.Where(p => p.TRANGTHAI != 0).Select(p => new BanDTO 
             { Soban = p.SOBAN, Tenban = p.TENBAN, Socho = p.SOCHO, Trangthai = p.TRANGTHAI }).ToList();
         }
 
         public BanDTO TimKiemBan(string tenBan)
         {
-            return db.BANs.Where(p => p.TRANGTHAIXOA == false && p.TENBAN == tenBan).Select(p => new BanDTO 
+            return db.BANs.Where(p => p.TRANGTHAI != 0 && p.TENBAN == tenBan).Select(p => new BanDTO 
             { Soban = p.SOBAN, Tenban = p.TENBAN, Socho = p.SOCHO, Trangthai = p.TRANGTHAI }).SingleOrDefault();
         }
 
@@ -45,7 +45,7 @@ namespace DAO
         {
             try
             {
-                BAN banDB = db.BANs.SingleOrDefault(p => p.SOBAN == ban.Soban && p.TRANGTHAIXOA == false);
+                BAN banDB = db.BANs.SingleOrDefault(p => p.SOBAN == ban.Soban && p.TRANGTHAI != 0);
                 banDB.SOCHO = ban.Socho;
                 banDB.TENBAN = ban.Tenban;
                 db.SaveChanges();
@@ -61,8 +61,8 @@ namespace DAO
         {
             try
             {
-                BAN banDB = db.BANs.SingleOrDefault(p => p.SOBAN == maBan && p.TRANGTHAIXOA == false);
-                banDB.TRANGTHAIXOA = true;
+                BAN banDB = db.BANs.SingleOrDefault(p => p.SOBAN == maBan && p.TRANGTHAI != 0);
+                banDB.TRANGTHAI = 0;
                 db.SaveChanges();
                 return true;
             }
@@ -74,7 +74,7 @@ namespace DAO
         public bool KiemTraBanCoNguoiKhong(string TenBanChuyen)
         {
             // true : Bàn Có Người và ngược Lại
-            if (db.BANs.Where(u => u.TENBAN == TenBanChuyen && u.TRANGTHAI == 0).Count() > 0)
+            if (db.BANs.Where(u => u.TENBAN == TenBanChuyen && u.TRANGTHAI == 2).Count() > 0)
                 return true;
             else
                 return false;
