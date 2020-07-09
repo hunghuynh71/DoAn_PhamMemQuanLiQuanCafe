@@ -36,9 +36,9 @@ namespace BUS
         {
             return banTam.XoaBan(maBan);
         }
-        public bool KiemTraBanCoNguoiChua(string TenBan)
+        public bool KiemTraBanCoNguoiChua(int MaBanChuyen , List<HoaDonTamDTO> ListHDTam)
         {
-            return banTam.KiemTraBanCoNguoiKhong(TenBan);
+            return banTam.KiemTraBanCoNguoiKhong(MaBanChuyen, ListHDTam);
         }
        
     }

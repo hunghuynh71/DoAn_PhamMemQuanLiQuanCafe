@@ -53,6 +53,7 @@
     <Compile Include="DonDatHangBUS.cs" />
     <Compile Include="HangHoaBUS.cs" />
     <Compile Include="HoaDonBUS.cs" />
+    <Compile Include="HoaDonTamBUS.cs" />
     <Compile Include="LoaiThucUongBUS.cs" />
     <Compile Include="NhaCungCapBUS.cs" />
     <Compile Include="NhanVienBUS.cs" />

@@ -39,5 +39,14 @@ namespace DTO
             get { return matu; }
             set { matu = value; }
         }
+
+        int soluong;
+        public int Soluong
+        {
+            get { return soluong; }
+            set { soluong = value; }
+        }
+
+      
     }
 }

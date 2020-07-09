@@ -25,13 +25,13 @@ namespace BUS
         {
             return hdTam.ThemThucUongTheoBan(ban,Manv,TenTU,LoaiTU,SoLg);
         }
-        public bool ThanhToan(BanDTO ban,double tongTien)
+        public bool ThanhToan(BanDTO ban,double tongTien, HoaDonTamDTO hdtam, int Manvlap)
         {
-            return hdTam.ThanhToan(ban,tongTien);
+            return hdTam.ThanhToan(ban,tongTien,hdtam,Manvlap);
         }
-        public bool ChuyenBan(BanDTO ban, string TenBan,int MavnLap)
+        public bool ChuyenBan(BanDTO banCU, int MaBanMoi,List<HoaDonTamDTO> listhdtam)
         {
-            return hdTam.ChuyenBan(ban, TenBan,MavnLap);
+            return hdTam.ChuyenBan(banCU, MaBanMoi, listhdtam);
         }
         public List<HoaDonDTO> loadDoanhThu_frmAmin(bool TraCuuTheoNgay, DateTime Start, DateTime End)
         {

@@ -100,6 +100,9 @@ namespace DAO
             }
             return ListTU;
         }
-    
+        public double TimGiaBanTheoMaTU(int MaTU)
+        {
+            return db.THUC_UONG.Where(u => u.MATU == MaTU).SingleOrDefault().GIA;
+        }
     }
 }
