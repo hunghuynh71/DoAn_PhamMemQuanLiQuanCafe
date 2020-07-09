@@ -47,7 +47,8 @@ namespace DoAn_Winform
                 Button button = new Button() { Width=120, Height=120};
 
                 button.Click += button_Click;           
-                button.Tag = item;                
+                button.Tag = item;  
+                
                 if(item.Trangthai == 1)
                 {
                     button.Text = item.Tenban + "\nTrống";

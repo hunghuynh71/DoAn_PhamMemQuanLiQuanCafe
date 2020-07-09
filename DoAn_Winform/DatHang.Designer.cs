@@ -232,6 +232,7 @@
             this.colMaDonDatHang.HeaderText = "Mã đơn đặt hàng";
             this.colMaDonDatHang.MinimumWidth = 6;
             this.colMaDonDatHang.Name = "colMaDonDatHang";
+            this.colMaDonDatHang.ReadOnly = true;
             // 
             // colNgayLap
             // 
@@ -239,6 +240,7 @@
             this.colNgayLap.HeaderText = "Ngày lập";
             this.colNgayLap.MinimumWidth = 6;
             this.colNgayLap.Name = "colNgayLap";
+            this.colNgayLap.ReadOnly = true;
             // 
             // colTenNhanVienLap
             // 
@@ -246,6 +248,7 @@
             this.colTenNhanVienLap.HeaderText = "Tên nhân viên lập";
             this.colTenNhanVienLap.MinimumWidth = 6;
             this.colTenNhanVienLap.Name = "colTenNhanVienLap";
+            this.colTenNhanVienLap.ReadOnly = true;
             // 
             // colTrangThaiDuyet
             // 
@@ -253,6 +256,7 @@
             this.colTrangThaiDuyet.HeaderText = "Trạng thái duyệt";
             this.colTrangThaiDuyet.MinimumWidth = 6;
             this.colTrangThaiDuyet.Name = "colTrangThaiDuyet";
+            this.colTrangThaiDuyet.ReadOnly = true;
             this.colTrangThaiDuyet.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.colTrangThaiDuyet.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
@@ -320,6 +324,10 @@
             this.Controls.Add(this.dtpNgayGiao);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(6);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(1180, 700);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(1180, 700);
             this.Name = "frmDatHang";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đơn đặt hàng";

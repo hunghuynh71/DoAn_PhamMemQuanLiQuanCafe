@@ -167,9 +167,14 @@
             this.tbpYeuCauDatHang = new System.Windows.Forms.TabPage();
             this.btnDuyetDDH = new System.Windows.Forms.Button();
             this.lvwChiTietDDH = new System.Windows.Forms.ListView();
+            this.colTenHangHoa = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colSoLuongTon = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colSoLuongHangDat = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.dtgvDanhSachYeuCauDatHang = new System.Windows.Forms.DataGridView();
+            this.colMaDonDatHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colNgayLap = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colTenNhanVienLap = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colTrangThaiDuyet = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.btnDuyetDonDatHang = new System.Windows.Forms.Button();
             this.tbpDoanhThu = new System.Windows.Forms.TabPage();
             this.radChonTheoNgay = new System.Windows.Forms.RadioButton();
@@ -188,11 +193,6 @@
             this.colNhanVienLap = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colSoTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tbcAdmin = new System.Windows.Forms.TabControl();
-            this.colMaDonDatHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colNgayLap = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colTenNhanVienLap = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colTrangThaiDuyet = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.colTenHangHoa = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tbpNhanVien.SuspendLayout();
             this.grbTimKiemNhanVien.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -1683,6 +1683,11 @@
             this.lvwChiTietDDH.UseCompatibleStateImageBehavior = false;
             this.lvwChiTietDDH.View = System.Windows.Forms.View.Details;
             // 
+            // colTenHangHoa
+            // 
+            this.colTenHangHoa.Text = "Tên hàng hóa";
+            this.colTenHangHoa.Width = 150;
+            // 
             // colSoLuongTon
             // 
             this.colSoLuongTon.Text = "Số lượng hàng tồn";
@@ -1690,7 +1695,6 @@
             // 
             // colSoLuongHangDat
             // 
-            this.colSoLuongHangDat.DisplayIndex = 1;
             this.colSoLuongHangDat.Text = "Số lượng hàng đặt";
             this.colSoLuongHangDat.Width = 199;
             // 
@@ -1711,6 +1715,32 @@
             this.dtgvDanhSachYeuCauDatHang.Size = new System.Drawing.Size(558, 525);
             this.dtgvDanhSachYeuCauDatHang.TabIndex = 29;
             this.dtgvDanhSachYeuCauDatHang.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dtgvDanhSachYeuCauDatHang_MouseClick);
+            // 
+            // colMaDonDatHang
+            // 
+            this.colMaDonDatHang.DataPropertyName = "Maddh";
+            this.colMaDonDatHang.HeaderText = "Mã đơn đặt hàng";
+            this.colMaDonDatHang.Name = "colMaDonDatHang";
+            // 
+            // colNgayLap
+            // 
+            this.colNgayLap.DataPropertyName = "Ngaylap";
+            this.colNgayLap.HeaderText = "Ngày lập";
+            this.colNgayLap.Name = "colNgayLap";
+            // 
+            // colTenNhanVienLap
+            // 
+            this.colTenNhanVienLap.DataPropertyName = "Tennvlap";
+            this.colTenNhanVienLap.HeaderText = "Tên nhân viên lập";
+            this.colTenNhanVienLap.Name = "colTenNhanVienLap";
+            // 
+            // colTrangThaiDuyet
+            // 
+            this.colTrangThaiDuyet.DataPropertyName = "Trangthaiduyet";
+            this.colTrangThaiDuyet.HeaderText = "Trạng thái duyệt";
+            this.colTrangThaiDuyet.Name = "colTrangThaiDuyet";
+            this.colTrangThaiDuyet.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.colTrangThaiDuyet.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // btnDuyetDonDatHang
             // 
@@ -1898,37 +1928,6 @@
             this.tbcAdmin.Size = new System.Drawing.Size(1150, 650);
             this.tbcAdmin.TabIndex = 0;
             // 
-            // colMaDonDatHang
-            // 
-            this.colMaDonDatHang.DataPropertyName = "Maddh";
-            this.colMaDonDatHang.HeaderText = "Mã đơn đặt hàng";
-            this.colMaDonDatHang.Name = "colMaDonDatHang";
-            // 
-            // colNgayLap
-            // 
-            this.colNgayLap.DataPropertyName = "Ngaylap";
-            this.colNgayLap.HeaderText = "Ngày lập";
-            this.colNgayLap.Name = "colNgayLap";
-            // 
-            // colTenNhanVienLap
-            // 
-            this.colTenNhanVienLap.DataPropertyName = "Tennvlap";
-            this.colTenNhanVienLap.HeaderText = "Tên nhân viên lập";
-            this.colTenNhanVienLap.Name = "colTenNhanVienLap";
-            // 
-            // colTrangThaiDuyet
-            // 
-            this.colTrangThaiDuyet.DataPropertyName = "Trangthaiduyet";
-            this.colTrangThaiDuyet.HeaderText = "Trạng thái duyệt";
-            this.colTrangThaiDuyet.Name = "colTrangThaiDuyet";
-            this.colTrangThaiDuyet.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.colTrangThaiDuyet.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // colTenHangHoa
-            // 
-            this.colTenHangHoa.Text = "Tên hàng hóa";
-            this.colTenHangHoa.Width = 150;
-            // 
             // frmAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -1937,6 +1936,9 @@
             this.Controls.Add(this.tbcAdmin);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(6);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(1180, 700);
+            this.MinimizeBox = false;
             this.Name = "frmAdmin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Admin";
