@@ -346,6 +346,102 @@
       <Name>DAO</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\O_Kho.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ChiaKho.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Thoat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\144974-tre-cuoi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GiaoDienLogin.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GiaoDienTaiKhoan.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BaoMat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GiaoDienTaiKhoan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hoanthanh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\timkiem.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ngay.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HoanThanhSize48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cong.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tru.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\suachua.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cole.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ngaySize48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QuanLySize48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ketoan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\khohang.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\khohangSize128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Taikhoanpng.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\caiBan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TraCuuSize48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BieuDoDuongThongKe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GiaoDIenbieuDoThogKE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ThungracSize48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DatHagSize48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nhacungcapSize48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LuaChonSize48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\giaoDienTaiKhoanAcount.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\timkiemSize48.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

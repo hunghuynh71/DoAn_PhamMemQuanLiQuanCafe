@@ -34,26 +34,27 @@
             this.colNgayLap = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colTenNVLap = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtpTuNgay = new System.Windows.Forms.DateTimePicker();
-            this.label2 = new System.Windows.Forms.Label();
             this.dtpDenNgay = new System.Windows.Forms.DateTimePicker();
-            this.label3 = new System.Windows.Forms.Label();
-            this.btnTimKiem = new System.Windows.Forms.Button();
-            this.btnChonDDH = new System.Windows.Forms.Button();
             this.lvwChiTietDDH = new System.Windows.Forms.ListView();
             this.colTenHH = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colSoLuong = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.btnChonDDH = new System.Windows.Forms.Button();
+            this.btnTimKiem = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvDsDDH)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(156, 20);
+            this.label1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 29.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Blue;
+            this.label1.Location = new System.Drawing.Point(274, 9);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(748, 55);
+            this.label1.Size = new System.Drawing.Size(541, 43);
             this.label1.TabIndex = 0;
             this.label1.Text = "Danh sách đơn đặt hàng đã duyệt";
             // 
@@ -94,62 +95,25 @@
             // dtpTuNgay
             // 
             this.dtpTuNgay.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpTuNgay.Location = new System.Drawing.Point(140, 105);
+            this.dtpTuNgay.Location = new System.Drawing.Point(131, 117);
             this.dtpTuNgay.Name = "dtpTuNgay";
-            this.dtpTuNgay.Size = new System.Drawing.Size(291, 30);
+            this.dtpTuNgay.Size = new System.Drawing.Size(233, 26);
             this.dtpTuNgay.TabIndex = 2;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(19, 105);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(90, 25);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Từ ngày:";
             // 
             // dtpDenNgay
             // 
             this.dtpDenNgay.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpDenNgay.Location = new System.Drawing.Point(848, 105);
+            this.dtpDenNgay.Location = new System.Drawing.Point(542, 118);
             this.dtpDenNgay.Name = "dtpDenNgay";
-            this.dtpDenNgay.Size = new System.Drawing.Size(291, 30);
+            this.dtpDenNgay.Size = new System.Drawing.Size(233, 26);
             this.dtpDenNgay.TabIndex = 2;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(727, 105);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(102, 25);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Đến ngày:";
-            // 
-            // btnTimKiem
-            // 
-            this.btnTimKiem.Location = new System.Drawing.Point(516, 97);
-            this.btnTimKiem.Name = "btnTimKiem";
-            this.btnTimKiem.Size = new System.Drawing.Size(150, 50);
-            this.btnTimKiem.TabIndex = 4;
-            this.btnTimKiem.Text = "Tìm kiếm";
-            this.btnTimKiem.UseVisualStyleBackColor = true;
-            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
-            // 
-            // btnChonDDH
-            // 
-            this.btnChonDDH.Location = new System.Drawing.Point(939, 20);
-            this.btnChonDDH.Name = "btnChonDDH";
-            this.btnChonDDH.Size = new System.Drawing.Size(200, 50);
-            this.btnChonDDH.TabIndex = 5;
-            this.btnChonDDH.Text = "Chọn đơn đặt hàng";
-            this.btnChonDDH.UseVisualStyleBackColor = true;
-            this.btnChonDDH.Click += new System.EventHandler(this.btnChonDDH_Click);
             // 
             // lvwChiTietDDH
             // 
             this.lvwChiTietDDH.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.colTenHH,
             this.colSoLuong});
+            this.lvwChiTietDDH.HideSelection = false;
             this.lvwChiTietDDH.Location = new System.Drawing.Point(673, 174);
             this.lvwChiTietDDH.Name = "lvwChiTietDDH";
             this.lvwChiTietDDH.Size = new System.Drawing.Size(477, 467);
@@ -167,12 +131,62 @@
             this.colSoLuong.Text = "Số lượng";
             this.colSoLuong.Width = 200;
             // 
+            // btnChonDDH
+            // 
+            this.btnChonDDH.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.btnChonDDH.Image = global::DoAn_Winform.Properties.Resources.LuaChonSize48;
+            this.btnChonDDH.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnChonDDH.Location = new System.Drawing.Point(949, 91);
+            this.btnChonDDH.Name = "btnChonDDH";
+            this.btnChonDDH.Size = new System.Drawing.Size(203, 57);
+            this.btnChonDDH.TabIndex = 5;
+            this.btnChonDDH.Text = "Chọn đơn đặt hàng";
+            this.btnChonDDH.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnChonDDH.UseVisualStyleBackColor = false;
+            this.btnChonDDH.Click += new System.EventHandler(this.btnChonDDH_Click);
+            // 
+            // btnTimKiem
+            // 
+            this.btnTimKiem.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.btnTimKiem.BackgroundImage = global::DoAn_Winform.Properties.Resources.timkiem;
+            this.btnTimKiem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnTimKiem.Location = new System.Drawing.Point(825, 90);
+            this.btnTimKiem.Name = "btnTimKiem";
+            this.btnTimKiem.Size = new System.Drawing.Size(104, 58);
+            this.btnTimKiem.TabIndex = 4;
+            this.btnTimKiem.UseVisualStyleBackColor = false;
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
+            // 
+            // label3
+            // 
+            this.label3.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.label3.Image = global::DoAn_Winform.Properties.Resources.ngaySize48;
+            this.label3.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label3.Location = new System.Drawing.Point(387, 95);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(133, 48);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Đến ngày:";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label2
+            // 
+            this.label2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.label2.Image = global::DoAn_Winform.Properties.Resources.ngaySize48;
+            this.label2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label2.Location = new System.Drawing.Point(10, 96);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(115, 48);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Từ ngày:";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // frmTraCuuDonDatHang
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.ClientSize = new System.Drawing.Size(1162, 653);
+            this.ClientSize = new System.Drawing.Size(1164, 662);
             this.Controls.Add(this.lvwChiTietDDH);
             this.Controls.Add(this.btnChonDDH);
             this.Controls.Add(this.btnTimKiem);

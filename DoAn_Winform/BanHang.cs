@@ -6,7 +6,6 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Web.UI.WebControls;
 using System.Windows.Forms;
 using BUS;
 using DAO;
@@ -47,20 +46,13 @@ namespace DoAn_Winform
             flpBan.Controls.Clear();
             List<BanDTO> dsBan = banBUS.LoadDsBan();
             if (dsBan.Count > 0)
-            {
-<<<<<<< HEAD
-                Button button = new Button() { Width=120, Height=120};
-
-                button.Click += button_Click;           
-                button.Tag = item;  
-                
-                if(item.Trangthai == 1)
-=======
+            {      
+               
                 foreach (BanDTO item in dsBan)
->>>>>>> 5c224e9df7c2662858ce6ce06fcc5fad42577d8c
                 {
                     Button button = new Button() { Width = 120, Height = 120 };
                     button.Click += button_Click;
+                    button.Image = Image.FromFile("../../../Image/caiBan.png");                    
                     button.Tag = item;
                     //if(item.Trangthai == 1)
                     //{

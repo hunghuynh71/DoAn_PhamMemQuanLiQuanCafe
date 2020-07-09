@@ -29,25 +29,11 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmXemBaoCao));
-            this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
-            this.cprtXemDTTrongNgay1 = new DoAn_Winform.crptDoanhThuTrongNgay();
             this.SuspendLayout();
-            // 
-            // crystalReportViewer1
-            // 
-            this.crystalReportViewer1.ActiveViewIndex = -1;
-            this.crystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.crystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default;
-            resources.ApplyResources(this.crystalReportViewer1, "crystalReportViewer1");
-            this.crystalReportViewer1.Name = "crystalReportViewer1";
             // 
             // frmXemBaoCao
             // 
             resources.ApplyResources(this, "$this");
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.crystalReportViewer1);
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
             this.Name = "frmXemBaoCao";
             this.ResumeLayout(false);
 
