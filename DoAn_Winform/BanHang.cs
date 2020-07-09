@@ -346,11 +346,11 @@ namespace DoAn_Winform
             List<ThucUongDTO> ListTUDTO = tubus.TimDrinkTheoTenLoaiDrink(cboLoaiThucUong.Text);
             if (ListTUDTO.Count() > 0)
             {
-                cboThucUong.Items.Clear();
-                foreach (ThucUongDTO tu in ListTUDTO)
-                {
-                    cboThucUong.Items.Add(tu.Tentu);
-                }
+                    cboThucUong.Items.Clear();
+
+                    cboThucUong.DataSource = ListTUDTO;
+                    cboThucUong.DisplayMember = "Tentu";
+                    cboThucUong.ValueMember = "Matu";                
             }
         }
         private void cboLoaiThucUong_Click(object sender, EventArgs e)
