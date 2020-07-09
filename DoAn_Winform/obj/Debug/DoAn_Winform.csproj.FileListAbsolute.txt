@@ -74,3 +74,19 @@ C:\Users\hungh\OneDrive\Desktop\New folder\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winfo
 C:\Users\hungh\OneDrive\Desktop\New folder\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\obj\Debug\DoAn_Winform.exe
 C:\Users\hungh\OneDrive\Desktop\New folder\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\obj\Debug\DoAn_Winform.pdb
 C:\Users\hungh\OneDrive\Desktop\New folder\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\obj\Debug\DoAn_Winform.frmTraCuuDonDatHang.resources
+C:\Users\admin\Downloads\Desktop\Không được xóa\Winform_DoAn\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\obj\Debug\DoAn_Winform.csprojAssemblyReference.cache
+C:\Users\admin\Downloads\Desktop\Không được xóa\Winform_DoAn\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\obj\Debug\DoAn_Winform.frmAccount.resources
+C:\Users\admin\Downloads\Desktop\Không được xóa\Winform_DoAn\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\obj\Debug\DoAn_Winform.frmAdmin.resources
+C:\Users\admin\Downloads\Desktop\Không được xóa\Winform_DoAn\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\obj\Debug\DoAn_Winform.frmBanHang.resources
+C:\Users\admin\Downloads\Desktop\Không được xóa\Winform_DoAn\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\obj\Debug\DoAn_Winform.frmChonBaoCao.resources
+C:\Users\admin\Downloads\Desktop\Không được xóa\Winform_DoAn\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\obj\Debug\DoAn_Winform.frmTraCuuDonDatHang.resources
+C:\Users\admin\Downloads\Desktop\Không được xóa\Winform_DoAn\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\obj\Debug\DoAn_Winform.frmLogin.resources
+C:\Users\admin\Downloads\Desktop\Không được xóa\Winform_DoAn\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\obj\Debug\DoAn_Winform.frmPhieuNhaphag.resources
+C:\Users\admin\Downloads\Desktop\Không được xóa\Winform_DoAn\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\obj\Debug\DoAn_Winform.Properties.Resources.resources
+C:\Users\admin\Downloads\Desktop\Không được xóa\Winform_DoAn\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\obj\Debug\DoAn_Winform.frmHome.resources
+C:\Users\admin\Downloads\Desktop\Không được xóa\Winform_DoAn\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\obj\Debug\DoAn_Winform.frmDatHang.resources
+C:\Users\admin\Downloads\Desktop\Không được xóa\Winform_DoAn\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\obj\Debug\DoAn_Winform.frmXemBaoCao.resources
+C:\Users\admin\Downloads\Desktop\Không được xóa\Winform_DoAn\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\obj\Debug\DoAn_Winform.csproj.GenerateResource.cache
+C:\Users\admin\Downloads\Desktop\Không được xóa\Winform_DoAn\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\obj\Debug\DoAn_Winform.exe.licenses
+C:\Users\admin\Downloads\Desktop\Không được xóa\Winform_DoAn\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\obj\Debug\DoAn_Winform.exe
+C:\Users\admin\Downloads\Desktop\Không được xóa\Winform_DoAn\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\obj\Debug\DoAn_Winform.pdb

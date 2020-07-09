@@ -48,3 +48,17 @@ C:\Users\hungh\OneDrive\Desktop\New folder\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winfo
 C:\Users\hungh\OneDrive\Desktop\New folder\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\DAO\obj\Debug\DAO.csprojResolveAssemblyReference.cache
 C:\Users\hungh\OneDrive\Desktop\New folder\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\DAO\obj\Debug\DAO.dll
 C:\Users\hungh\OneDrive\Desktop\New folder\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\DAO\obj\Debug\DAO.pdb
+C:\Users\admin\Downloads\Desktop\Không được xóa\Winform_DoAn\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\DAO\bin\Debug\DAO.dll.config
+C:\Users\admin\Downloads\Desktop\Không được xóa\Winform_DoAn\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\DAO\bin\Debug\DAO.dll
+C:\Users\admin\Downloads\Desktop\Không được xóa\Winform_DoAn\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\DAO\bin\Debug\DAO.pdb
+C:\Users\admin\Downloads\Desktop\Không được xóa\Winform_DoAn\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\DAO\bin\Debug\DTO.dll
+C:\Users\admin\Downloads\Desktop\Không được xóa\Winform_DoAn\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\DAO\bin\Debug\EntityFramework.dll
+C:\Users\admin\Downloads\Desktop\Không được xóa\Winform_DoAn\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\DAO\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\admin\Downloads\Desktop\Không được xóa\Winform_DoAn\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\DAO\bin\Debug\DTO.pdb
+C:\Users\admin\Downloads\Desktop\Không được xóa\Winform_DoAn\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\DAO\bin\Debug\EntityFramework.xml
+C:\Users\admin\Downloads\Desktop\Không được xóa\Winform_DoAn\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\DAO\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\admin\Downloads\Desktop\Không được xóa\Winform_DoAn\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\DAO\obj\Debug\DAO.csprojAssemblyReference.cache
+C:\Users\admin\Downloads\Desktop\Không được xóa\Winform_DoAn\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache
+C:\Users\admin\Downloads\Desktop\Không được xóa\Winform_DoAn\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\DAO\obj\Debug\DAO.csproj.CopyComplete
+C:\Users\admin\Downloads\Desktop\Không được xóa\Winform_DoAn\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\DAO\obj\Debug\DAO.dll
+C:\Users\admin\Downloads\Desktop\Không được xóa\Winform_DoAn\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\DAO\obj\Debug\DAO.pdb

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using DTO;
@@ -112,18 +113,44 @@ namespace DAO
             return flag;
         }
         
-        public bool ThanhToan(BanDTO ban, double tongTien)
+        public bool ThanhToan(BanDTO ban, double tongTien,HoaDonTamDTO hdtam,int Manvlap)
         {
             bool flag;
             try
             {
-                HOA_DON hd = db.HOA_DON.Where(u => u.SOBAN == ban.Soban && u.TRANGTHAI == 0).SingleOrDefault();
-                hd.TONGTIEN = tongTien;
-                hd.TRANGTHAI = 1;
+                //HOA_DON hd = db.HOA_DON.Where(u => u.SOBAN == ban.Soban && u.TRANGTHAI == 0).SingleOrDefault();
+                //hd.TONGTIEN = tongTien;
+                //hd.TRANGTHAI = 1;
+                //db.SaveChanges();
+                //BAN bandb = db.BANs.Where(u => u.SOBAN == ban.Soban).SingleOrDefault();
+                //bandb.TRANGTHAI = 1;
+                //db.SaveChanges();
+
+                HOA_DON hd = new HOA_DON
+                {
+                    SOBAN = hdtam.MaBan,
+                    NGAYLAP = DateTime.Now,
+                    MANVLAP = Manvlap,
+                    TONGTIEN=tongTien
+                    
+                };
+
+                db.HOA_DON.Add(hd);
                 db.SaveChanges();
-                BAN bandb = db.BANs.Where(u => u.SOBAN == ban.Soban).SingleOrDefault();
-                bandb.TRANGTHAI = 1;
-                db.SaveChanges();
+
+                foreach (ThucUongDTO tu in hdtam.ListTUTam)
+                {
+                    CHI_TIET_HOA_DON cthd = new CHI_TIET_HOA_DON
+                    {
+                        MAHD=hd.MAHD,
+                        MATU=tu.Matu,
+                        SL=tu.Soluong,   
+                        GIABAN=tu.Gia
+                    };
+                    db.CHI_TIET_HOA_DON.Add(cthd);
+                    db.SaveChanges();
+                }    
+
                 flag = true;
             }
             catch(Exception e)
@@ -133,62 +160,89 @@ namespace DAO
             return flag;
         }
 
-        public bool ChuyenBan(BanDTO banHienTai, string TenBanMoi,int ManvLap)
+        public bool ChuyenBan(BanDTO banHienTai, int MaBanMoi, List<HoaDonTamDTO> listhdt)
         {
             try
             {
-                BAN banMoi = db.BANs.Where(u => u.TENBAN == TenBanMoi && u.TRANGTHAI != 0).SingleOrDefault();
-                BAN banCu = db.BANs.Where(u => u.SOBAN == banHienTai.Soban && u.TRANGTHAI != 0).SingleOrDefault();
-                if (banMoi.TRANGTHAI==1) // Bàn Chưa có người
-                {
-                    banCu.TRANGTHAI = 1;
-                    banMoi.TRANGTHAI = 2;
-                    HOA_DON hd = new HOA_DON();
-                    hd = db.HOA_DON.Where(u => u.SOBAN == banHienTai.Soban && u.TRANGTHAI == 0 && u.TRANGTHAIXOA == false).SingleOrDefault();
-                    hd.SOBAN = banMoi.SOBAN;
-                    db.SaveChanges();
-                }
-                else //Ban Có Người
-                {
-                    banCu.TRANGTHAI = 1;
-                    //Lay
-                    HOA_DON hd = new HOA_DON();
-                    hd = db.HOA_DON.Where(u => u.SOBAN == banMoi.SOBAN && u.TRANGTHAI == 0 && u.TRANGTHAIXOA == false).SingleOrDefault();
-                    //  ThemVao Database
-                    int MaHDCU = db.HOA_DON.Where(u=> u.SOBAN == banHienTai.Soban && u.TRANGTHAI==0).SingleOrDefault().MAHD;
+                //BAN banMoi = db.BANs.Where(u => u.TENBAN == TenBanMoi && u.TRANGTHAI != 0).SingleOrDefault();
+                //BAN banCu = db.BANs.Where(u => u.SOBAN == banHienTai.Soban && u.TRANGTHAI != 0).SingleOrDefault();
+                //if (banMoi.TRANGTHAI==1) // Bàn Chưa có người
+                //{
+                //    banCu.TRANGTHAI = 1;
+                //    banMoi.TRANGTHAI = 2;
+                //    HOA_DON hd = new HOA_DON();
+                //    hd = db.HOA_DON.Where(u => u.SOBAN == banHienTai.Soban && u.TRANGTHAI == 0 && u.TRANGTHAIXOA == false).SingleOrDefault();
+                //    hd.SOBAN = banMoi.SOBAN;
+                //    db.SaveChanges();
+                //}
+                //else //Ban Có Người
+                //{
+                //    banCu.TRANGTHAI = 1;
+                //    //Lay
+                //    HOA_DON hd = new HOA_DON();
+                //    hd = db.HOA_DON.Where(u => u.SOBAN == banMoi.SOBAN && u.TRANGTHAI == 0 && u.TRANGTHAIXOA == false).SingleOrDefault();
+                //    //  ThemVao Database
+                //    int MaHDCU = db.HOA_DON.Where(u=> u.SOBAN == banHienTai.Soban && u.TRANGTHAI==0).SingleOrDefault().MAHD;
 
-                    List<ChiTietHoaDonDTO> listCTHDCU = db.CHI_TIET_HOA_DON.Where(u => u.MAHD == MaHDCU).Select(v => new
-                        ChiTietHoaDonDTO { 
-                                                   Mahd =v.MAHD,
-                                                   Giaban=v.GIABAN,
-                                                   Matu=v.MATU,
-                                                   Tentu=v.THUC_UONG.TENTU,
-                                                   Soluong=v.SL                                              
-                                        }).ToList();
-                    //
-                  BanDTO bDTO = new BanDTO {
-                  Soban=banMoi.SOBAN,Socho=banMoi.SOCHO,Tenban=banMoi.TENBAN,Trangthai=banMoi.TRANGTHAI};
-                  foreach(ChiTietHoaDonDTO cthd in listCTHDCU)
-                  {
-                      int MaLoaiTu= db.THUC_UONG.Where(u=> u.MATU==cthd.Matu).SingleOrDefault().MALOAITU;
-                      string TenLoaiTU= db.LOAI_THUC_UONG.Where(u=> u.MALOAITU== MaLoaiTu).SingleOrDefault().TENLOAITU;
-                     
-                      if(ThemThucUongTheoBan(bDTO,ManvLap,cthd.Tentu,TenLoaiTU,cthd.Soluong))
-                      {
-                          
-                      }
+                //    List<ChiTietHoaDonDTO> listCTHDCU = db.CHI_TIET_HOA_DON.Where(u => u.MAHD == MaHDCU).Select(v => new
+                //        ChiTietHoaDonDTO { 
+                //                                   Mahd =v.MAHD,
+                //                                   Giaban=v.GIABAN,
+                //                                   Matu=v.MATU,
+                //                                   Tentu=v.THUC_UONG.TENTU,
+                //                                   Soluong=v.SL                                              
+                //                        }).ToList();
+                //    //
+                //  BanDTO bDTO = new BanDTO {
+                //  Soban=banMoi.SOBAN,Socho=banMoi.SOCHO,Tenban=banMoi.TENBAN,Trangthai=banMoi.TRANGTHAI};
+                //  foreach(ChiTietHoaDonDTO cthd in listCTHDCU)
+                //  {
+                //      int MaLoaiTu= db.THUC_UONG.Where(u=> u.MATU==cthd.Matu).SingleOrDefault().MALOAITU;
+                //      string TenLoaiTU= db.LOAI_THUC_UONG.Where(u=> u.MALOAITU== MaLoaiTu).SingleOrDefault().TENLOAITU;
 
-                  }         
-                    // sau khi add vao hd moi hd cu bi huy bo
-                  HOA_DON HDCU = new HOA_DON();
-                  List<CHI_TIET_HOA_DON> CTHDCU = new List<CHI_TIET_HOA_DON>();
-                  HDCU = db.HOA_DON.Where(u => u.SOBAN == banHienTai.Soban && u.TRANGTHAI == 0).SingleOrDefault();
-                  CTHDCU = db.CHI_TIET_HOA_DON.Where(u => u.MAHD == HDCU.MAHD).ToList();
-                  db.CHI_TIET_HOA_DON.RemoveRange(CTHDCU);             
-                  db.SaveChanges();
-                  db.HOA_DON.Remove(HDCU);
-                  db.SaveChanges();
+                //      if(ThemThucUongTheoBan(bDTO,ManvLap,cthd.Tentu,TenLoaiTU,cthd.Soluong))
+                //      {
+
+                //      }
+
+                //  }         
+                //    // sau khi add vao hd moi hd cu bi huy bo
+                //  HOA_DON HDCU = new HOA_DON();
+                //  List<CHI_TIET_HOA_DON> CTHDCU = new List<CHI_TIET_HOA_DON>();
+                //  HDCU = db.HOA_DON.Where(u => u.SOBAN == banHienTai.Soban && u.TRANGTHAI == 0).SingleOrDefault();
+                //  CTHDCU = db.CHI_TIET_HOA_DON.Where(u => u.MAHD == HDCU.MAHD).ToList();
+                //  db.CHI_TIET_HOA_DON.RemoveRange(CTHDCU);             
+                //  db.SaveChanges();
+                //  db.HOA_DON.Remove(HDCU);
+                //  db.SaveChanges();
+                //}
+
+                HoaDonTamDAO hdtam = new HoaDonTamDAO();
+                HoaDonTamDTO hdmoi = new HoaDonTamDTO();
+                HoaDonTamDTO hdcu = new HoaDonTamDTO();
+                hdmoi = hdtam.LayHDTheoMaBan(MaBanMoi, listhdt);
+                hdcu = hdtam.LayHDTheoMaBan(banHienTai.Soban, listhdt);
+
+                // if : bàn mới không có người , else ngược lại
+                if (hdmoi == null)
+                {
+                    hdcu.MaBan = MaBanMoi;
                 }
+                else
+                {
+                    foreach(ThucUongDTO tu in hdcu.ListTUTam)
+                    {
+                        ThucUongDTO tutamthoi = new ThucUongDTO
+                        {
+                            Gia=tu.Gia,
+                            Maloaitu=tu.Maloaitu,
+                            Matu=tu.Matu,
+                            Soluong=tu.Soluong
+                        };
+                        hdmoi.ListTUTam.Add(tutamthoi);
+                    }
+                    listhdt.Remove(hdcu);
+                }    
                 return true;
             }
             catch (Exception e)

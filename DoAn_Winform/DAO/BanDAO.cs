@@ -71,10 +71,11 @@ namespace DAO
                 return false;
             }
         }
-        public bool KiemTraBanCoNguoiKhong(string TenBanChuyen)
+        public bool KiemTraBanCoNguoiKhong(int MaBanChuyen,List<HoaDonTamDTO> listhdTam)
         {
+            HoaDonTamDAO hdt = new HoaDonTamDAO();
             // true : Bàn Có Người và ngược Lại
-            if (db.BANs.Where(u => u.TENBAN == TenBanChuyen && u.TRANGTHAI == 2).Count() > 0)
+            if (hdt.LayHDTheoMaBan(MaBanChuyen,listhdTam) != null)
                 return true;
             else
                 return false;

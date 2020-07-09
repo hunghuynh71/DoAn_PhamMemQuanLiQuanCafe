@@ -75,6 +75,7 @@
       <DependentUpon>QLQCafe.tt</DependentUpon>
     </Compile>
     <Compile Include="HoaDonDAO.cs" />
+    <Compile Include="HoaDonTamDAO.cs" />
     <Compile Include="HOA_DON.cs">
       <DependentUpon>QLQCafe.tt</DependentUpon>
     </Compile>

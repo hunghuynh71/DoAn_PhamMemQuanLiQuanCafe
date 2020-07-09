@@ -45,7 +45,7 @@ namespace DoAn_Winform
         }
 
         //Thức uống
-        void LoadComboboxLoaiTU()
+       public void LoadComboboxLoaiTU()
         {
             LoaiThucUongBUS ltu = new LoaiThucUongBUS();
 

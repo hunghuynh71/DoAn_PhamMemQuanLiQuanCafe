@@ -51,3 +51,20 @@ C:\Users\hungh\OneDrive\Desktop\New folder\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winfo
 C:\Users\hungh\OneDrive\Desktop\New folder\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\BUS\obj\Debug\BUS.csprojResolveAssemblyReference.cache
 C:\Users\hungh\OneDrive\Desktop\New folder\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\BUS\obj\Debug\BUS.dll
 C:\Users\hungh\OneDrive\Desktop\New folder\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\BUS\obj\Debug\BUS.pdb
+C:\Users\admin\Downloads\Desktop\Không được xóa\Winform_DoAn\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\BUS\bin\Debug\BUS.dll.config
+C:\Users\admin\Downloads\Desktop\Không được xóa\Winform_DoAn\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\BUS\bin\Debug\BUS.dll
+C:\Users\admin\Downloads\Desktop\Không được xóa\Winform_DoAn\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\BUS\bin\Debug\BUS.pdb
+C:\Users\admin\Downloads\Desktop\Không được xóa\Winform_DoAn\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\BUS\bin\Debug\DAO.dll
+C:\Users\admin\Downloads\Desktop\Không được xóa\Winform_DoAn\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\BUS\bin\Debug\DTO.dll
+C:\Users\admin\Downloads\Desktop\Không được xóa\Winform_DoAn\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\BUS\bin\Debug\EntityFramework.dll
+C:\Users\admin\Downloads\Desktop\Không được xóa\Winform_DoAn\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\BUS\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\admin\Downloads\Desktop\Không được xóa\Winform_DoAn\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\BUS\bin\Debug\DTO.pdb
+C:\Users\admin\Downloads\Desktop\Không được xóa\Winform_DoAn\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\BUS\bin\Debug\DAO.pdb
+C:\Users\admin\Downloads\Desktop\Không được xóa\Winform_DoAn\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\BUS\bin\Debug\DAO.dll.config
+C:\Users\admin\Downloads\Desktop\Không được xóa\Winform_DoAn\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\BUS\bin\Debug\EntityFramework.xml
+C:\Users\admin\Downloads\Desktop\Không được xóa\Winform_DoAn\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\BUS\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\admin\Downloads\Desktop\Không được xóa\Winform_DoAn\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\BUS\obj\Debug\BUS.csprojAssemblyReference.cache
+C:\Users\admin\Downloads\Desktop\Không được xóa\Winform_DoAn\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
+C:\Users\admin\Downloads\Desktop\Không được xóa\Winform_DoAn\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\BUS\obj\Debug\BUS.csproj.CopyComplete
+C:\Users\admin\Downloads\Desktop\Không được xóa\Winform_DoAn\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\BUS\obj\Debug\BUS.dll
+C:\Users\admin\Downloads\Desktop\Không được xóa\Winform_DoAn\DoAn_PhamMemQuanLiQuanCafe\DoAn_Winform\BUS\obj\Debug\BUS.pdb

@@ -40,5 +40,10 @@ namespace BUS
         {
             return tuTam.TimDrinkTheoTenLoaiTU(TenLoaiTU);
         }
+        public double TimGiaTUTheoMaTU(int MaTU)
+        {
+            return tuTam.TimGiaBanTheoMaTU(MaTU);
+        }
+
     }
 }
